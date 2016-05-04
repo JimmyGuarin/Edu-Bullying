@@ -5,7 +5,7 @@ using System.Collections;
 public class PuntoRetroalimentacion : MonoBehaviour
 {
 
-    private GameObject canvas;
+    public GameObject canvas;
     private Text textoRetroalimentación;
     private string textoPunto;
 
@@ -15,7 +15,7 @@ public class PuntoRetroalimentacion : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        canvas = GameObject.Find("CanvasRetro").gameObject;
+        
         canvas.SetActive(false);
         textoRetroalimentación = canvas.transform.FindChild("TextoRetro").GetComponent<Text>();
         PuntosRetro pr=(PuntosRetro) Camera.main.GetComponent<Bullying>().misPuntosRetro[numeroRetroalimentacion];
