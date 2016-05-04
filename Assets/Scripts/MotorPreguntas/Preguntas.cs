@@ -74,4 +74,22 @@ public class Preguntas{
 
         }
     }
+
+    public int IndexCorreta(){
+        if (multiple){
+            for (int i = 0; i <respuestasMultiple.Length; i++){
+                if (respuestasMultiple[i].Equals(respuestaCorrecta))
+                    return i;
+
+            }
+        }
+        else{
+            for (int i = 0; i < respuestasDual.Length; i++)
+            {
+                if (respuestasDual[i].Equals(respuestaCorrecta))
+                    return i;
+            }
+        }
+        return -1;
+    }
 }
