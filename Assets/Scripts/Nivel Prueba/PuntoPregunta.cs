@@ -86,13 +86,15 @@ public class PuntoPregunta : MonoBehaviour
     {
         if(preguntaActual.EsCorrecta(botonPrecionado.transform.GetChild(0).GetComponent<Text>().text))  {
 
-            
+            botonPrecionado.GetComponent<Image>().color = Color.green;
         }
         else
         {
-            
+            botonPrecionado.GetComponent<Image>().color = Color.red;
+            respuestas[preguntaActual.IndexCorreta()].GetComponent<Image>().color = Color.green;
         }
 
+        preguntaActual = (Preguntas)misPreguntas[++preguntaActualIndex];
 
     }
 }
