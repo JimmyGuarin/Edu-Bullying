@@ -16,8 +16,9 @@ public class BullyingFisico : MonoBehaviour {
             p1.misPreguntas.Add(new Preguntas("¿Programo en Unity?", "Si", "No"));
             p1.Barajar();
 
-       // miNivel.puntosRetro.Add(p1);
-        toString();
+        miNivel.puntosRetro.Add(p1);
+        GetComponent<Bullying>().misPuntosRetro = miNivel.puntosRetro;
+        //toString();
 
     }
 

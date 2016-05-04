@@ -15,9 +15,10 @@ public class PuntoRetroalimentacion : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        canvas = Camera.main.transform.FindChild("CanvasRetro").gameObject;
+        canvas = GameObject.Find("CanvasRetro").gameObject;
+        canvas.SetActive(false);
         textoRetroalimentación = canvas.transform.FindChild("TextoRetro").GetComponent<Text>();
-        PuntosRetro pr=(PuntosRetro) Camera.main.GetComponent<BullyingFisico>().miNivel.puntosRetro[numeroRetroalimentacion];
+        PuntosRetro pr=(PuntosRetro) Camera.main.GetComponent<Bullying>().misPuntosRetro[numeroRetroalimentacion];
         textoPunto = pr.retroalimentacion;
     }
 
@@ -27,7 +28,7 @@ public class PuntoRetroalimentacion : MonoBehaviour
 
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerStay2D(Collider2D collision)
     {
         textoRetroalimentación.text = textoPunto;
         canvas.SetActive(true);
