@@ -2,25 +2,36 @@
 using UnityEngine.UI;
 using System.Collections;
 
+
 public class PuntoPregunta : MonoBehaviour
 {
-
+    
     public int[] puntosRetro;
     private ArrayList misPreguntas;
     private int preguntaActualIndex;
     private Preguntas preguntaActual;
     private Button[] respuestas;
+    public int puntajePreguntaMultiple;
+    public int puntajePreguntaDual;
+    private int puntajePregunta;
+    
     public GameObject[] objetosAnimados;
 
+    [Tooltip("Canvas de las preguntas multiples")]
     public GameObject canvasPreguntaMultiple;
     public Text enunciadoPreguntaMultiple;
     public Button[] respuestasMultiples;
     public GameObject botonCerrarMultiple;
+    public Text textoPuntajeMultiple;
+    public Text textoRetroAlimentacionMultiple;
+
 
     public GameObject canvasPreguntaDual;
     public Text enunciadoPreguntaDual;
     public Button[] respuestasDual;
     public GameObject botonCerrarDual;
+    public Text textoPuntajeDual;
+    public Text textoRetroAlimentacionDual;
 
     public GameObject presionarFPanel;
 
@@ -34,10 +45,12 @@ public class PuntoPregunta : MonoBehaviour
         misPreguntas = new ArrayList();
 
         PuntosRetro pR;
+        ManejadorPreguntas puntosRetroAlimentacion = GameObject.FindGameObjectWithTag("Player").GetComponent<ManejadorPreguntas>();
+
         for (int i = 0; i < puntosRetro.Length; i++)
         {
-
-            pR = (PuntosRetro)Camera.main.GetComponent<Bullying>().misPuntosRetro[puntosRetro[i]];
+            
+            pR = (PuntosRetro)puntosRetroAlimentacion.misPuntosRetro[puntosRetro[i]];
 
             for (int j = 0; j < pR.misPreguntas.Count; j++)
             {
@@ -64,18 +77,26 @@ public class PuntoPregunta : MonoBehaviour
         }
     }
 
+    
+    
     public void OnTriggerStay2D(Collider2D collision)
     {
-        presionarFPanel.SetActive(true);
-        enColision = true;
+        if (collision.tag.Equals("Player"))
+        {
+            presionarFPanel.SetActive(true);
+            enColision = true;
+        }
+        
     
     }
 
     public void OnTriggerExit2D(Collider2D collision)
     {
-
-        presionarFPanel.SetActive(false);
-        enColision = false;
+        if (collision.tag.Equals("Player"))
+        {
+            presionarFPanel.SetActive(false);
+            enColision = false;
+        }
     }
 
     public void Mostrar()
@@ -88,12 +109,14 @@ public class PuntoPregunta : MonoBehaviour
             enunciadoPreguntaMultiple.text = preguntaActual.Enunciado;
             respuestas = respuestasMultiples;
             canvasPreguntaMultiple.SetActive(true);
+            puntajePregunta =puntajePreguntaMultiple;
 
         }
         else
         {
             enunciadoPreguntaDual.text = preguntaActual.Enunciado;
             respuestas = respuestasDual;
+            puntajePregunta = puntajePreguntaDual;
             canvasPreguntaDual.SetActive(true);
         }
 
@@ -105,33 +128,59 @@ public class PuntoPregunta : MonoBehaviour
 
     }
 
-    public bool VerificarRespuesta(Button botonPrecionado)
+    //Devuelve el puntajeObtenido con la respuesta
+    //0 Si la respuesta es erronea
+    public int VerificarRespuesta(Button botonPrecionado)
     {
-        bool respuesta;
+        //Verde bien, rojo mal
+        Color colorRespuesta;
 
         if (preguntaActual.EsCorrecta(botonPrecionado.transform.GetChild(0).GetComponent<Text>().text))
         {
 
             botonPrecionado.GetComponent<Image>().color = Color.green;
-            respuesta= true;
+            textoRetroAlimentacionMultiple.text = "Has respondido Correctamente ésta pregunta";
+            textoRetroAlimentacionDual.text = "Has respondido Correctamente ésta pregunta";
 
         }
         else
         {
             botonPrecionado.GetComponent<Image>().color = Color.red;
             respuestas[preguntaActual.IndexCorreta()].GetComponent<Image>().color = Color.green;
-            respuesta = false;
+            puntajePregunta=0;
+            textoRetroAlimentacionMultiple.text = "Respuesta Erronea";
+            textoRetroAlimentacionDual.text = "Respuesta Erronea";
+
 
         }
 
-        botonCerrarMultiple.SetActive(true);
-        botonCerrarDual.SetActive(true);
+        colorRespuesta = botonPrecionado.GetComponent<Image>().color;
+
+        if (preguntaActual.IsMultiple){
+
+            textoPuntajeMultiple.text = "Puntaje Obtenido: " + puntajePregunta;       
+            textoPuntajeMultiple.transform.parent.gameObject.SetActive(true);
+            textoPuntajeMultiple.transform.parent.gameObject.GetComponent<Image>().color = colorRespuesta;
+            textoRetroAlimentacionMultiple.transform.parent.gameObject.SetActive(true);
+            textoRetroAlimentacionMultiple.transform.parent.gameObject.GetComponent<Image>().color = colorRespuesta;
+            botonCerrarMultiple.SetActive(true);
+        }
+        else
+        {
+            textoPuntajeDual.text = "Puntaje Obtenido: " + puntajePregunta;
+            textoPuntajeDual.transform.parent.gameObject.SetActive(true);
+            textoPuntajeDual.transform.parent.gameObject.GetComponent<Image>().color = colorRespuesta;
+            textoRetroAlimentacionDual.transform.parent.gameObject.SetActive(true);
+            textoRetroAlimentacionDual.transform.parent.gameObject.GetComponent<Image>().color = colorRespuesta;
+            botonCerrarDual.SetActive(true);
+
+        }
 
         preguntaActualIndex++;
         if (preguntaActualIndex >= misPreguntas.Count)
             preguntaActualIndex = 0;
         preguntaActual = (Preguntas)misPreguntas[preguntaActualIndex];
-        return respuesta;
+        return puntajePregunta;
 
     }
     
@@ -140,7 +189,7 @@ public class PuntoPregunta : MonoBehaviour
         foreach (GameObject g in objetosAnimados)
         {
 
-            g.GetComponent<Animator>().enabled = true;
+            g.GetComponent<Animation>().Play();
         }
     }
 }
