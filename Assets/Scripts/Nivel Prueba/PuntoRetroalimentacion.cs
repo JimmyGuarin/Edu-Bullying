@@ -18,7 +18,7 @@ public class PuntoRetroalimentacion : MonoBehaviour
         
         canvas.SetActive(false);
         textoRetroalimentación = canvas.transform.FindChild("TextoRetro").GetComponent<Text>();
-        PuntosRetro pr=(PuntosRetro) Camera.main.GetComponent<Bullying>().misPuntosRetro[numeroRetroalimentacion];
+        PuntosRetro pr=(PuntosRetro)GameObject.FindGameObjectWithTag("Player").GetComponent<ManejadorPreguntas>().misPuntosRetro[numeroRetroalimentacion];
         textoPunto = pr.retroalimentacion;
     }
 

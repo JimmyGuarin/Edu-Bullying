@@ -4,11 +4,15 @@ using System.Collections;
 
 public class ManejadorPreguntas : MonoBehaviour
 {
+    
     private PuntoPregunta PuntoDePregunta;
-    private bool EsCorrecta;
-
+    public GameObject bombillas;
     public Image[] coloresBotones;
-
+    public ArrayList misPuntosRetro;
+    public Slider BarraConocimiento;
+    public Text textoPuntajeTotal;
+    public static int puntajeTotal;
+    public int puntajePuntoPregunta;
     // Use this for initialization
     void Start()
     {
@@ -18,7 +22,7 @@ public class ManejadorPreguntas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -39,9 +43,13 @@ public class ManejadorPreguntas : MonoBehaviour
     {
         if (PuntoDePregunta != null)
         {
-           EsCorrecta=PuntoDePregunta.VerificarRespuesta(boton);
+           puntajePuntoPregunta=PuntoDePregunta.VerificarRespuesta(boton);
         }
     }
+
+
+
+
 
     public void ManejarTiempo()
     {
@@ -52,10 +60,12 @@ public class ManejadorPreguntas : MonoBehaviour
                 PuntoDePregunta.GetComponent<Collider2D>().enabled = true;           
         }
         ResetearCanvas();
-        if (EsCorrecta)
+        if (puntajePuntoPregunta>0)
         {
             PuntoDePregunta.AnimarObjetos();
+            bombillas.SetActive(true);
             Destroy(PuntoDePregunta);
+            
         }
            
         
@@ -68,5 +78,40 @@ public class ManejadorPreguntas : MonoBehaviour
             b.color = Color.white;
             b.GetComponent<Button>().interactable = true;
         }
+
     }
+
+
+    public void Barajar()
+    {
+        for (int i = 0; i < misPuntosRetro.Count; i++)
+        {
+            PuntosRetro temp = (PuntosRetro)misPuntosRetro[i];
+            int randomIndex = Random.Range(0, misPuntosRetro.Count);
+            misPuntosRetro[i] = misPuntosRetro[randomIndex];
+            misPuntosRetro[randomIndex] = temp;
+
+        }
+    }
+
+    public void AumentarPuntaje()
+    {
+        puntajeTotal += puntajePuntoPregunta;
+        textoPuntajeTotal.text = ""+puntajeTotal;
+        StartCoroutine("AumentarConocimiento");
+    }
+
+    IEnumerator AumentarConocimiento()
+    {
+        int valor = puntajePuntoPregunta;
+
+        while (valor > 0)
+        {
+            BarraConocimiento.value += 1;
+            valor--;
+            yield return new WaitForSeconds(0.05f);
+        }
+        bombillas.SetActive(false);
+    }
+    
 }
