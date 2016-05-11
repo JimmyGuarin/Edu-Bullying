@@ -33,7 +33,10 @@ public class PuntoPregunta : MonoBehaviour
     public Text textoPuntajeDual;
     public Text textoRetroAlimentacionDual;
 
+    [Tooltip("Ingrese aquí el texto a mostrar en el presiona F.")]
+    public string textoPresionaFPanel;
     public GameObject presionarFPanel;
+    
 
     public bool enColision;
 
@@ -58,6 +61,8 @@ public class PuntoPregunta : MonoBehaviour
                 misPreguntas.Add(pR.misPreguntas[j]);
             }
         }
+
+        
     }
 
     // Update is called once per frame
@@ -83,6 +88,7 @@ public class PuntoPregunta : MonoBehaviour
     {
         if (collision.tag.Equals("Player"))
         {
+            presionarFPanel.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = textoPresionaFPanel;
             presionarFPanel.SetActive(true);
             enColision = true;
         }
@@ -191,5 +197,12 @@ public class PuntoPregunta : MonoBehaviour
 
             g.GetComponent<Animation>().Play();
         }
+    }
+
+    public void cualquierCosa()
+    {
+        Button b=GetComponent<Button>();
+        b.onClick.RemoveAllListeners();
+        b.onClick.AddListener(() => { AnimarObjetos(); });
     }
 }
