@@ -14,13 +14,14 @@ public class Preguntas{
     private string[] respuestasDual;
 
     
-    public Preguntas(string enun,string rBuena,string rFalsa1,string rFalsa2,string rFalsa3){
+    public Preguntas(string enun,string rBuena,string rFalsa1,string rFalsa2,string rFalsa3,bool barajar){
 
         enunciado = enun;
         respuestasMultiple= new string[4]{ rBuena,rFalsa1,rFalsa2,rFalsa3};
         respuestaCorrecta = rBuena;
         multiple = true;
-        Barajar(respuestasMultiple);
+        if(barajar)
+            Barajar(respuestasMultiple);
     }
 
     public Preguntas(string enun,string rBuena, string rFalsa){
