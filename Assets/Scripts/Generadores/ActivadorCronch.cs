@@ -20,7 +20,7 @@ public class ActivadorCronch : MonoBehaviour
     public void OnCollisionStay2D(Collision2D collision)
     {
         collision.gameObject.GetComponent<UnityStandardAssets._2D.PlatformerCharacter2D>().m_Anim.SetBool("enColision", true);
-        Debug.Log("EstoyColisionando");
+        //Debug.Log("EstoyColisionando");
 
     }
 
