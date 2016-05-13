@@ -91,6 +91,7 @@ public class ManejadorPreguntas : MonoBehaviour
             misPuntosRetro[i] = misPuntosRetro[randomIndex];
             misPuntosRetro[randomIndex] = temp;
 
+            ControladorHUD.instance.aumentarPuntaje(40);
         }
     }
 
