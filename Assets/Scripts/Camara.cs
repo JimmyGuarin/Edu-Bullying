@@ -12,7 +12,7 @@ public class Camara : MonoBehaviour
     void Update()
     {
         if (player.position.y < 4)
-            offset.Set(offset.x, 7, offset.z);
+            offset.Set(offset.x, 6.5f, offset.z);
         else{
 
             if (player.position.y <= 8)
