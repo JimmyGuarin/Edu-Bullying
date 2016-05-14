@@ -49,8 +49,8 @@ public class ControladorHUD : MonoBehaviour {
         //    }
         //}
 
-        disminuirVida();
-        aumentarPuntaje(1000);
+       // disminuirVida();
+        //aumentarPuntaje(1000);
        
 	}
 	
