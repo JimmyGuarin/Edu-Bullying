@@ -6,8 +6,12 @@ public class PuntoRetroalimentacion : MonoBehaviour
 {
 
     public GameObject canvas;
-    private Text textoRetroalimentación;
-    private string textoPunto;
+    
+	[HideInInspector]
+	public Text textoRetroalimentación;
+
+	[HideInInspector]
+	public string textoPunto;
 
     public int numeroRetroalimentacion;
 
@@ -21,21 +25,5 @@ public class PuntoRetroalimentacion : MonoBehaviour
         PuntosRetro pr=(PuntosRetro)GameObject.FindGameObjectWithTag("Player").GetComponent<ManejadorPreguntas>().misPuntosRetro[numeroRetroalimentacion];
         textoPunto = pr.retroalimentacion;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public void OnTriggerStay2D(Collider2D collision)
-    {
-        textoRetroalimentación.text = textoPunto;
-        canvas.SetActive(true);
-    }
-
-    public void OnTriggerExit2D(Collider2D collision)
-    {
-        canvas.SetActive(false);
-    }
+		
 }

@@ -9,9 +9,6 @@ public class ManejadorPreguntas : MonoBehaviour
     public GameObject bombillas;
     public Image[] coloresBotones;
     public ArrayList misPuntosRetro;
-    public Slider BarraConocimiento;
-    public Text textoPuntajeTotal;
-    public static int puntajeTotal;
     public int puntajePuntoPregunta;
     // Use this for initialization
     void Start()
@@ -91,28 +88,15 @@ public class ManejadorPreguntas : MonoBehaviour
             misPuntosRetro[i] = misPuntosRetro[randomIndex];
             misPuntosRetro[randomIndex] = temp;
 
-            ControladorHUD.instance.aumentarPuntaje(40);
+           
         }
     }
 
     public void AumentarPuntaje()
     {
-        puntajeTotal += puntajePuntoPregunta;
-        textoPuntajeTotal.text = ""+puntajeTotal;
-        StartCoroutine("AumentarConocimiento");
+		ControladorHUD.instance.aumentarPuntaje (puntajePuntoPregunta,true);
     }
 
-    IEnumerator AumentarConocimiento()
-    {
-        int valor = puntajePuntoPregunta;
-
-        while (valor > 0)
-        {
-            BarraConocimiento.value += 1;
-            valor--;
-            yield return new WaitForSeconds(0.05f);
-        }
-        bombillas.SetActive(false);
-    }
+   
     
 }

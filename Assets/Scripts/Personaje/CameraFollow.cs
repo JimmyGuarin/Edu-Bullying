@@ -32,7 +32,7 @@ public class CameraFollow : MonoBehaviour
     void LateUpdate()
     {
 
-        if (target.transform.position.x >= -3)
+        if (target.transform.position.x >=-5)
         {
             focusArea.Update(target.collider.bounds);
 
@@ -72,11 +72,11 @@ public class CameraFollow : MonoBehaviour
 
     }
 
-    //void OnDrawGizmos()
-    //{
-    //    Gizmos.color = new Color(1, 0, 0, .5f);
-    //    Gizmos.DrawCube(focusArea.centre, focusAreaSize);
-    //}
+    void OnDrawGizmos()
+    {
+        Gizmos.color = new Color(1, 0, 0, .5f);
+        Gizmos.DrawCube(focusArea.centre, focusAreaSize);
+    }
 
     public void OnEnable()
     {

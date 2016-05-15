@@ -10,7 +10,7 @@ public class Camara : MonoBehaviour
 
     void Update()
     {
-        if (GetComponent<CameraFollow>().target.transform.position.x > -0.57)
+        if (GetComponent<CameraFollow>().target.transform.position.x >-5)
         {
             GetComponent<CameraFollow>().enabled = true;
         }

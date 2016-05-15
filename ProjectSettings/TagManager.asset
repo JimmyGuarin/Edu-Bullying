@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Trampolin
   - PlataformasMov
+  - LluviaBloques
+  - PuntoPregunta
+  - PuntoRetro
+  - Coins
+  - Corazon
   layers:
   - Default
   - TransparentFX

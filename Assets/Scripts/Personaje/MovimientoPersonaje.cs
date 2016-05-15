@@ -25,7 +25,30 @@ public class MovimientoPersonaje : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		if (Input.GetKey (KeyCode.LeftArrow)) {
 
+			rb.velocity = new Vector2 (Input.GetAxis("Horizontal")*velocidad, rb.velocity.y);
+			rb.transform.localScale = new Vector3 (-0.25f,0.25f,1f);
+			if(tocaPiso)
+				anim.SetInteger ("Estado", 1);
+
+		}
+
+		if (Input.GetKey (KeyCode.RightArrow)) {
+
+
+			rb.velocity = new Vector2 (Input.GetAxis("Horizontal")*velocidad, rb.velocity.y);
+			rb.transform.localScale = new Vector3 (0.25f,0.25f,1f);
+			if(tocaPiso)
+				anim.SetInteger ("Estado", 1);
+		}
+
+		if (Input.GetKey(KeyCode.UpArrow)&&tocaPiso) {
+
+
+			rb.velocity = new Vector2 (rb.velocity.x,fuerzaSalto);
+			anim.SetInteger ("Estado", 2);
+		}
         
     }
 
@@ -34,28 +57,28 @@ public class MovimientoPersonaje : MonoBehaviour {
 		tocaPiso = Physics2D.OverlapCircle (validadorPiso.position, radioValidacion, capaPiso);
 		if(tocaPiso)
 			anim.SetInteger ("Estado", 0);
-
 	
-		if (Input.GetKey (KeyCode.LeftArrow)) {
 
-			rb.velocity = new Vector2 (-velocidad, rb.velocity.y);
-			rb.transform.localScale = new Vector3 (-0.25f,0.25f,1f);
-			anim.SetInteger ("Estado", 1);
+
+	}
+
+	void OnCollisionEnter2D(Collision2D collider){
+	
+		if (collider.transform.tag.Equals ("PlataformasMov")) {
 		
-		}
-	
-		if (Input.GetKey (KeyCode.RightArrow)) {
-
-			rb.velocity = new Vector2 (velocidad, rb.velocity.y);
-			rb.transform.localScale = new Vector3 (0.25f,0.25f,1f);
-			anim.SetInteger ("Estado", 1);
+			transform.parent = collider.transform;
 		}
 
-		if (Input.GetKey (KeyCode.UpArrow)&&tocaPiso) {
 
-			rb.velocity = new Vector2 (rb.velocity.x,fuerzaSalto);
-			anim.SetInteger ("Estado", 2);
+	}
+
+	void OnCollisionExit2D(Collision2D collider){
+
+		if (collider.transform.tag.Equals ("PlataformasMov")) {
+
+			transform.parent = null;
 		}
+
 
 	}
 }
