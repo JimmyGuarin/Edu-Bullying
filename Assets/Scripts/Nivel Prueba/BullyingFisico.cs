@@ -12,12 +12,12 @@ public class BullyingFisico : MonoBehaviour
         //Creando Motor de preguntas del Nivel--------------------------------------------
         miNivel = new Nivel();
 
-        PuntosRetro p1 = new PuntosRetro("El lider de Proyectos tiene un su nombre la letra Y, nosotros no programamos en Ruby.");
+        PuntosRetro p1 = new PuntosRetro("El Bullying Físico incluye agresiones físicas");
             p1.misPreguntas.Add(new Preguntas("Quien es el  Lider de Proyectos", "Yovanny", "Felipe", "Jimmy", "Viviana",true));
             p1.misPreguntas.Add(new Preguntas("¿Programo en Unity?", "Si", "No"));
             p1.Barajar();
 
-        PuntosRetro p2 = new PuntosRetro("Si quieres tener éxito necesitas mucha disciplina, valentía y empeño");
+		PuntosRetro p2 = new PuntosRetro("Aquí son muy comunes las acciones humillantes como bajar los pantalones");
             p2.misPreguntas.Add(new Preguntas("¿ Qué no necesita para tener éxito?", "Plata", "Valentía", "Disciplina", "Empeño", true));
             p2.misPreguntas.Add(new Preguntas("¿Necesitas Valentía para tener éxito ? ", "Si", "No"));
             p2.Barajar();
@@ -27,8 +27,8 @@ public class BullyingFisico : MonoBehaviour
 
 
         GameObject personaje = GameObject.FindGameObjectWithTag("Player");
-        personaje.GetComponent<ManejadorPreguntas>().misPuntosRetro = miNivel.puntosRetro;
-        personaje.GetComponent<ManejadorPreguntas>().Barajar();
+		GameObject.Find("ControladorNivel").GetComponent<ManejadorPreguntas>().misPuntosRetro = miNivel.puntosRetro;
+		GameObject.Find("ControladorNivel").GetComponent<ManejadorPreguntas>().Barajar();
 
         //Creando Sistema de conversación del nivel------------------------------------------------------------------------------------------
 
