@@ -4,19 +4,18 @@ using System.Collections;
 
 public class ManejadorPreguntas : MonoBehaviour
 {
-    
-    private PuntoPregunta PuntoDePregunta;
+	public static ManejadorPreguntas instanciaActiva;
+
+	[HideInInspector]
+    public PuntoPregunta PuntoDePregunta;
     public GameObject bombillas;
     public Image[] coloresBotones;
     public ArrayList misPuntosRetro;
-    public Slider BarraConocimiento;
-    public Text textoPuntajeTotal;
-    public static int puntajeTotal;
     public int puntajePuntoPregunta;
     // Use this for initialization
     void Start()
     {
-
+		instanciaActiva = this;
     }
 
     // Update is called once per frame
@@ -24,20 +23,7 @@ public class ManejadorPreguntas : MonoBehaviour
     {
         
     }
-
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag.Equals("PuntoPregunta"))
-        {
-            PuntoDePregunta = collision.GetComponent<PuntoPregunta>();
-        }
-    }
-
-    public void OnTriggerExit2D(Collider2D collision)
-    {
-            
-    }
-
+		
 
     public void VerificarRespuesta(Button boton)
     {
@@ -91,28 +77,15 @@ public class ManejadorPreguntas : MonoBehaviour
             misPuntosRetro[i] = misPuntosRetro[randomIndex];
             misPuntosRetro[randomIndex] = temp;
 
-            ControladorHUD.instance.aumentarPuntaje(40);
+           
         }
     }
 
     public void AumentarPuntaje()
     {
-        puntajeTotal += puntajePuntoPregunta;
-        textoPuntajeTotal.text = ""+puntajeTotal;
-        StartCoroutine("AumentarConocimiento");
+		ControladorHUD.instance.aumentarPuntaje (puntajePuntoPregunta,true);
     }
 
-    IEnumerator AumentarConocimiento()
-    {
-        int valor = puntajePuntoPregunta;
-
-        while (valor > 0)
-        {
-            BarraConocimiento.value += 1;
-            valor--;
-            yield return new WaitForSeconds(0.05f);
-        }
-        bombillas.SetActive(false);
-    }
+   
     
 }
