@@ -20,20 +20,23 @@ public class CameraFollow : MonoBehaviour
     float smoothVelocityY;
 
     bool lookAheadStopped;
+    public float posicionMinimaX;
 
     void Start()
     {
 
-
         focusArea = new FocusArea(target.collider.bounds, focusAreaSize);
+        
 
     }
 
     void LateUpdate()
     {
+        
 
-        if (target.transform.position.x >=-5)
+        if (target.transform.position.x>=posicionMinimaX)
         {
+
             focusArea.Update(target.collider.bounds);
 
             Vector2 focusPosition = focusArea.centre + Vector2.up * verticalOffset;
@@ -61,12 +64,18 @@ public class CameraFollow : MonoBehaviour
 
             focusPosition.y = Mathf.SmoothDamp(transform.position.y, focusPosition.y, ref smoothVelocityY, verticalSmoothTime);
             focusPosition += Vector2.right * currentLookAheadX;
-            transform.position = (Vector3)focusPosition + Vector3.forward * -10;
+
+            Vector3 auxiliar = (Vector3)focusPosition + Vector3.forward * -10;
+            if (auxiliar.y < 6.6)
+                auxiliar.Set(auxiliar.x, 6.6f, auxiliar.z);        
+            transform.position = auxiliar;
 
         }
         else
         {
+            
             GetComponent<Camara>().enabled = true;
+            
         }
 
 
@@ -81,6 +90,7 @@ public class CameraFollow : MonoBehaviour
     public void OnEnable()
     {
         GetComponent<Camara>().enabled = false;
+        focusArea = new FocusArea(target.collider.bounds, focusAreaSize);
     }
 
     struct FocusArea
@@ -100,6 +110,7 @@ public class CameraFollow : MonoBehaviour
 
             velocity = Vector2.zero;
             centre = new Vector2((left + right) / 2, (top + bottom) / 2);
+            
         }
 
         public void Update(Bounds targetBounds)
