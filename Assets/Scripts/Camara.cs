@@ -3,6 +3,13 @@ using System.Collections;
 
 public class Camara : MonoBehaviour
 {
+    private Transform posJugador;
+
+    public void Start()
+    {
+         posJugador = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
     public void OnEnable()
     {
         GetComponent<CameraFollow>().enabled = false;
@@ -10,8 +17,9 @@ public class Camara : MonoBehaviour
 
     void Update()
     {
-        if (GetComponent<CameraFollow>().target.transform.position.x >-5)
+        if (posJugador.transform.position.x >= transform.position.x)
         {
+
             GetComponent<CameraFollow>().enabled = true;
         }
     }
