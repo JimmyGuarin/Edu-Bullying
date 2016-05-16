@@ -5,10 +5,7 @@ using System.Collections;
 public class PuntoRetroalimentacion : MonoBehaviour
 {
 
-    public GameObject canvas;
-    
-	[HideInInspector]
-	public Text textoRetroalimentación;
+
 
 	[HideInInspector]
 	public string textoPunto;
@@ -20,9 +17,7 @@ public class PuntoRetroalimentacion : MonoBehaviour
     void Start()
     {
         
-        canvas.SetActive(false);
-        textoRetroalimentación = canvas.transform.FindChild("TextoRetro").GetComponent<Text>();
-        PuntosRetro pr=(PuntosRetro)GameObject.FindGameObjectWithTag("Player").GetComponent<ManejadorPreguntas>().misPuntosRetro[numeroRetroalimentacion];
+		PuntosRetro pr=(PuntosRetro)GameObject.Find("ControladorNivel").GetComponent<ManejadorPreguntas>().misPuntosRetro[numeroRetroalimentacion];
         textoPunto = pr.retroalimentacion;
     }
 		

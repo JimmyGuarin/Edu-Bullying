@@ -48,7 +48,7 @@ public class PuntoPregunta : MonoBehaviour
         misPreguntas = new ArrayList();
 
         PuntosRetro pR;
-        ManejadorPreguntas puntosRetroAlimentacion = GameObject.FindGameObjectWithTag("Player").GetComponent<ManejadorPreguntas>();
+		ManejadorPreguntas puntosRetroAlimentacion =GameObject.Find("ControladorNivel").GetComponent<ManejadorPreguntas>();
 
         for (int i = 0; i < puntosRetro.Length; i++)
         {
@@ -82,28 +82,20 @@ public class PuntoPregunta : MonoBehaviour
         }
     }
 
-    
-    
-    public void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.tag.Equals("Player"))
-        {
-            presionarFPanel.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = textoPresionaFPanel;
-            presionarFPanel.SetActive(true);
-            enColision = true;
-        }
-        
-    
-    }
+	public void activarPuntoPregunta(){
+	
+		presionarFPanel.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = textoPresionaFPanel;
+		presionarFPanel.SetActive(true);
+		enColision = true;
 
-    public void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag.Equals("Player"))
-        {
-            presionarFPanel.SetActive(false);
-            enColision = false;
-        }
-    }
+	}
+    
+	public void desactivarPuntoPregunta(){
+	
+		presionarFPanel.SetActive(false);
+		enColision = false;
+	}
+		
 
     public void Mostrar()
     {

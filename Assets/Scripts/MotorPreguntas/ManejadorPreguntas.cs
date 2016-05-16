@@ -4,8 +4,10 @@ using System.Collections;
 
 public class ManejadorPreguntas : MonoBehaviour
 {
-    
-    private PuntoPregunta PuntoDePregunta;
+	public static ManejadorPreguntas instanciaActiva;
+
+	[HideInInspector]
+    public PuntoPregunta PuntoDePregunta;
     public GameObject bombillas;
     public Image[] coloresBotones;
     public ArrayList misPuntosRetro;
@@ -13,7 +15,7 @@ public class ManejadorPreguntas : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+		instanciaActiva = this;
     }
 
     // Update is called once per frame
@@ -21,20 +23,7 @@ public class ManejadorPreguntas : MonoBehaviour
     {
         
     }
-
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag.Equals("PuntoPregunta"))
-        {
-            PuntoDePregunta = collision.GetComponent<PuntoPregunta>();
-        }
-    }
-
-    public void OnTriggerExit2D(Collider2D collision)
-    {
-            
-    }
-
+		
 
     public void VerificarRespuesta(Button boton)
     {
