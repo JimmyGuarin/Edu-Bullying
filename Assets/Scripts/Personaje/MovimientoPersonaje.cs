@@ -28,7 +28,7 @@ public class MovimientoPersonaje : MonoBehaviour {
 		if (Input.GetKey (KeyCode.LeftArrow)) {
 
 			rb.velocity = new Vector2 (Input.GetAxis("Horizontal")*velocidad, rb.velocity.y);
-			rb.transform.localScale = new Vector3 (-0.25f,0.25f,1f);
+			rb.transform.localScale = new Vector3 (-0.2f,0.2f,1f);
 			if(tocaPiso)
 				anim.SetInteger ("Estado", 1);
 
@@ -38,7 +38,7 @@ public class MovimientoPersonaje : MonoBehaviour {
 
 
 			rb.velocity = new Vector2 (Input.GetAxis("Horizontal")*velocidad, rb.velocity.y);
-			rb.transform.localScale = new Vector3 (0.25f,0.25f,1f);
+			rb.transform.localScale = new Vector3 (0.2f,0.2f,1f);
 			if(tocaPiso)
 				anim.SetInteger ("Estado", 1);
 		}

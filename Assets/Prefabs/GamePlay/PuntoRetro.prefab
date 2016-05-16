@@ -13,8 +13,8 @@ GameObject:
   - 114: {fileID: 11442412}
   m_Layer: 0
   m_Name: PuntoRetro
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: PuntoRetro
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -24,9 +24,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186724}
-  m_LocalRotation: {x: 0, y: 0, z: -0.39168736, w: 0.9200984}
-  m_LocalPosition: {x: 92.28, y: 4.9, z: 0}
-  m_LocalScale: {x: 0.30686465, y: 0.30686465, z: 0.30686465}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.020740509, y: 0.40150213, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -41,9 +41,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 1.2500306, y: 1.2500001}
+  m_Offset: {x: 0.0055618286, y: 0.03890276}
   serializedVersion: 2
-  m_Size: {x: 2.5000002, y: 2.5000002}
+  m_Size: {x: 1.5665121, y: 1.6109743}
 --- !u!114 &11442412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55,7 +55,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 940415f8bcb945d40a61eebbecae8886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
+  textoPunto: 
   numeroRetroalimentacion: 0
 --- !u!212 &21273770
 SpriteRenderer:
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1d0c184845252df44a655359de388cb8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cca99b03637aab4448923e4ec5cab8ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
