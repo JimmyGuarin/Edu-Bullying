@@ -49,7 +49,8 @@ public class ManejadorPreguntas : MonoBehaviour
         if (puntajePuntoPregunta>0)
         {
             PuntoDePregunta.AnimarObjetos();
-            bombillas.SetActive(true);
+            ControladorHUD.instance.aumentarPuntaje(puntajePuntoPregunta, true);
+            // bombillas.SetActive(true);
             Destroy(PuntoDePregunta);
             
         }
@@ -63,6 +64,7 @@ public class ManejadorPreguntas : MonoBehaviour
 
             b.color = Color.white;
             b.GetComponent<Button>().interactable = true;
+            b.transform.GetChild(0).GetComponent<Text>().color = Color.black;
         }
 
     }
@@ -81,10 +83,10 @@ public class ManejadorPreguntas : MonoBehaviour
         }
     }
 
-    public void AumentarPuntaje()
-    {
-		ControladorHUD.instance.aumentarPuntaje (puntajePuntoPregunta,true);
-    }
+  //  public void AumentPuntaje()
+  //  {
+		//ControladorHUD.instance.aumentarPuntaje (puntajePuntoPregunta,true);
+  //  }
 
    
     
