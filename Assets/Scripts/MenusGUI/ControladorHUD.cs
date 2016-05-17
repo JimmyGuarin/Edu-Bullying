@@ -9,7 +9,7 @@ public class ControladorHUD : MonoBehaviour {
 
     //Variables controladoras del HUD
     public static int puntajeTotal=0;
-    public static int numeroVidas=3;
+    public static int numeroVidas=4;
     public static int[] nivelesSuperados;
     public static int IndexPersonaje;
 
