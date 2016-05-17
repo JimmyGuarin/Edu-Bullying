@@ -60,7 +60,7 @@ public class ControladorHUD : MonoBehaviour {
         puntajeTotal += cantidad;
         textoPuntaje.text = "" + puntajeTotal;
 		if(conocimiento)
-			StartCoroutine(AumentarConocimiento((int)(cantidad/10)));
+			StartCoroutine(AumentarConocimiento((int)(cantidad)));
     }
 
     IEnumerator AumentarConocimiento(int valor)

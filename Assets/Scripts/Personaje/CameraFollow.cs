@@ -21,6 +21,7 @@ public class CameraFollow : MonoBehaviour
 
     bool lookAheadStopped;
     public float posicionMinimaX;
+    public float posicionMinimaAuxiliar;
 
     void Start()
     {
@@ -65,16 +66,17 @@ public class CameraFollow : MonoBehaviour
             focusPosition.y = Mathf.SmoothDamp(transform.position.y, focusPosition.y, ref smoothVelocityY, verticalSmoothTime);
             focusPosition += Vector2.right * currentLookAheadX;
 
-            Vector3 auxiliar = (Vector3)focusPosition + Vector3.forward * -10;
-            if (auxiliar.y < 6.6)
-                auxiliar.Set(auxiliar.x, 6.6f, auxiliar.z);        
+           // Vector3 auxiliar = (Vector3)focusPosition + Vector3.forward * -10+ Vector3.right*7;
+            Vector3 auxiliar = new Vector3(target.transform.position.x, focusPosition.y, 0) + Vector3.forward * -10 + Vector3.right * 7;
+            if (auxiliar.y < posicionMinimaAuxiliar)
+                auxiliar.Set(auxiliar.x, posicionMinimaAuxiliar, auxiliar.z);        
             transform.position = auxiliar;
 
         }
         else
         {
-            
-            GetComponent<Camara>().enabled = true;
+
+           // GetComponent<Camara>().enabled = true;
             
         }
 

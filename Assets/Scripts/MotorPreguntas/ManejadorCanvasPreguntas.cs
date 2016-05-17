@@ -5,8 +5,6 @@ using System.Collections;
 public class ManejadorCanvasPreguntas : MonoBehaviour {
 
 	public static ManejadorCanvasPreguntas instanciaActiva;
-
-	public GameObject canvasPuntoRetroalimentacion;
 	private Text textoRetroalimentacion;
 
 
@@ -27,7 +25,7 @@ public class ManejadorCanvasPreguntas : MonoBehaviour {
 	
 		instanciaActiva = this;
 
-		textoRetroalimentacion = canvasPuntoRetroalimentacion.transform.GetChild (1).GetComponent<Text> ();
+		
 	}
 	
 	// Update is called once per frame
@@ -35,15 +33,5 @@ public class ManejadorCanvasPreguntas : MonoBehaviour {
 	
 	}
 
-
-	public void MostrarPuntoInformacion(string texto){
-
-		textoRetroalimentacion.text = texto;
-		canvasPuntoRetroalimentacion.SetActive (true);
-	}
-
-	public void OcultarPuntoInformacion(){
 	
-		canvasPuntoRetroalimentacion.SetActive (false);
-	}
 }

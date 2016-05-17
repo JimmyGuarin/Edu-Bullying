@@ -15,6 +15,6 @@ public class bombilloPrueba : MonoBehaviour {
 
     public void Evento()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<ManejadorPreguntas>().AumentarPuntaje();
+        //GameObject.FindGameObjectWithTag("Player").GetComponent<ManejadorPreguntas>().AumentarPuntaje();
     }
 }
