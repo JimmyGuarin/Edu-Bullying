@@ -5,6 +5,10 @@ public class ControladorColisiones : MonoBehaviour {
 
 
 	public GameObject canvasRetroalimentacion;
+    public GameObject[] checkpoints;
+    public GameObject[] destructores;
+    private int indiceDestructor = -1;
+   
 
 	// Use this for initialization
 	void Start () {
@@ -44,6 +48,17 @@ public class ControladorColisiones : MonoBehaviour {
            
 		}
 
+        if (collision.tag.Equals("Destructor"))
+        {
+             indiceDestructor = compararObjeto(collision.gameObject);
+            if(indiceDestructor!= -1)
+            {
+                gameObject.SetActive(false);
+                ControladorHUD.instance.disminuirVida();
+                Invoke("reaparecerPersonaje", 2f);
+            } 
+        }
+
 	}
 
 	public void OnTriggerExit2D(Collider2D collision)
@@ -62,4 +77,23 @@ public class ControladorColisiones : MonoBehaviour {
                 
 		}
 	}
+
+    public int compararObjeto(GameObject obj)
+    {
+        for(int i=0; i < destructores.Length; i++)
+        {
+            if(obj == destructores[i])
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public void reaparecerPersonaje()
+    {
+        gameObject.transform.position = checkpoints[indiceDestructor].transform.position;
+        gameObject.SetActive(true);
+       
+    }
 }

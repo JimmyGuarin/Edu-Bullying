@@ -2483,7 +2483,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.1230283
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2536,6 +2536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c7641fadb364d4cbadc352513b3c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paredIzquierda: {fileID: 0}
 --- !u!114 &414424093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2554,6 +2555,7 @@ MonoBehaviour:
   verticalSmoothTime: 0
   focusAreaSize: {x: 3.7, y: 14.59}
   posicionMinimaX: -15
+  posicionMinimaAuxiliar: 0
 --- !u!1 &417909037
 GameObject:
   m_ObjectHideFlags: 0
@@ -3565,27 +3567,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22431902, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 443
       objectReference: {fileID: 0}
     - target: {fileID: 22431902, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 101
       objectReference: {fileID: 0}
     - target: {fileID: 22459904, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 138
       objectReference: {fileID: 0}
     - target: {fileID: 22459904, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 136
       objectReference: {fileID: 0}
     - target: {fileID: 22477224, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 595
       objectReference: {fileID: 0}
     - target: {fileID: 22477224, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 226
       objectReference: {fileID: 0}
     - target: {fileID: 170920, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_IsActive
