@@ -13,6 +13,9 @@ public class GuiManager : MonoBehaviour {
     public GameObject imagenCarga;
     AsyncOperation async;
 
+    public GameObject bottonCambiarEscena;
+    public GameObject textoCargando;
+
     void Awake(){
 
         if (indexPersonaje != 0)
@@ -49,16 +52,28 @@ public class GuiManager : MonoBehaviour {
     public void Jugar()
     {
         ControladorHUD.IndexPersonaje = indexPersonaje-1;
-        //imagenCarga.SetActive(true);
+        imagenCarga.SetActive(true);
         StartCoroutine("load");
     }
 
-    IEnumerator load() {
+    IEnumerator load()
+    {
+        Debug.LogWarning("ASYNC LOAD STARTED - " +
+           "DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH");
+        async = SceneManager.LoadSceneAsync(1);
 
-        AsyncOperation async = SceneManager.LoadSceneAsync(1);
-        
+
+
+        async.allowSceneActivation = false;
+        textoCargando.SetActive(false);
+        bottonCambiarEscena.SetActive(true);
+
         yield return async;
-        Debug.Log("Loading complete");
     }
-   
+
+    public void ActivateScene()
+    {
+        async.allowSceneActivation = true;
+    }
+
 }
