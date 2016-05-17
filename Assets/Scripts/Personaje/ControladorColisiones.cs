@@ -14,9 +14,9 @@ public class ControladorColisiones : MonoBehaviour {
 	public void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.tag.Equals ("PuntoRetro")) {
-			
-			ManejadorCanvasPreguntas.instanciaActiva.MostrarPuntoInformacion(
-				collision.GetComponent<PuntoRetroalimentacion> ().textoPunto);
+
+
+            collision.GetComponent<PuntoRetroalimentacion>().MostrarPuntoRetro();
 		}
 
 
@@ -36,8 +36,12 @@ public class ControladorColisiones : MonoBehaviour {
 
 		if (collision.tag.Equals ("PuntoPregunta")) {
 
-			collision.GetComponent<PuntoPregunta> ().activarPuntoPregunta ();
-			ManejadorPreguntas.instanciaActiva.PuntoDePregunta = collision.GetComponent<PuntoPregunta>();
+            if (collision.GetComponent<PuntoPregunta>() != null) {
+
+                collision.GetComponent<PuntoPregunta>().activarPuntoPregunta();
+                ManejadorPreguntas.instanciaActiva.PuntoDePregunta = collision.GetComponent<PuntoPregunta>();
+            }
+           
 		}
 
 	}
@@ -46,12 +50,16 @@ public class ControladorColisiones : MonoBehaviour {
 	{
 		if (collision.tag.Equals ("PuntoRetro")) {
 
-			ManejadorCanvasPreguntas.instanciaActiva.OcultarPuntoInformacion ();
-		}
+            collision.GetComponent<PuntoRetroalimentacion>().OcultarPuntoRetro();
+        }
 
 		if (collision.tag.Equals ("PuntoPregunta")) {
 
-			collision.GetComponent<PuntoPregunta> ().desactivarPuntoPregunta();
+            if (collision.GetComponent<PuntoPregunta>() != null){
+
+                collision.GetComponent<PuntoPregunta>().desactivarPuntoPregunta();
+            }
+                
 		}
 	}
 }

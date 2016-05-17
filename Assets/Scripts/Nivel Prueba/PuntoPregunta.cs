@@ -33,9 +33,7 @@ public class PuntoPregunta : MonoBehaviour
     public Text textoPuntajeDual;
     public Text textoRetroAlimentacionDual;
 
-    [Tooltip("Ingrese aquí el texto a mostrar en el presiona F.")]
-    public string textoPresionaFPanel;
-    public GameObject presionarFPanel;
+    public GameObject canvasHijo;
     
 
     public bool enColision;
@@ -74,7 +72,7 @@ public class PuntoPregunta : MonoBehaviour
             if (Input.GetKeyDown("f"))
             {
                 Time.timeScale = 0;
-                presionarFPanel.SetActive(false);
+                canvasHijo.SetActive(false);
                 Mostrar();
                 GetComponent<Collider2D>().enabled = false;
                 enColision = false;
@@ -83,17 +81,16 @@ public class PuntoPregunta : MonoBehaviour
     }
 
 	public void activarPuntoPregunta(){
-	
-		presionarFPanel.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = textoPresionaFPanel;
-		presionarFPanel.SetActive(true);
-		enColision = true;
+
+        canvasHijo.SetActive(true);
+        enColision = true;
 
 	}
     
 	public void desactivarPuntoPregunta(){
-	
-		presionarFPanel.SetActive(false);
-		enColision = false;
+
+        canvasHijo.SetActive(false);
+        enColision = false;
 	}
 		
 
@@ -130,46 +127,36 @@ public class PuntoPregunta : MonoBehaviour
     //0 Si la respuesta es erronea
     public int VerificarRespuesta(Button botonPrecionado)
     {
-        //Verde bien, rojo mal
-        Color colorRespuesta;
+        botonPrecionado.transform.GetChild(0).GetComponent<Text>().color = Color.white;
 
         if (preguntaActual.EsCorrecta(botonPrecionado.transform.GetChild(0).GetComponent<Text>().text))
         {
 
             botonPrecionado.GetComponent<Image>().color = Color.green;
-            textoRetroAlimentacionMultiple.text = "Has respondido Correctamente ésta pregunta";
-            textoRetroAlimentacionDual.text = "Has respondido Correctamente ésta pregunta";
+            textoRetroAlimentacionMultiple.text= "Respuesta Correcta:    <size=60><color=green>" + RespuestaCorrecta(preguntaActual.IndexCorreta()) + "</color></size>";
+            textoRetroAlimentacionDual.text= "Respuesta Correcta:    <size=60><color=green>" + RespuestaCorrecta(preguntaActual.IndexCorreta()) + "</color></size>";
 
         }
         else
         {
             botonPrecionado.GetComponent<Image>().color = Color.red;
-            respuestas[preguntaActual.IndexCorreta()].GetComponent<Image>().color = Color.green;
             puntajePregunta=0;
-            textoRetroAlimentacionMultiple.text = "Respuesta Erronea";
-            textoRetroAlimentacionDual.text = "Respuesta Erronea";
-
-
+            textoRetroAlimentacionMultiple.text = "Respuesta Correcta:    <size=60><color=green>" + RespuestaCorrecta(preguntaActual.IndexCorreta()) + "</color></size>";
+            textoRetroAlimentacionDual.text = "Respuesta Correcta:    <size=60><color=green>" + RespuestaCorrecta(preguntaActual.IndexCorreta()) + "</color></size>";
         }
-
-        colorRespuesta = botonPrecionado.GetComponent<Image>().color;
 
         if (preguntaActual.IsMultiple){
 
-            textoPuntajeMultiple.text = "Puntaje Obtenido: " + puntajePregunta;       
+            textoPuntajeMultiple.text = "Puntaje Obtenido:    <size=60><color=green>" +puntajePregunta+ "</color></size>";
             textoPuntajeMultiple.transform.parent.gameObject.SetActive(true);
-            textoPuntajeMultiple.transform.parent.gameObject.GetComponent<Image>().color = colorRespuesta;
             textoRetroAlimentacionMultiple.transform.parent.gameObject.SetActive(true);
-            textoRetroAlimentacionMultiple.transform.parent.gameObject.GetComponent<Image>().color = colorRespuesta;
             botonCerrarMultiple.SetActive(true);
         }
         else
         {
-            textoPuntajeDual.text = "Puntaje Obtenido: " + puntajePregunta;
+            textoPuntajeDual.text = "Puntaje Obtenido:    <size=60><color=green>" + puntajePregunta + "</color></size>";
             textoPuntajeDual.transform.parent.gameObject.SetActive(true);
-            textoPuntajeDual.transform.parent.gameObject.GetComponent<Image>().color = colorRespuesta;
             textoRetroAlimentacionDual.transform.parent.gameObject.SetActive(true);
-            textoRetroAlimentacionDual.transform.parent.gameObject.GetComponent<Image>().color = colorRespuesta;
             botonCerrarDual.SetActive(true);
 
         }
@@ -196,5 +183,23 @@ public class PuntoPregunta : MonoBehaviour
         Button b=GetComponent<Button>();
         b.onClick.RemoveAllListeners();
         b.onClick.AddListener(() => { AnimarObjetos(); });
+    }
+
+    public char RespuestaCorrecta(int index)
+    {
+        switch (index)
+        {
+            case 0:
+                return 'A';
+            case 1:
+                return 'B';
+            case 2:
+                return 'C';
+            case 3:
+                return 'D';
+
+        }
+        return 'E';
+
     }
 }
