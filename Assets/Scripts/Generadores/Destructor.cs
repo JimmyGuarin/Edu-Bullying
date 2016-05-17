@@ -4,6 +4,7 @@ using System.Collections;
 public class Destructor : MonoBehaviour
 {
 
+    public LayerMask mascara;
     // Use this for initialization
     void Start()
     {
@@ -16,14 +17,10 @@ public class Destructor : MonoBehaviour
 
     }
 
-    
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        //Debug.Log("hay Colosion");
-        if (collision.gameObject.tag.Equals(gameObject.tag))
-        {
-            Destroy(collision.gameObject);
-        }
-        
+        Destroy(gameObject);
     }
+
+    
 }
