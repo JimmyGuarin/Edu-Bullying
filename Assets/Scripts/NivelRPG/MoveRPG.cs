@@ -1,53 +1,79 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class MoveRPG : MonoBehaviour {
+public class MoveRPG : MonoBehaviour
+{
 
 
     // Normal Movements Variables
     private float walkSpeed;
     private float curSpeed;
-    private float maxSpeed;
-
-  //  private CharacterStat plStat;
+    private GameObject canvasNiveles;
+    private bool enColision;
+    public string nombreNivel;
 
     void Start()
     {
-    //    plStat = GetComponent<CharacterStat>();
 
-        walkSpeed = (float)(2);
-        //sprintSpeed = walkSpeed + (walkSpeed / 2);
+        nombreNivel = "";
+        enColision = false;
+       canvasNiveles= GameObject.Find("Canvas");
+        curSpeed = (float)(2);
 
+
+    }
+
+    public void Update()
+    {
+        if (enColision && Input.GetKeyDown("f"))
+        {
+            SceneManager.LoadSceneAsync(nombreNivel);
+        }
     }
 
     void FixedUpdate()
     {
-        curSpeed = walkSpeed;
-        maxSpeed = curSpeed;
 
-        // Move senteces
-      
-
-
-        if (Input.GetAxis("Horizontal") != 0&& Input.GetAxis("Vertical") == 0)
+        if (Input.GetAxisRaw("Horizontal") != 0 && Input.GetAxisRaw("Vertical") == 0)
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Lerp(0, Input.GetAxis("Horizontal") * curSpeed, 1), 0);
+
+
+            GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Lerp(0, Input.GetAxisRaw("Horizontal") * curSpeed, 1), 0);
         }
-        if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") != 0)
+        if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") != 0)
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0,Mathf.Lerp(0, Input.GetAxis("Vertical") * curSpeed, 1));
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, Mathf.Lerp(0, Input.GetAxisRaw("Vertical") * curSpeed, 1));
         }
 
-        if ( (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0)|| (Input.GetAxis("Horizontal") != 0 && Input.GetAxis("Vertical") != 0))
+        if ((Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0) || (Input.GetAxisRaw("Horizontal") != 0 && Input.GetAxisRaw("Vertical") != 0))
         {
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
+    }
 
-        if ((Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0) || (Input.GetAxis("Horizontal") != 0 && Input.GetAxis("Vertical") != 0))
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.name.Equals("Patio"))
         {
-            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-
+            enColision = true;
         }
 
+        if (enColision)
+        {
+            nombreNivel = collision.name;
+            canvasNiveles.transform.FindChild(nombreNivel).gameObject.SetActive(true);          
+        }
+           
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (enColision)
+        {
+            enColision = false;
+            canvasNiveles.transform.FindChild(collision.name).gameObject.SetActive(false);
+        }
+       
     }
 }

@@ -39,23 +39,28 @@ public class ControladorHUD : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        //if (!SceneManager.GetActiveScene().name.Equals("pasillo")){
-        //    canvasHud.SetActive(false);
-        //    canvasHudPlay.SetActive(true);
-        //    foreach(Image bombilla in bombillas){
+        if (!SceneManager.GetActiveScene().name.Equals("Corredor"))
+        {
+            canvasHud.SetActive(false);
+            canvasHudPlay.SetActive(true);
+            foreach (Image bombilla in bombillas)
+            {
 
-        //        bombilla.color = colorBombillaApagada;
-        //        BarraConocimiento.value = 0;
-        //    }
-        //}
+                bombilla.color = colorBombillaApagada;
+                BarraConocimiento.value = 0;
+            }
+        }
 
-       // disminuirVida();
-        //aumentarPuntaje(1000);
-       
-	}
-	
+        else
+        {
+            canvasHud.SetActive(true);
+            canvasHudPlay.SetActive(false);
+        }
 
-	public  void aumentarPuntaje(int cantidad,bool conocimiento) {
+    }
+
+
+    public  void aumentarPuntaje(int cantidad,bool conocimiento) {
 
         puntajeTotal += cantidad;
         textoPuntaje.text = "" + puntajeTotal;
