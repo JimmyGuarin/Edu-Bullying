@@ -77,9 +77,6 @@ public class MovimientoPersonaje : MonoBehaviour {
             }
                
         }
-
-       
-
     }
 
     
