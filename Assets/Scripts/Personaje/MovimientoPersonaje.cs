@@ -11,64 +11,87 @@ public class MovimientoPersonaje : MonoBehaviour {
 	public LayerMask capaPiso;
 	public float radioValidacion;
 	public Transform validadorPiso;
-
+    public float escala=0.2f;
 
     // Use this for initialization
     void Start () {
 
-
+        tocaPiso = true;
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 		anim.SetInteger ("Estado", 0);
     }
-	
-	// Update is called once per frame
-	void Update () {
 
-		if (Input.GetKey (KeyCode.LeftArrow)) {
+    void FixedUpdate()
+    {
 
-			rb.velocity = new Vector2 (Input.GetAxis("Horizontal")*velocidad, rb.velocity.y);
-			rb.transform.localScale = new Vector3 (-0.2f,0.2f,1f);
-			if(tocaPiso)
-				anim.SetInteger ("Estado", 1);
-
-		}
-
-		if (Input.GetKey (KeyCode.RightArrow)) {
+        tocaPiso = Physics2D.OverlapCircle(validadorPiso.position, radioValidacion, capaPiso);
 
 
-			rb.velocity = new Vector2 (Input.GetAxis("Horizontal")*velocidad, rb.velocity.y);
-			rb.transform.localScale = new Vector3 (0.2f,0.2f,1f);
-			if(tocaPiso)
-				anim.SetInteger ("Estado", 1);
-		}
+        if (tocaPiso == false && rb.velocity.y == 0)
+        {
+            tocaPiso = true;
+        }
 
-		if (Input.GetKey(KeyCode.UpArrow)&&tocaPiso) {
-
-
-			rb.velocity = new Vector2 (rb.velocity.x,fuerzaSalto);
-			anim.SetInteger ("Estado", 2);
-		}
-        
     }
 
-	void FixedUpdate(){
+    // Update is called once per frame
+    void Update () {
 
-		tocaPiso = Physics2D.OverlapCircle (validadorPiso.position, radioValidacion, capaPiso);
-		if(tocaPiso)
-			anim.SetInteger ("Estado", 0);
-	
+        if (tocaPiso)
+        {
+            anim.SetInteger("Estado", 0);
+        }
+
+    
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * velocidad, rb.velocity.y);
+            rb.transform.localScale = new Vector3(-escala, escala, 1f);
+            if (tocaPiso)
+                anim.SetInteger("Estado", 1);
+
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
 
 
-	}
+            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * velocidad, rb.velocity.y);
+            rb.transform.localScale = new Vector3(escala, escala, 1f);
+            if (tocaPiso)
+                anim.SetInteger("Estado", 1);
+        }
 
-	void OnCollisionEnter2D(Collision2D collider){
+        if (Input.GetKey(KeyCode.UpArrow)&&tocaPiso)
+        {
+                
+                if(anim.GetInteger("Estado")==2)
+                    anim.enabled = false;
+                else {
+                    anim.enabled = true;
+                    anim.SetInteger("Estado", 2);
+                    rb.velocity = new Vector2(rb.velocity.x, fuerzaSalto);
+                    tocaPiso = false;
+            }
+               
+        }
+
+       
+
+    }
+
+    
+
+    void OnCollisionEnter2D(Collision2D collider){
 	
 		if (collider.transform.tag.Equals ("PlataformasMov")) {
 		
 			transform.parent = collider.transform;
+       
 		}
-
+     
 
 	}
 
@@ -79,6 +102,6 @@ public class MovimientoPersonaje : MonoBehaviour {
 			transform.parent = null;
 		}
 
-
-	}
+       
+    }
 }

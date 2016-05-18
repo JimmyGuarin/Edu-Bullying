@@ -28,7 +28,10 @@ public class MoveRPG : MonoBehaviour
     {
         if (enColision && Input.GetKeyDown("f"))
         {
+           
+            ControladorHUD.instance.cargarCanvarJugable();
             SceneManager.LoadSceneAsync(nombreNivel);
+           
         }
     }
 
