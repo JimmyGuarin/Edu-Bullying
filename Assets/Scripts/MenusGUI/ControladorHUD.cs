@@ -29,34 +29,31 @@ public class ControladorHUD : MonoBehaviour {
     public Color colorBombillaApagada;
     public Color colorBombillaEncendida;
 
+    private static Vector3 posicionPlayer;
+
     void Awake(){
 
-        instance = this;
-        DontDestroyOnLoad(this);
-        personajes[IndexPersonaje].SetActive(true);
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+            personajes[IndexPersonaje].SetActive(true);
+        }
+        else
+        {
+            if (instance != this)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     // Use this for initialization
     void Start () {
 
-        if (!SceneManager.GetActiveScene().name.Equals("Corredor"))
-        {
-            canvasHud.SetActive(false);
-            canvasHudPlay.SetActive(true);
-            foreach (Image bombilla in bombillas)
-            {
-
-                bombilla.color = colorBombillaApagada;
-                BarraConocimiento.value = 0;
-            }
-        }
-
-        else
-        {
-            canvasHud.SetActive(true);
-            canvasHudPlay.SetActive(false);
-        }
-
+        
+     
+    
     }
 
 
@@ -120,9 +117,30 @@ public class ControladorHUD : MonoBehaviour {
 
     public  void aumentarVida()
     {
-        corazones[numeroVidas].color = colorBombillaEncendida;
-        numeroVidas++;
+        if (numeroVidas < 4)
+        {
+            corazones[numeroVidas].color = colorBombillaEncendida;
+            numeroVidas++;
+        }
+
+        
     }
 
-    
+    public void cargarCanvarJugable()
+    {
+        canvasHud.SetActive(false);
+        canvasHudPlay.SetActive(true);
+        foreach (Image bombilla in bombillas)
+        {
+
+            bombilla.color = colorBombillaApagada;
+            BarraConocimiento.value = 0;
+        }
+    }
+
+    public void cargarCanvasCorredor()
+    {
+        canvasHud.SetActive(true);
+        canvasHudPlay.SetActive(false);
+    }
 }
