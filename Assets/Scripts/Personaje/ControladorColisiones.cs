@@ -59,6 +59,13 @@ public class ControladorColisiones : MonoBehaviour {
             } 
         }
 
+        if (collision.name.Equals("Profesora"))
+        {
+           
+            collision.GetComponent<Animator>().SetBool("Correr", true);
+            collision.GetComponent<MoveOnPath>().enabled = true;
+            collision.enabled = false;
+        }
 	}
 
 	public void OnTriggerExit2D(Collider2D collision)

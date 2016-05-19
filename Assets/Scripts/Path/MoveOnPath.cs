@@ -34,7 +34,10 @@ public class MoveOnPath : MonoBehaviour {
         }
         if(currentWayPointID >= pathToFollow.path_objs.Count)
         {
+            GetComponent<Animator>().SetBool("Correr", false);
             currentWayPointID = 0;
+            this.enabled = false;
+            
         }
         
 	}

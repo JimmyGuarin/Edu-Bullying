@@ -6,6 +6,8 @@ public class ManejadorPreguntas : MonoBehaviour
 {
 	public static ManejadorPreguntas instanciaActiva;
 
+    public RuntimeAnimatorController[] controladoresAnimaciones;
+
 	[HideInInspector]
     public PuntoPregunta PuntoDePregunta;
     public GameObject bombillas;
@@ -15,7 +17,8 @@ public class ManejadorPreguntas : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-		instanciaActiva = this;
+        instanciaActiva = this; 
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().runtimeAnimatorController=controladoresAnimaciones[ControladorHUD.IndexPersonaje];
     }
 
     // Update is called once per frame
