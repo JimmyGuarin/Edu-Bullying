@@ -2742,6 +2742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c7641fadb364d4cbadc352513b3c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paredIzquierda: {fileID: 0}
 --- !u!114 &553530959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7738,7 +7739,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2053427250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7981,6 +7982,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7eabd84d7d2d7d4394570fdd923c10f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controladoresAnimaciones: []
+  PuntoDePregunta: {fileID: 0}
   bombillas: {fileID: 640097245}
   coloresBotones:
   - {fileID: 178938679}
