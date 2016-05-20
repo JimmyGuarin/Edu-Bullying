@@ -67,7 +67,7 @@ public class ControladorHUD : MonoBehaviour {
 
     IEnumerator AumentarConocimiento(int valor)
     {
-        
+
 
         while (valor > 0)
         {
@@ -91,13 +91,9 @@ public class ControladorHUD : MonoBehaviour {
             {
                 bombillas[0].color = colorBombillaEncendida;
             }
-                
 
-            
             yield return new WaitForSeconds(0.05f);
-        }
-        Debug.Log("Listo");
-      
+        }      
     }
 
 
