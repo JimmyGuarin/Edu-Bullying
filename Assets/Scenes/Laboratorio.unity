@@ -283,12 +283,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e8e5c57855faf7429b8548cb347cd6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imagenProfesora: {fileID: 0}
-  imagenVillano: {fileID: 0}
-  canvasPlayerNpc: {fileID: 0}
-  personajePlayerNpc: {fileID: 0}
+  imagenesVillano: []
   textoPlayerNpc: {fileID: 0}
   botonesNpc: []
+  SliderVillano: {fileID: 0}
+  imagenActualVillano: {fileID: 0}
 --- !u!212 &45441195
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2282,6 +2281,34 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &69237639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1615835780}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 69237640}
+  - 114: {fileID: 1263876397}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &69237640
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1615835780}
+  m_GameObject: {fileID: 69237639}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 984347889}
+  m_RootOrder: 0
 --- !u!1001 &69918467
 Prefab:
   m_ObjectHideFlags: 0
@@ -3795,12 +3822,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e8e5c57855faf7429b8548cb347cd6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imagenProfesora: {fileID: 0}
-  imagenVillano: {fileID: 0}
-  canvasPlayerNpc: {fileID: 0}
-  personajePlayerNpc: {fileID: 0}
+  imagenesVillano: []
   textoPlayerNpc: {fileID: 0}
   botonesNpc: []
+  SliderVillano: {fileID: 0}
+  imagenActualVillano: {fileID: 0}
 --- !u!212 &342648583
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9431,6 +9457,34 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 486610, guid: 0b4e35e9a64faad4ca7e27067d5987c2, type: 2}
   m_PrefabInternal: {fileID: 980285090}
+--- !u!1 &984347888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1615835780}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 984347889}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &984347889
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1615835780}
+  m_GameObject: {fileID: 984347888}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 69237640}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
 --- !u!1001 &999652906
 Prefab:
   m_ObjectHideFlags: 0
@@ -12585,6 +12639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7eabd84d7d2d7d4394570fdd923c10f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controladoresAnimaciones: []
   PuntoDePregunta: {fileID: 0}
   bombillas: {fileID: 0}
   coloresBotones:
@@ -13442,12 +13497,27 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 490024, guid: b2a8d107f3f5e0e4191a16baeddddfce, type: 2}
   m_PrefabInternal: {fileID: 1263535653}
---- !u!114 &1263876397 stripped
+--- !u!114 &1263876397
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11409160, guid: 7e6e648884eff564eae8d5dac8aed2fd,
     type: 2}
   m_PrefabInternal: {fileID: 1615835780}
+  m_GameObject: {fileID: 69237639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64ab51d7f2eebe14eba2e0fa1c052bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 0
+  horizontalRayCount: 4
+  verticalRayCount: 4
+  horizontalRaySpacing: 0
+  verticalRaySpacing: 0
+  collider: {fileID: 0}
+  playerInput: {x: 0, y: 0}
 --- !u!4 &1264775195 stripped
 Transform:
   m_PrefabParentObject: {fileID: 480584, guid: 798c68740e15f184ab4927c46a3be88b, type: 2}
@@ -19446,7 +19516,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 170920, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}

@@ -16125,27 +16125,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22477224, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 595
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22477224, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 226
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22431902, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 443
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22431902, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 101
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22459904, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 138
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22459904, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 136
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 170920, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_IsActive
