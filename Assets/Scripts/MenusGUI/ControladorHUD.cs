@@ -33,11 +33,13 @@ public class ControladorHUD : MonoBehaviour {
 
     void Awake(){
 
+       
+
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(this.gameObject);
-            personajes[IndexPersonaje].SetActive(true);
+
         }
         else
         {
@@ -51,9 +53,13 @@ public class ControladorHUD : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        
-     
-    
+        Debug.Log(personajes.Length);
+        Debug.Log(IndexPersonaje);
+
+        personajes[IndexPersonaje].SetActive(true);
+
+        Debug.Log("Entra");
+
     }
 
 

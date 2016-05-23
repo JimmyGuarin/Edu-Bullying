@@ -34,8 +34,18 @@ public class GuiManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+
+     
+
+        if (async != null && async.progress>=0.9f)
+        {
+         
+            textoCargando.SetActive(false);
+            bottonCambiarEscena.SetActive(true);
+
+        }
+
+    }
 
 
 
@@ -51,7 +61,7 @@ public class GuiManager : MonoBehaviour {
 
     public void Jugar()
     {
-        ControladorHUD.IndexPersonaje = indexPersonaje-1;
+        
         imagenCarga.SetActive(true);
         StartCoroutine("load");
     }
@@ -61,19 +71,16 @@ public class GuiManager : MonoBehaviour {
         Debug.LogWarning("ASYNC LOAD STARTED - " +
            "DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH");
         async = SceneManager.LoadSceneAsync(1);
-
-
-
         async.allowSceneActivation = false;
-        textoCargando.SetActive(false);
-        bottonCambiarEscena.SetActive(true);
-
+        textoCargando.SetActive(true);
         yield return async;
     }
 
     public void ActivateScene()
     {
+        ControladorHUD.IndexPersonaje = indexPersonaje - 1;
         async.allowSceneActivation = true;
+        
     }
 
 }

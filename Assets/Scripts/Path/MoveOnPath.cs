@@ -20,7 +20,8 @@ public class MoveOnPath : MonoBehaviour {
 
         //pathToFollow = GameObject.Find(pathName).GetComponent<EditorPath>();
         last_position = transform.position;
-
+        current_position = last_position;
+        
 	}
 	
 	// Update is called once per frame
@@ -34,11 +35,22 @@ public class MoveOnPath : MonoBehaviour {
         }
         if(currentWayPointID >= pathToFollow.path_objs.Count)
         {
+
             GetComponent<Animator>().SetBool("Correr", false);
             currentWayPointID = 0;
             this.enabled = false;
-            
+            GetComponent<Collider2D>().enabled = false;
         }
         
 	}
+
+    public void Reset()
+    {
+        currentWayPointID = 0;
+        transform.position = current_position;
+        last_position = transform.position;
+        GetComponent<Animator>().SetBool("Correr", false);
+        GetComponent<Collider2D>().enabled = true;
+        this.enabled = false;
+    }
 }

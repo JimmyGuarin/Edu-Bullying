@@ -26,7 +26,7 @@ public class BullyingFisico : MonoBehaviour
         miNivel.puntosRetro.Add(p2);
 
 
-        GameObject personaje = GameObject.FindGameObjectWithTag("Player");
+
 		GameObject.Find("ControladorNivel").GetComponent<ManejadorPreguntas>().misPuntosRetro = miNivel.puntosRetro;
 		GameObject.Find("ControladorNivel").GetComponent<ManejadorPreguntas>().Barajar();
 

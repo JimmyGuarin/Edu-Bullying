@@ -5,10 +5,10 @@ using UnityEngine.UI;
 public class Enemigo : MonoBehaviour
 {
 
-    public GameObject presionarFPanel;
+
     public GameObject canvasConversacion;
-    public MaquinaEstadosConver mq;
-    public bool enColision;
+    private bool enColision;
+    public MovimientoPersonaje mp;
 
     // Use this for initialization
     void Start()
@@ -27,28 +27,27 @@ public class Enemigo : MonoBehaviour
 
             if (Input.GetKeyDown("f"))
             {
-                Time.timeScale = 0;
-                presionarFPanel.SetActive(false);
+                mp.enabled = false;
+               transform.GetChild(0).gameObject.SetActive(false);
                 canvasConversacion.SetActive(true);
-                mq.Moldear();
                 GetComponent<Collider2D>().enabled = false;
                 enColision = false;
+
+               
             }
         }
     }
 
-    public void OnCollisionStay2D(Collision2D collision)
+    public void OnTriggerExit2D(Collider2D collision)
     {
-
-        presionarFPanel.transform.GetChild(0).GetChild(0).GetComponent<Text>().text ="Para hablar con "+gameObject.name+" y convencerlo"+
-            "de dejar el Bullying presiona F";
-        presionarFPanel.SetActive(true);
-        enColision = true;
+        transform.GetChild(0).gameObject.SetActive(false);
+        enColision = false;
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerStay2D(Collider2D collision)
     {
-        presionarFPanel.SetActive(false);
-        enColision = false;
+
+        transform.GetChild(0).gameObject.SetActive(true);
+        enColision = true;
     }
 }

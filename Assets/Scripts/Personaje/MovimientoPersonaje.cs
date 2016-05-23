@@ -24,14 +24,9 @@ public class MovimientoPersonaje : MonoBehaviour {
 
     void FixedUpdate()
     {
-
+        
         tocaPiso = Physics2D.OverlapCircle(validadorPiso.position, radioValidacion, capaPiso);
 
-
-        if (tocaPiso == false && rb.velocity.y == 0)
-        {
-            tocaPiso = true;
-        }
 
     }
 
@@ -43,6 +38,7 @@ public class MovimientoPersonaje : MonoBehaviour {
             anim.SetInteger("Estado", 0);
         }
 
+       
     
 
         if (Input.GetKey(KeyCode.LeftArrow))
@@ -63,36 +59,46 @@ public class MovimientoPersonaje : MonoBehaviour {
             if (tocaPiso)
                 anim.SetInteger("Estado", 1);
         }
-
-        if (Input.GetKey(KeyCode.UpArrow)&&tocaPiso)
+        
+        if (Input.GetKey(KeyCode.UpArrow)&&(tocaPiso))
         {
                 
-                if(anim.GetInteger("Estado")==2)
+              
                     anim.enabled = false;
-                else {
                     anim.enabled = true;
                     anim.SetInteger("Estado", 2);
-                    rb.velocity = new Vector2(rb.velocity.x, fuerzaSalto);
+                    if(tocaPiso)
+                        rb.velocity = new Vector2(rb.velocity.x,fuerzaSalto);
                     tocaPiso = false;
-            }
+            
                
         }
+
+  
     }
 
     
 
     void OnCollisionEnter2D(Collision2D collider){
-	
+
+
+        
+
 		if (collider.transform.tag.Equals ("PlataformasMov")) {
 		
 			transform.parent = collider.transform;
        
 		}
-     
 
-	}
+       
 
-	void OnCollisionExit2D(Collision2D collider){
+
+    }
+
+   
+
+
+        void OnCollisionExit2D(Collision2D collider){
 
 		if (collider.transform.tag.Equals ("PlataformasMov")) {
 
@@ -100,5 +106,6 @@ public class MovimientoPersonaje : MonoBehaviour {
 		}
 
        
+
     }
 }
