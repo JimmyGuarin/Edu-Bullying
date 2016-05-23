@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
@@ -12,6 +13,12 @@ public class MoveRPG : MonoBehaviour
     private GameObject canvasNiveles;
     private bool enColision;
     public string nombreNivel;
+
+    public GameObject canvasInfografias;
+    public GameObject textoCargando;
+    public GameObject ButtonComenzar;
+
+    private AsyncOperation async;
 
     void Start()
     {
@@ -28,11 +35,23 @@ public class MoveRPG : MonoBehaviour
     {
         if (enColision && Input.GetKeyDown("f"))
         {
-           
-            ControladorHUD.instance.cargarCanvarJugable();
-            SceneManager.LoadSceneAsync(nombreNivel);
+            enColision = false;
+            canvasInfografias.SetActive(true);
+            
+            StartCoroutine(load());
+            return;
            
         }
+
+        if (async != null && async.progress >= 0.9f)
+        {
+            textoCargando.SetActive(false);
+            ButtonComenzar.SetActive(true);
+          
+
+        }
+
+       
     }
 
     void FixedUpdate()
@@ -55,9 +74,30 @@ public class MoveRPG : MonoBehaviour
         }
     }
 
+
+    IEnumerator load()
+    {
+        
+        async = SceneManager.LoadSceneAsync(nombreNivel);
+        async.allowSceneActivation = false;
+        yield return async;
+       
+    }
+
+    public void ActivateScene()
+    {
+      
+        ControladorHUD.instance.cargarCanvarJugable();
+        async.allowSceneActivation = true;
+    }
+
+
+
+
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.name.Equals("Patio"))
+        if (collision.tag.Equals("GameController"))
         {
             enColision = true;
         }

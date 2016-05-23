@@ -27,10 +27,7 @@ public class MaquinaEstadosConver : MonoBehaviour{
 
     public void CambiarEstado(int i)
     {
-      
-
-       
-       
+     
         estadoActual = estados[estadoActual].proximos[i];
         int suma = estados[estadoActual].tipo;
         StartCoroutine(MoverSlider(suma));

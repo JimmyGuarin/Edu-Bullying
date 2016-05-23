@@ -17,6 +17,8 @@ public class ManejadorPreguntas : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        Debug.Log(ControladorHUD.IndexPersonaje);
+
         instanciaActiva = this; 
         GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().runtimeAnimatorController=controladoresAnimaciones[ControladorHUD.IndexPersonaje];
     }
