@@ -6,22 +6,28 @@ public class MaquinaEstadosConver : MonoBehaviour{
 
 
     public EstadoConversacion[] estados;
-    private int estadoActual;
 
+    private int estadoActual;
+    
     
     public Sprite[] imagenesVillano;
+
+    public Sprite[] imagenesVictimas;
 
     //public Image personajePlayerNpc;
     public Text textoPlayerNpc;
     public Button[] botonesNpc;
     public Slider SliderVillano;
     public Image imagenActualVillano;
+    public Image imagenActualVictima;
+    public Text textoVictima;
     void Start()
     {
         estadoActual = 0;
         Debug.Log(estados.Length);
-
+        
         Moldear();
+        SeleccionarVictima();
     }
 
 
@@ -96,10 +102,50 @@ public class MaquinaEstadosConver : MonoBehaviour{
                 case 50:
                     imagenActualVillano.sprite = imagenesVillano[2];
                     break;
+                case 0:
+                    this.gameObject.SetActive(false);
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<Animation>().Play();
+                    ControladorHUD.instance.disminuirVida();
+                    break;
+                case 60:
+                   
+                    Invoke("terminarConversacion", 1f);
+                    
+                    break;
+
             }
 
             yield return new WaitForSeconds(0.05f);
         }
     }
+
+    void terminarConversacion()
+    {
+        this.gameObject.SetActive(false);
+        ControladorHUD.instance.GanarNivel();
+     
+    }
+
+    void SeleccionarVictima()
+    {
+        imagenActualVictima.sprite = imagenesVictimas[ControladorHUD.IndexPersonaje];
+        switch (ControladorHUD.IndexPersonaje)
+        {
+            case 0:
+                textoVictima.text = "ARNOLD";
+                break;
+            case 1:
+                textoVictima.text = "KEILY";
+                break;
+            case 2:
+                textoVictima.text = "FRED";
+                break;
+            case 3:
+                textoVictima.text = "FILL";
+                break;
+
+        }
+    }
+
 
 }
