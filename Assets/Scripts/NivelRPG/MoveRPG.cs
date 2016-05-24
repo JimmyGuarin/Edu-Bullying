@@ -12,11 +12,14 @@ public class MoveRPG : MonoBehaviour
     private float curSpeed;
     private GameObject canvasNiveles;
     private bool enColision;
-    public string nombreNivel;
+    private Animator anim;
 
+    public string nombreNivel;
     public GameObject canvasInfografias;
     public GameObject textoCargando;
     public GameObject ButtonComenzar;
+
+    public Sprite[] imagenesJugadores;
 
     private AsyncOperation async;
 
@@ -25,9 +28,10 @@ public class MoveRPG : MonoBehaviour
 
         nombreNivel = "";
         enColision = false;
-       canvasNiveles= GameObject.Find("Canvas");
+        canvasNiveles= GameObject.Find("Canvas");
         curSpeed = (float)(2);
-
+        anim = GetComponent<Animator>();
+        transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = imagenesJugadores[ControladorHUD.IndexPersonaje];
 
     }
 
@@ -59,17 +63,25 @@ public class MoveRPG : MonoBehaviour
 
         if (Input.GetAxisRaw("Horizontal") != 0 && Input.GetAxisRaw("Vertical") == 0)
         {
+            anim.SetInteger("Estado", 1);
 
+            if (Input.GetAxisRaw("Horizontal") < 0)
+                transform.localScale = new Vector3(-0.1f, 0.1f, 1);
+            else
+                transform.localScale = new Vector3(0.1f, 0.1f, 1);
 
             GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Lerp(0, Input.GetAxisRaw("Horizontal") * curSpeed, 1), 0);
         }
         if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") != 0)
         {
+
+            anim.SetInteger("Estado", 1);
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, Mathf.Lerp(0, Input.GetAxisRaw("Vertical") * curSpeed, 1));
         }
 
         if ((Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0) || (Input.GetAxisRaw("Horizontal") != 0 && Input.GetAxisRaw("Vertical") != 0))
         {
+            anim.SetInteger("Estado", 0);
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
     }
@@ -78,6 +90,7 @@ public class MoveRPG : MonoBehaviour
     IEnumerator load()
     {
         
+        Debug.Log(ControladorHUD.nivelActual);
         async = SceneManager.LoadSceneAsync(nombreNivel);
         async.allowSceneActivation = false;
         yield return async;
