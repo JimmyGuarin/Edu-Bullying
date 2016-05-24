@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -18,9 +19,10 @@ public class ManejadorPreguntas : MonoBehaviour
     void Start()
     {
         Debug.Log(ControladorHUD.IndexPersonaje);
-
+        ControladorHUD.nivelActual = SceneManager.GetActiveScene().buildIndex-2;
         instanciaActiva = this; 
         GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().runtimeAnimatorController=controladoresAnimaciones[ControladorHUD.IndexPersonaje];
+
     }
 
     // Update is called once per frame

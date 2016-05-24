@@ -3,19 +3,22 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class ControladorHUD : MonoBehaviour {
+public class ControladorHUD : MonoBehaviour
+{
 
     public static ControladorHUD instance;
 
     //Variables controladoras del HUD
-    public static int puntajeTotal=0;
-    public static int numeroVidas=4;
-    public static int[] nivelesSuperados;
+    public static int puntajeTotal = 0;
+    public static int numeroVidas = 4;
+    public static bool[] nivelesSuperados = new bool[7];
     public static int IndexPersonaje;
+    public static int nivelActual;
 
     //Tipos de HUD
     public GameObject canvasHudPlay;
     public GameObject canvasHud;
+    public GameObject imagenVictoria;
 
 
     //Propiedades del inspector
@@ -31,13 +34,15 @@ public class ControladorHUD : MonoBehaviour {
 
     private static Vector3 posicionPlayer;
 
-    void Awake(){
+    void Awake()
+    {
 
-       
+
 
         if (instance == null)
         {
             instance = this;
+
             DontDestroyOnLoad(this.gameObject);
 
         }
@@ -51,10 +56,10 @@ public class ControladorHUD : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
 
-        Debug.Log(personajes.Length);
-        Debug.Log(IndexPersonaje);
+
 
         personajes[IndexPersonaje].SetActive(true);
 
@@ -63,12 +68,13 @@ public class ControladorHUD : MonoBehaviour {
     }
 
 
-    public  void aumentarPuntaje(int cantidad,bool conocimiento) {
+    public void aumentarPuntaje(int cantidad, bool conocimiento)
+    {
 
         puntajeTotal += cantidad;
         textoPuntaje.text = "" + puntajeTotal;
-		if(conocimiento)
-			StartCoroutine(AumentarConocimiento((int)(cantidad)));
+        if (conocimiento)
+            StartCoroutine(AumentarConocimiento((int)(cantidad)));
     }
 
     IEnumerator AumentarConocimiento(int valor)
@@ -99,13 +105,20 @@ public class ControladorHUD : MonoBehaviour {
             }
 
             yield return new WaitForSeconds(0.05f);
-        }      
+        }
+    }
+
+    public void OnEnable()
+    {
+        Debug.Log("Entra");
+        personajes[IndexPersonaje].SetActive(true);
     }
 
 
 
     //Returna false si se quedo sin vidas
-    public bool  disminuirVida(){
+    public bool disminuirVida()
+    {
 
         numeroVidas--;
         if (numeroVidas == -1)
@@ -114,10 +127,10 @@ public class ControladorHUD : MonoBehaviour {
         corazones[numeroVidas].color = colorBombillaApagada;
         return true;
 
-       
+
     }
 
-    public  void aumentarVida()
+    public void aumentarVida()
     {
         if (numeroVidas < 4)
         {
@@ -125,7 +138,7 @@ public class ControladorHUD : MonoBehaviour {
             numeroVidas++;
         }
 
-        
+
     }
 
     public void cargarCanvarJugable()
@@ -144,5 +157,28 @@ public class ControladorHUD : MonoBehaviour {
     {
         canvasHud.SetActive(true);
         canvasHudPlay.SetActive(false);
+    }
+
+    public void GanarNivel()
+    {
+        imagenVictoria.SetActive(true);
+        nivelesSuperados[nivelActual] = true;
+
+    }
+
+
+    //MetodoLlamado si se ganó el nivel
+    public void irACorredor(int nivelJugado)
+    {
+        Destroy(gameObject);
+    }
+
+    public void MenuPrincipal()
+    {
+        gameObject.SetActive(false);
+        personajes[IndexPersonaje].SetActive(false);
+        SceneManager.LoadScene(0);
+
+
     }
 }

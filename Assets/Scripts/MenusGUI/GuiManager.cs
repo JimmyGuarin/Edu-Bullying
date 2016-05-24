@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class GuiManager : MonoBehaviour {
 
 
-    public static int indexPersonaje=0;
+    public static int indexPersonaje = 0;
 
     public GameObject canvasSeleccionarPersonaje;
     public GameObject canvasMenuPrincipal;
@@ -16,12 +17,19 @@ public class GuiManager : MonoBehaviour {
     public GameObject bottonCambiarEscena;
     public GameObject textoCargando;
 
+    public GameObject[] imagenMenuPrincipal;
+    
+
     void Awake(){
+
+
 
         if (indexPersonaje != 0)
         {
             canvasSeleccionarPersonaje.SetActive(false);
+            imagenMenuPrincipal[ControladorHUD.IndexPersonaje].SetActive(true);
             canvasMenuPrincipal.SetActive(true);
+
         }
     }
    
@@ -52,6 +60,8 @@ public class GuiManager : MonoBehaviour {
     public void cambiarPersonaje(int intPersonaje)
     {
         indexPersonaje = intPersonaje;
+        ControladorHUD.IndexPersonaje = indexPersonaje - 1;
+        
     }
 
     public  void CerrarAplicacion() {
@@ -63,6 +73,7 @@ public class GuiManager : MonoBehaviour {
     {
         
         imagenCarga.SetActive(true);
+        imagenMenuPrincipal[ControladorHUD.IndexPersonaje].SetActive(false);
         StartCoroutine("load");
     }
 
@@ -78,7 +89,9 @@ public class GuiManager : MonoBehaviour {
 
     public void ActivateScene()
     {
-        ControladorHUD.IndexPersonaje = indexPersonaje - 1;
+       if (ControladorHUD.instance!=null)
+            ControladorHUD.instance.gameObject.SetActive(true);
+ 
         async.allowSceneActivation = true;
         
     }
