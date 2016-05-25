@@ -21,7 +21,8 @@ public class MoveOnPath : MonoBehaviour {
         //pathToFollow = GameObject.Find(pathName).GetComponent<EditorPath>();
         last_position = transform.position;
         current_position = last_position;
-        
+        this.enabled = false;
+
 	}
 	
 	// Update is called once per frame
@@ -33,7 +34,7 @@ public class MoveOnPath : MonoBehaviour {
         {
             currentWayPointID++;
         }
-        if(currentWayPointID >= pathToFollow.path_objs.Count)
+        if(currentWayPointID>0&&currentWayPointID >= pathToFollow.path_objs.Count)
         {
 
             GetComponent<Animator>().SetBool("Correr", false);
