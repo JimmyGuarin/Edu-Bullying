@@ -12,15 +12,18 @@ public class BullyingFisico : MonoBehaviour
         //Creando Motor de preguntas del Nivel--------------------------------------------
         miNivel = new Nivel();
 
-        PuntosRetro p1 = new PuntosRetro("El Bullying Físico incluye agresiones físicas");
-            p1.misPreguntas.Add(new Preguntas("Quien es el  Lider de Proyectos", "Yovanny", "Felipe", "Jimmy", "Viviana",true));
-            p1.misPreguntas.Add(new Preguntas("¿Programo en Unity?", "Si", "No"));
+        PuntosRetro p1 = new PuntosRetro("El Bullying Físico ess el tipo de acoso más común, especialmente entre chicos.");
+            p1.misPreguntas.Add(new Preguntas("Cuál es el tipo de Bullying más común", "Bullying Físico", "Bullying Psicológico", "Bullying Verbal", "CyberBullying",true));
+            p1.misPreguntas.Add(new Preguntas("¿El Bullying Físico es más común entre chicas?", "Si", "No"));
             p1.Barajar();
 
-		PuntosRetro p2 = new PuntosRetro("Aquí son muy comunes las acciones humillantes como bajar los pantalones");
-            p2.misPreguntas.Add(new Preguntas("¿ Qué no necesita para tener éxito?", "Plata", "Valentía", "Disciplina", "Empeño", true));
-            p2.misPreguntas.Add(new Preguntas("¿Necesitas Valentía para tener éxito ? ", "Si", "No"));
+		PuntosRetro p2 = new PuntosRetro("El Bullying Físico incluye golpes, empujones e incluso palizas entre uno o varios agresores contra una sola víctima.");
+            p2.misPreguntas.Add(new Preguntas("El bullying Físico incluye: ", "Golpes", "Ataques virtuales", "Chismes", "Abuso Sexual", true));
+            p2.misPreguntas.Add(new Preguntas("En el Bullying Físico se dan palizas entre uno o varios agresoras contra una sola víctima", "Verdadero", "Falso"));
             p2.Barajar();
+
+
+
 
         miNivel.puntosRetro.Add(p1);
         miNivel.puntosRetro.Add(p2);
