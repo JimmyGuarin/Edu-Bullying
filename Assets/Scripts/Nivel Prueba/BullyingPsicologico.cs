@@ -23,7 +23,7 @@ public class BullyingPsicologico : MonoBehaviour {
         p2.misPreguntas.Add(new Preguntas("¿ Si alguien provoca miedo en los demás compañeros les está causando Bullying Piscológico ?", "Si", "No"));
         p2.Barajar();
 
-        PuntosRetro p3 = new PuntosRetro("En el agredido, aumenta el sentimiento de < color=#a52a2aff><b>indefensión y vulnerabilidad</b></color>, pues percibe este atrevimiento como una amenaza que tarde o temprano se materializará de manera más contundente.");
+        PuntosRetro p3 = new PuntosRetro("En el agredido, aumenta el sentimiento de <color=#a52a2aff><b>indefensión y vulnerabilidad</b></color>, pues percibe este atrevimiento como una amenaza que tarde o temprano se materializará de manera más contundente.");
         p3.misPreguntas.Add(new Preguntas("Que sentimientos siente una victima a causa del Bullying Psicológico", "indefensión y vulnerabilidad", "Odio y venganza", "Amor y Amistad", "Ninguna de las Anteriores", true));
         p3.misPreguntas.Add(new Preguntas("¿Las Victimas del Bullying Psicológico se sienten amenazados?", "Si", "No"));
         p3.Barajar();
