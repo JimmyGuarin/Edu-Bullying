@@ -14,7 +14,7 @@ public class BullyingFisico : MonoBehaviour
 
         PuntosRetro p1 = new PuntosRetro("El Bullying Físico ess el tipo de acoso más común, especialmente entre chicos.");
             p1.misPreguntas.Add(new Preguntas("Cuál es el tipo de Bullying más común", "Bullying Físico", "Bullying Psicológico", "Bullying Verbal", "CyberBullying",true));
-            p1.misPreguntas.Add(new Preguntas("¿El Bullying Físico es más común entre chicas?", "Si", "No"));
+            p1.misPreguntas.Add(new Preguntas("¿El Bullying Físico es más común entre chicas?", "No", "Sí"));
             p1.Barajar();
 
 		PuntosRetro p2 = new PuntosRetro("El Bullying Físico incluye golpes, empujones e incluso palizas entre uno o varios agresores contra una sola víctima.");

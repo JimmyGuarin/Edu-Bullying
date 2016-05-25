@@ -14,7 +14,7 @@ public class BullyingPsicologico : MonoBehaviour {
         miNivel = new Nivel();
 
         PuntosRetro p1 = new PuntosRetro("Hay Bullying Psicológico cuando hay <color=#a52a2aff><b>persecución</b></color>, que es una manera agresiva y continua de acosar a alguien a fin de que haga lo que la otra persona quiere.");
-        p1.misPreguntas.Add(new Preguntas("Existe Bullying Psicológico cuando hay", "Persecucione", "Robos", "Golpes", "Acoso sexual", true));
+        p1.misPreguntas.Add(new Preguntas("Existe Bullying Psicológico cuando hay", "Persecuciones", "Robos", "Golpes", "Acoso sexual", true));
         p1.misPreguntas.Add(new Preguntas("¿En el Bullying Psicológico se presenta el acoso sexual?", "No", "Sí"));
         p1.Barajar();
 
