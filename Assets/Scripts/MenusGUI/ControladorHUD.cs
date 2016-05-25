@@ -63,7 +63,7 @@ public class ControladorHUD : MonoBehaviour
 
         personajes[IndexPersonaje].SetActive(true);
 
-        Debug.Log("Entra");
+
 
     }
 
@@ -110,7 +110,7 @@ public class ControladorHUD : MonoBehaviour
 
     public void OnEnable()
     {
-        Debug.Log("Entra");
+
         personajes[IndexPersonaje].SetActive(true);
     }
 

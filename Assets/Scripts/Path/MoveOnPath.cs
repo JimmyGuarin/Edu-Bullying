@@ -4,12 +4,14 @@ using System.Collections.Generic;
 
 public class MoveOnPath : MonoBehaviour {
 
-    public EditorPath pathToFollow;
-    public int currentWayPointID = 0;
+    private EditorPath pathToFollow;
+    public int currentWayPointID;
     public float speed;
     private float reachDistance = 1.0f;
     public float rotationSpeed = 5.0f;
     public string pathName;
+
+    public bool correr;
 
     Vector3 last_position;
     Vector3 current_position;
@@ -18,40 +20,55 @@ public class MoveOnPath : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        //pathToFollow = GameObject.Find(pathName).GetComponent<EditorPath>();
+        Debug.Log("Entra a start PROFESORA");
+        pathToFollow = GameObject.Find(pathName).GetComponent<EditorPath>();
         last_position = transform.position;
         current_position = last_position;
-        this.enabled = false;
+        currentWayPointID = 0;
+        correr = false;
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        float distance = Vector3.Distance(pathToFollow.path_objs[currentWayPointID].position, transform.position);
-        transform.position = Vector3.MoveTowards(transform.position, pathToFollow.path_objs[currentWayPointID].position, Time.deltaTime * speed);
-        if(distance <= reachDistance)
+        if (correr)
         {
-            currentWayPointID++;
-        }
-        if(currentWayPointID>0&&currentWayPointID >= pathToFollow.path_objs.Count)
-        {
+            
 
-            GetComponent<Animator>().SetBool("Correr", false);
-            currentWayPointID = 0;
-            this.enabled = false;
-            GetComponent<Collider2D>().enabled = false;
+            float distance = Vector3.Distance(pathToFollow.path_objs[currentWayPointID].position, transform.position);
+            transform.position = Vector3.MoveTowards(transform.position, pathToFollow.path_objs[currentWayPointID].position, Time.deltaTime * speed);
+            if (distance <= reachDistance)
+            {
+                currentWayPointID++;
+            }
+
+            if (currentWayPointID >= pathToFollow.path_objs.Count)
+            {
+                Debug.Log(pathToFollow.path_objs.Count + "puntos a correr");
+
+                GetComponent<Animator>().SetBool("Correr", false);
+                correr = false;
+                
+                
+
+            }
         }
+
+       
+
+
+        
         
 	}
 
-    public void Reset()
+    public void Resetear()
     {
+        GetComponent<Collider2D>().enabled = true;
         currentWayPointID = 0;
         transform.position = current_position;
         last_position = transform.position;
         GetComponent<Animator>().SetBool("Correr", false);
-        GetComponent<Collider2D>().enabled = true;
-        this.enabled = false;
+        correr = false;
     }
 }

@@ -71,7 +71,7 @@ public class MaquinaEstadosConver : MonoBehaviour{
 
     IEnumerator MoverSlider(int valor)
     {
-        Debug.Log(valor);
+
 
         while (valor != 0)
         {
