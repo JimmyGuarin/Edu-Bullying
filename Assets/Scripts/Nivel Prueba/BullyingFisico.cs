@@ -22,6 +22,9 @@ public class BullyingFisico : MonoBehaviour
             p2.misPreguntas.Add(new Preguntas("En el Bullying Físico se dan palizas entre uno o varios agresoras contra una sola víctima", "Verdadero", "Falso"));
             p2.Barajar();
 
+
+
+
         miNivel.puntosRetro.Add(p1);
         miNivel.puntosRetro.Add(p2);
 
