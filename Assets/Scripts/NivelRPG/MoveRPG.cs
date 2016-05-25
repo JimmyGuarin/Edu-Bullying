@@ -90,7 +90,7 @@ public class MoveRPG : MonoBehaviour
     IEnumerator load()
     {
         
-        Debug.Log(ControladorHUD.nivelActual);
+
         async = SceneManager.LoadSceneAsync(nombreNivel);
         async.allowSceneActivation = false;
         yield return async;
