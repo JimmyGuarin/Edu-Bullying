@@ -12,6 +12,7 @@ TagManager:
   - Coins
   - Corazon
   - Destructor
+  - Caen
   layers:
   - Default
   - TransparentFX
