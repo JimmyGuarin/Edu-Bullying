@@ -5,7 +5,7 @@ public class ControladorColisiones : MonoBehaviour
 {
 
     public GameObject profesora;
-    public GameObject canvasRetroalimentacion;
+    public GameObject enemigo;
     public GameObject[] checkpoints;
     public GameObject[] destructores;
     private int indiceDestructor = -1;
@@ -15,7 +15,6 @@ public class ControladorColisiones : MonoBehaviour
     void Start()
     {
         enDaño = false;
-        Debug.Log("Entra a start Personaje");
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -79,7 +78,7 @@ public class ControladorColisiones : MonoBehaviour
                 collision.GetComponent<MoveOnPath>().currentWayPointID = 0;
                 collision.GetComponent<MoveOnPath>().correr = true;
                 collision.GetComponent<Animator>().SetBool("Correr", true);
-                
+                enemigo.SetActive(true);
         }
 
         if (collision.tag.Equals("LluviaBloques"))
@@ -143,7 +142,7 @@ public class ControladorColisiones : MonoBehaviour
         GameObject.Find("Profesora").GetComponent<MoveOnPath>().Resetear();
         gameObject.transform.position = checkpoints[indiceDestructor].transform.position;
         gameObject.SetActive(true);
-
+        enemigo.SetActive(false);
     }
 
     public void RestablecerDeDaño()

@@ -2,7 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class MoveOnPath : MonoBehaviour {
+public class MoveOnPath : MonoBehaviour
+{
 
     private EditorPath pathToFollow;
     public int currentWayPointID;
@@ -17,24 +18,26 @@ public class MoveOnPath : MonoBehaviour {
     Vector3 current_position;
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
 
-        Debug.Log("Entra a start PROFESORA");
         pathToFollow = GameObject.Find(pathName).GetComponent<EditorPath>();
         last_position = transform.position;
         current_position = last_position;
         currentWayPointID = 0;
         correr = false;
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
 
         if (correr)
         {
-            
+
+       
 
             float distance = Vector3.Distance(pathToFollow.path_objs[currentWayPointID].position, transform.position);
             transform.position = Vector3.MoveTowards(transform.position, pathToFollow.path_objs[currentWayPointID].position, Time.deltaTime * speed);
@@ -49,18 +52,18 @@ public class MoveOnPath : MonoBehaviour {
 
                 GetComponent<Animator>().SetBool("Correr", false);
                 correr = false;
-                
-                
+
+
 
             }
         }
 
-       
 
 
-        
-        
-	}
+
+
+
+    }
 
     public void Resetear()
     {
@@ -71,4 +74,5 @@ public class MoveOnPath : MonoBehaviour {
         GetComponent<Animator>().SetBool("Correr", false);
         correr = false;
     }
+
 }
