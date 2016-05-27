@@ -8,8 +8,12 @@ public class GuiManager : MonoBehaviour {
 
     public static int indexPersonaje = 0;
 
+    
+
     public GameObject canvasSeleccionarPersonaje;
     public GameObject canvasMenuPrincipal;
+
+    public GameObject[] offPersonajes;
 
     public GameObject imagenCarga;
     AsyncOperation async;
@@ -18,19 +22,30 @@ public class GuiManager : MonoBehaviour {
     public GameObject textoCargando;
 
     public GameObject[] imagenMenuPrincipal;
+    public CanvasGroup fademe;
+    public Fade fade;
+
+    private bool listo;
     
 
     void Awake(){
 
+        listo = false;
+
+        
 
 
         if (indexPersonaje != 0)
         {
             canvasSeleccionarPersonaje.SetActive(false);
+            offPersonajes[0].SetActive(true);
+            offPersonajes[ControladorHUD.IndexPersonaje].SetActive(false);
+
             imagenMenuPrincipal[ControladorHUD.IndexPersonaje].SetActive(true);
             canvasMenuPrincipal.SetActive(true);
 
         }
+       
     }
    
 	// Use this for initialization
@@ -45,11 +60,15 @@ public class GuiManager : MonoBehaviour {
 
      
 
-        if (async != null && async.progress>=0.9f)
+        if (async != null && async.progress==0.9f&& !listo)
         {
-         
-            textoCargando.SetActive(false);
-            bottonCambiarEscena.SetActive(true);
+
+            Debug.Log("Entra a activar");
+            listo = true;
+          
+
+            StartCoroutine("activarBoton");
+
 
         }
 
@@ -89,11 +108,38 @@ public class GuiManager : MonoBehaviour {
 
     public void ActivateScene()
     {
-       if (ControladorHUD.instance!=null)
-            ControladorHUD.instance.gameObject.SetActive(true);
- 
-        async.allowSceneActivation = true;
+
         
+        fademe.alpha =Fade.alpha;
+        fademe.gameObject.SetActive(true);
+       
+        StartCoroutine(activarFameEscena()); 
+           
+        if (ControladorHUD.instance!=null)
+            ControladorHUD.instance.gameObject.SetActive(true);
+        
+
+
+    }
+    IEnumerator activarBoton()
+    {
+        Debug.Log("Entra A boton");
+        yield return new WaitForSeconds(1f);
+        textoCargando.SetActive(false);
+        bottonCambiarEscena.SetActive(true);
     }
 
+    IEnumerator activarFameEscena()
+    {
+        async.allowSceneActivation = true;
+        while (!async.isDone)
+        {
+            
+            Debug.Log("Entra a corrutina" + async.progress);
+            fademe.alpha += Time.deltaTime / 2;
+            Fade.alpha = fademe.alpha;
+           
+            yield return null;
+        }
+    }
 }
