@@ -89,7 +89,7 @@ public class Laboratorio : MonoBehaviour
         if (collision.name.Equals("ColisionPequeña"))
         {
 
-            mp.escala = 0.2f;
+            mp.escala = escalaMin;
         }
     }
 }

@@ -139,7 +139,7 @@ public class ControladorColisiones : MonoBehaviour
 
     public void reaparecerPersonaje()
     {
-        GameObject.Find("Profesora").GetComponent<MoveOnPath>().Resetear();
+        profesora.GetComponent<MoveOnPath>().Resetear();
         gameObject.transform.position = checkpoints[indiceDestructor].transform.position;
         gameObject.SetActive(true);
         enemigo.SetActive(false);
