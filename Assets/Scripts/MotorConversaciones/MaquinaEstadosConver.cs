@@ -2,14 +2,15 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class MaquinaEstadosConver : MonoBehaviour{
+public class MaquinaEstadosConver : MonoBehaviour
+{
 
 
     public EstadoConversacion[] estados;
 
     private int estadoActual;
-    
-    
+
+
     public Sprite[] imagenesVillano;
 
     public Sprite[] imagenesVictimas;
@@ -25,7 +26,7 @@ public class MaquinaEstadosConver : MonoBehaviour{
     {
         estadoActual = 0;
         Debug.Log(estados.Length);
-        
+
         Moldear();
         SeleccionarVictima();
     }
@@ -33,40 +34,40 @@ public class MaquinaEstadosConver : MonoBehaviour{
 
     public void CambiarEstado(int i)
     {
-     
+
         estadoActual = estados[estadoActual].proximos[i];
         int suma = estados[estadoActual].tipo;
         StartCoroutine(MoverSlider(suma));
         Moldear();
-        
+
     }
 
     public void Moldear()
     {
-        EstadoConversacion converActual= estados[estadoActual];
-        
+        EstadoConversacion converActual = estados[estadoActual];
+
 
         //switch (converActual.tipo)
         //{
         //    case 0:
-               // personajePlayerNpc.sprite = imagenProfesora;
-                textoPlayerNpc.text = converActual.pregunta.Enunciado;
-                for(int i = 0; i <3; i++)
-                {
+        // personajePlayerNpc.sprite = imagenProfesora;
+        textoPlayerNpc.text = converActual.pregunta.Enunciado;
+        for (int i = 0; i < 3; i++)
+        {
 
-                    if (converActual.proximos!=null&& converActual.proximos.Length > 3)
-                    {
-                       
-                        botonesNpc[i].onClick.AddListener(() => { CambiarEstado(converActual.proximos[i]); });
-                    }
-                    botonesNpc[i].GetComponentInChildren<Text>().text = converActual.pregunta.Respuestas[i];
+            if (converActual.proximos != null && converActual.proximos.Length > 3)
+            {
+
+                botonesNpc[i].onClick.AddListener(() => { CambiarEstado(converActual.proximos[i]); });
+            }
+            botonesNpc[i].GetComponentInChildren<Text>().text = converActual.pregunta.Respuestas[i];
 
 
-                }
-               // gameObject.SetActive(true);
-              //  break;
+        }
+        // gameObject.SetActive(true);
+        //  break;
 
-       // }
+        // }
     }
 
     IEnumerator MoverSlider(int valor)
@@ -75,10 +76,10 @@ public class MaquinaEstadosConver : MonoBehaviour{
 
         while (valor != 0)
         {
-           
+
             if (valor < 0)
             {
-               
+
                 valor++;
                 SliderVillano.value -= 1;
             }
@@ -88,13 +89,13 @@ public class MaquinaEstadosConver : MonoBehaviour{
                 SliderVillano.value += 1;
                 valor--;
             }
-                
+
 
             switch ((int)SliderVillano.value)
             {
                 case 20:
 
-                    imagenActualVillano.sprite = imagenesVillano[0];   
+                    imagenActualVillano.sprite = imagenesVillano[0];
                     break;
                 case 30:
                     imagenActualVillano.sprite = imagenesVillano[1];
@@ -104,13 +105,19 @@ public class MaquinaEstadosConver : MonoBehaviour{
                     break;
                 case 0:
                     this.gameObject.SetActive(false);
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<Animation>().Play();
+                    estadoActual = 0;
+                    Moldear();
+                    SliderVillano.value = 30;
+                    GameObject jugador = GameObject.FindGameObjectWithTag("Player");
+                    jugador.GetComponent<Animation>().Play();
+                    jugador.GetComponent<MovimientoPersonaje>().enabled = true;
+                    jugador.GetComponent<ControladorColisiones>().enemigo.GetComponent<Collider2D>().enabled = true;
                     ControladorHUD.instance.disminuirVida();
                     break;
                 case 60:
-                   
+
                     Invoke("terminarConversacion", 1f);
-                    
+
                     break;
 
             }
@@ -119,11 +126,13 @@ public class MaquinaEstadosConver : MonoBehaviour{
         }
     }
 
+   
+
     void terminarConversacion()
     {
         this.gameObject.SetActive(false);
         ControladorHUD.instance.GanarNivel();
-     
+
     }
 
     void SeleccionarVictima()
