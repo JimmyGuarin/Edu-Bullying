@@ -27,12 +27,13 @@ public class ControladorHUD : MonoBehaviour
     public GameObject[] personajes;
     public Text textoPuntaje;
     public Slider BarraConocimiento;
-
+    public bool[] indexcorazonesrpg;
     //Colores Bombillaswe
     public Color colorBombillaApagada;
     public Color colorBombillaEncendida;
 
     private static Vector3 posicionPlayer;
+    private GameObject corazonesrpg;
 
     void Awake()
     {
@@ -42,7 +43,8 @@ public class ControladorHUD : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-
+            indexcorazonesrpg = new bool[4];
+            corazonesrpg = GameObject.Find("corazones");
             DontDestroyOnLoad(this.gameObject);
 
         }
@@ -145,6 +147,7 @@ public class ControladorHUD : MonoBehaviour
     {
         canvasHud.SetActive(false);
         canvasHudPlay.SetActive(true);
+        //corazonesrpg.SetActive(false);
         foreach (Image bombilla in bombillas)
         {
 
@@ -157,6 +160,12 @@ public class ControladorHUD : MonoBehaviour
     {
         canvasHud.SetActive(true);
         canvasHudPlay.SetActive(false);
+        corazonesrpg = GameObject.Find("corazones");
+        for (int i = 0; i < indexcorazonesrpg.Length; i++)
+        {
+            if (indexcorazonesrpg[i] == true)
+                corazonesrpg.transform.GetChild(i).gameObject.SetActive(false);
+        }
     }
 
     public void GanarNivel()
@@ -180,5 +189,21 @@ public class ControladorHUD : MonoBehaviour
         SceneManager.LoadScene(0);
 
 
+    }
+
+    public  void cogerCorazon(GameObject corazon)
+    {
+      
+
+        for (int i = 0; i < corazonesrpg.transform.childCount; i++)
+        {
+            if (corazonesrpg.transform.GetChild(i).gameObject == corazon)
+            {
+                corazonesrpg.transform.GetChild(i).gameObject.SetActive(false);
+                indexcorazonesrpg[i] = true;
+                ControladorHUD.instance.aumentarVida();
+                return;
+            }
+        }
     }
 }
