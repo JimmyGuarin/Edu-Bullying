@@ -19,6 +19,8 @@ public class MoveRPG : MonoBehaviour
     public GameObject textoCargando;
     public GameObject ButtonComenzar;
 
+    public CanvasGroup fademe;
+
     public Sprite[] imagenesJugadores;
 
     private AsyncOperation async;
@@ -93,15 +95,21 @@ public class MoveRPG : MonoBehaviour
 
         async = SceneManager.LoadSceneAsync(nombreNivel);
         async.allowSceneActivation = false;
+        
+
         yield return async;
        
     }
 
     public void ActivateScene()
     {
-      
+        fademe.alpha = 1f;
+        fademe.gameObject.SetActive(true);
+
+        StartCoroutine(activarFameEscena());
+
         ControladorHUD.instance.cargarCanvarJugable();
-        async.allowSceneActivation = true;
+       
     }
 
 
@@ -131,5 +139,20 @@ public class MoveRPG : MonoBehaviour
             canvasNiveles.transform.FindChild(collision.name).gameObject.SetActive(false);
         }
        
+    }
+
+
+    IEnumerator activarFameEscena()
+    {
+        async.allowSceneActivation = true;
+        while (!async.isDone)
+        {
+
+            Debug.Log("Entra a corrutina" + async.progress);
+            fademe.alpha -= Time.deltaTime / 2;
+            Fade.alpha = fademe.alpha;
+
+            yield return null;
+        }
     }
 }
