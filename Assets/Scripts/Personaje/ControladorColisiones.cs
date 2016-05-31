@@ -100,6 +100,11 @@ public class ControladorColisiones : MonoBehaviour
             GetComponent<Animation>().Play();
             return;
         }
+
+        if (collision.gameObject.tag.Equals("Caen"))
+        {
+            StartCoroutine(desabilitarisKinematic(collision.gameObject));
+        }
     }
 
     public void OnTriggerExit2D(Collider2D collision)
@@ -148,5 +153,14 @@ public class ControladorColisiones : MonoBehaviour
     public void RestablecerDeDaño()
     {
         enDaño = false;
+    }
+
+    IEnumerator desabilitarisKinematic(GameObject obj)
+    {
+        yield return new WaitForSeconds(0.2f);
+        obj.GetComponent<Rigidbody2D>().isKinematic = false;
+        yield return new WaitForSeconds(2f);
+
+        Destroy(obj);
     }
 }
