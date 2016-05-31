@@ -19,7 +19,7 @@ public class ControladorColegio : MonoBehaviour {
         if (instancia == null)
         {
             Debug.Log("Entra");
-            corazones = GameObject.Find("corazones");
+           
         }
         instancia = this;
         mapa = transform.GetChild(0).gameObject;
