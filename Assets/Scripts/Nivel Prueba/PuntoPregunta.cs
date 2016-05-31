@@ -38,12 +38,14 @@ public class PuntoPregunta : MonoBehaviour
 
     public bool enColision;
 
+    private Animator animator;
 
     void Start()
     {
         preguntaActualIndex = 0;
         enColision = false;
         misPreguntas = new ArrayList();
+        animator = GetComponent<Animator>();
 
         PuntosRetro pR;
 		ManejadorPreguntas puntosRetroAlimentacion =GameObject.Find("ControladorNivel").GetComponent<ManejadorPreguntas>();
@@ -83,13 +85,14 @@ public class PuntoPregunta : MonoBehaviour
 	public void activarPuntoPregunta(){
 
         canvasHijo.SetActive(true);
+        canvasHijo.GetComponent<Animator>().SetBool("Salida", false);
         enColision = true;
 
 	}
     
 	public void desactivarPuntoPregunta(){
 
-        canvasHijo.SetActive(false);
+        canvasHijo.GetComponent<Animator>().SetBool("Salida", true);
         enColision = false;
 	}
 		
@@ -101,6 +104,8 @@ public class PuntoPregunta : MonoBehaviour
 
         if (preguntaActual.IsMultiple)
         {
+            
+
             enunciadoPreguntaMultiple.text = preguntaActual.Enunciado;
             respuestas = respuestasMultiples;
             canvasPreguntaMultiple.SetActive(true);

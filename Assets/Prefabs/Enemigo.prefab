@@ -110,9 +110,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 5.352783, y: 0}
+  m_Offset: {x: 5.352783, y: 0.2863121}
   serializedVersion: 2
-  m_Size: {x: 19.554918, y: 15}
+  m_Size: {x: 19.55492, y: 14.427368}
 --- !u!95 &9546164
 Animator:
   serializedVersion: 3
@@ -158,11 +158,11 @@ MonoBehaviour:
     m_MaxSize: 116
     m_Alignment: 4
     m_AlignByGeometry: 0
-    m_RichText: 0
+    m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Para hablar con Brutus \n\nPresiona F "
+  m_Text: "Para hablar con Brutus \n<color=#a52a2aff><b><size=126>Presiona F</size></b></color>"
 --- !u!114 &11441652
 MonoBehaviour:
   m_ObjectHideFlags: 1
