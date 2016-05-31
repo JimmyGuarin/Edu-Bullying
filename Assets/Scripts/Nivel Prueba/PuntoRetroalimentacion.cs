@@ -12,22 +12,26 @@ public class PuntoRetroalimentacion : MonoBehaviour
 
     public int numeroRetroalimentacion;
 
+    private GameObject canvasHijo;
+
     // Use this for initialization
     void Start()
     {
         
 		PuntosRetro pr=(PuntosRetro)GameObject.Find("ControladorNivel").GetComponent<ManejadorPreguntas>().misPuntosRetro[numeroRetroalimentacion];
         transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<Text>().text = pr.retroalimentacion;
+        canvasHijo = transform.GetChild(0).gameObject;
     }
 		
 
     public void MostrarPuntoRetro(){
 
-        transform.GetChild(0).gameObject.SetActive(true);
+        canvasHijo.SetActive(true);
+        canvasHijo.GetComponent<Animator>().SetBool("Salida", false);
     }
 
     public void OcultarPuntoRetro(){
 
-        transform.GetChild(0).gameObject.SetActive(false);
+        canvasHijo.GetComponent<Animator>().SetBool("Salida", true);
     }
 }
