@@ -28,7 +28,7 @@ public class Enemigo : MonoBehaviour
             if (Input.GetKeyDown("f"))
             {
                 mp.enabled = false;
-               transform.GetChild(0).gameObject.SetActive(false);
+                transform.GetChild(0).gameObject.SetActive(false);
                 canvasConversacion.SetActive(true);
                 GetComponent<Collider2D>().enabled = false;
                 enColision = false;

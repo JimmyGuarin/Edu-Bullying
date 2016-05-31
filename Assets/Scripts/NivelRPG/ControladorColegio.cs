@@ -8,13 +8,19 @@ public class ControladorColegio : MonoBehaviour {
     public RuntimeAnimatorController[] controladoresAnimaciones;
     public Sprite[] imagenesColorNiveles;
 
-   
+    
 
     private GameObject jugador;
     private GameObject mapa;
    
     void Awake()
     {
+
+        if (instancia == null)
+        {
+            Debug.Log("Entra");
+            corazones = GameObject.Find("corazones");
+        }
         instancia = this;
         mapa = transform.GetChild(0).gameObject;
         jugador = GameObject.FindGameObjectWithTag("Player");
@@ -49,5 +55,7 @@ public class ControladorColegio : MonoBehaviour {
         }
 
     }
+
+  
 
 }

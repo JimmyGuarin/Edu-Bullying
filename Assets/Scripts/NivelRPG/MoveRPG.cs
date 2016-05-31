@@ -128,12 +128,20 @@ public class MoveRPG : MonoBehaviour
             nombreNivel = collision.name;
             canvasNiveles.transform.FindChild(nombreNivel).gameObject.SetActive(true);          
         }
-           
+
+
+        if (collision.tag.Equals("Corazon"))
+        {
+
+            ControladorHUD.instance.cogerCorazon(collision.gameObject);
+
+        }
+
     }
 
     public void OnTriggerExit2D(Collider2D collision)
     {
-        if (enColision)
+        if (enColision&&!collision.tag.Equals("Corazon"))
         {
             enColision = false;
             canvasNiveles.transform.FindChild(collision.name).gameObject.SetActive(false);
