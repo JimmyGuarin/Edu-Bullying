@@ -42,7 +42,9 @@ public class MoveRPG : MonoBehaviour
         if (enColision && Input.GetKeyDown("f"))
         {
             enColision = false;
+            canvasInfografias.transform.Find(nombreNivel).gameObject.SetActive(true);
             canvasInfografias.SetActive(true);
+            
             
             StartCoroutine(load());
             return;
@@ -126,7 +128,9 @@ public class MoveRPG : MonoBehaviour
         if (enColision)
         {
             nombreNivel = collision.name;
-            canvasNiveles.transform.FindChild(nombreNivel).gameObject.SetActive(true);          
+            GameObject nivel = canvasNiveles.transform.FindChild(nombreNivel).gameObject;
+            nivel.SetActive(true);
+            nivel.GetComponent<Animator>().SetBool("Salida", false);
         }
 
 
@@ -134,7 +138,7 @@ public class MoveRPG : MonoBehaviour
         {
 
             ControladorHUD.instance.cogerCorazon(collision.gameObject);
-
+            enColision = false;
         }
 
     }
@@ -143,10 +147,11 @@ public class MoveRPG : MonoBehaviour
     {
         if (enColision&&!collision.tag.Equals("Corazon"))
         {
-            enColision = false;
-            canvasNiveles.transform.FindChild(collision.name).gameObject.SetActive(false);
+            
+            canvasNiveles.transform.FindChild(collision.name).GetComponent<Animator>().SetBool("Salida", true);
         }
-       
+        enColision = false;
+
     }
 
 
