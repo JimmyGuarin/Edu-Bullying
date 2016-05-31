@@ -122,7 +122,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413252, guid: 92689d59e537ca843bae6dcc16cb9a9c, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 11404572, guid: 92689d59e537ca843bae6dcc16cb9a9c, type: 2}
       propertyPath: rayColor.r
@@ -7608,10 +7608,6 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 486610, guid: 0b4e35e9a64faad4ca7e27067d5987c2, type: 2}
   m_PrefabInternal: {fileID: 279654619}
---- !u!1 &884679507 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 161078, guid: ce6fc087af59fae4d892a124540ab50f, type: 2}
-  m_PrefabInternal: {fileID: 2112894341}
 --- !u!1 &885943732
 GameObject:
   m_ObjectHideFlags: 0
@@ -7918,78 +7914,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 6186756, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: m_Offset.x
-      value: -0.329628
-      objectReference: {fileID: 0}
-    - target: {fileID: 6186756, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: m_Size.x
-      value: 2.2719064
-      objectReference: {fileID: 0}
-    - target: {fileID: 11408994, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: radioValidacion
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11489922, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: checkpoints.Array.data[0]
-      value: 
-      objectReference: {fileID: 1752779065}
-    - target: {fileID: 11489922, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: checkpoints.Array.data[1]
-      value: 
-      objectReference: {fileID: 397766869}
-    - target: {fileID: 11489922, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: checkpoints.Array.data[2]
-      value: 
-      objectReference: {fileID: 544491618}
-    - target: {fileID: 11489922, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: checkpoints.Array.data[3]
-      value: 
-      objectReference: {fileID: 1422921102}
-    - target: {fileID: 11489922, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: checkpoints.Array.data[4]
-      value: 
-      objectReference: {fileID: 1198987410}
-    - target: {fileID: 11489922, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: destructores.Array.data[0]
-      value: 
-      objectReference: {fileID: 175101929}
-    - target: {fileID: 11489922, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: destructores.Array.data[1]
-      value: 
-      objectReference: {fileID: 1077567947}
-    - target: {fileID: 11489922, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: destructores.Array.data[2]
-      value: 
-      objectReference: {fileID: 1841750476}
-    - target: {fileID: 11489922, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: destructores.Array.data[3]
-      value: 
-      objectReference: {fileID: 676849998}
-    - target: {fileID: 11489922, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: destructores.Array.data[4]
-      value: 
-      objectReference: {fileID: 1444118916}
-    - target: {fileID: 6186756, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: m_Offset.y
-      value: 6.3847313
-      objectReference: {fileID: 0}
-    - target: {fileID: 6186756, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: m_Size.y
-      value: 11.463274
-      objectReference: {fileID: 0}
-    - target: {fileID: 9562068, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 21250478, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 11489922, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: profesora
-      value: 
-      objectReference: {fileID: 884679507}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
   m_IsPrefabParent: 0
