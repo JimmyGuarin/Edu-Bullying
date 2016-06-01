@@ -13,6 +13,7 @@ public class MovimientoPersonaje : MonoBehaviour
     public float radioValidacion;
     public Transform validadorPiso;
     public float escala = 0.2f;
+    public AudioSource[] sonidos;
 
     // Use this for initialization
     void Start()
@@ -22,6 +23,7 @@ public class MovimientoPersonaje : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         anim.SetInteger("Estado", 0);
+        sonidos = GetComponents<AudioSource>();
     }
 
     void FixedUpdate()
@@ -40,7 +42,25 @@ public class MovimientoPersonaje : MonoBehaviour
         if (tocaPiso)
         {
             anim.SetInteger("Estado", 0);
+            
 
+        }
+
+        if(tocaPiso&&Input.GetAxis("Horizontal")==0&& Input.GetAxis("Vertical") == 0)
+        {
+            sonidos[2].Stop();
+        }
+
+        if(tocaPiso==false)
+        {
+            if (sonidos[2].isPlaying == true)
+            {
+                sonidos[2].Stop();
+            }
+            
+           
+           
+               
         }
 
 
@@ -50,9 +70,15 @@ public class MovimientoPersonaje : MonoBehaviour
         {
             rb.velocity = new Vector2(Input.GetAxis("Horizontal") * velocidad, rb.velocity.y);
             rb.transform.localScale = new Vector3(-escala, escala, 1f);
-            if (tocaPiso)
+            if (tocaPiso) { 
                 anim.SetInteger("Estado", 1);
+                if (sonidos[2].isPlaying == true)
+                {
 
+                }
+                else
+                    sonidos[2].Play();
+            }
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
@@ -62,7 +88,17 @@ public class MovimientoPersonaje : MonoBehaviour
             rb.velocity = new Vector2(Input.GetAxis("Horizontal") * velocidad, rb.velocity.y);
             rb.transform.localScale = new Vector3(escala, escala, 1f);
             if (tocaPiso)
+            {
                 anim.SetInteger("Estado", 1);
+                if(sonidos[2].isPlaying ==true)
+                {
+
+                }
+                else
+                sonidos[2].Play();
+                
+            }
+                
         }
 
         if (Input.GetKey(KeyCode.UpArrow) && (tocaPiso))
@@ -73,7 +109,10 @@ public class MovimientoPersonaje : MonoBehaviour
             anim.enabled = true;
             anim.SetInteger("Estado", 2);
             // if (tocaPiso)
+            if (!sonidos[3].isPlaying)
+                sonidos[3].Play();
             rb.velocity = new Vector2(rb.velocity.x, fuerzaSalto);
+
         }
 
 
