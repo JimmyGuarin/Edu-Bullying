@@ -19,7 +19,7 @@ public class ControladorHUD : MonoBehaviour
     public GameObject canvasHudPlay;
     public GameObject canvasHud;
     public GameObject imagenVictoria;
-
+    public GameObject panelDerrota;
 
     //Propiedades del inspector
     public Image[] bombillas;
@@ -124,7 +124,11 @@ public class ControladorHUD : MonoBehaviour
 
         numeroVidas--;
         if (numeroVidas == -1)
+        {
+            panelDerrota.SetActive(true);
             return false;
+        }
+            
 
         corazones[numeroVidas].color = colorBombillaApagada;
         return true;
