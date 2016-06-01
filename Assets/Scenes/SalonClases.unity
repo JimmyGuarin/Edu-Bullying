@@ -957,19 +957,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 345
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -85.1076
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: -1081.29
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11440754, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_Color.r
@@ -6109,7 +6109,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!1 &637637607
 GameObject:
@@ -9304,7 +9304,7 @@ MonoBehaviour:
   botonCerrarDual: {fileID: 1935378351}
   textoPuntajeDual: {fileID: 828204846}
   textoRetroAlimentacionDual: {fileID: 513079385}
-  canvasHijo: {fileID: 0}
+  canvasHijo: {fileID: 627663663}
   enColision: 0
 --- !u!4 &938554045 stripped
 Transform:
