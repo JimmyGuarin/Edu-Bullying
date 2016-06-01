@@ -8,6 +8,8 @@ public class Laboratorio : MonoBehaviour
     public float escalaMax;
     public float escalaMin;
     public float tasaCrecimiento;
+    public float fuerzaSaltoGrande = 30f;
+    public float velocidadGrande = 10f;
 
     private bool crecer;
 
@@ -50,8 +52,8 @@ public class Laboratorio : MonoBehaviour
                 transform.localScale = new Vector3(transform.localScale.x + (tasaCrecimiento * 2 * Time.deltaTime), transform.localScale.y + (tasaCrecimiento * 2 * Time.deltaTime), 1);
             }
             mp.escala += tasaCrecimiento * 2 * Time.deltaTime;
-            mp.velocidad = 10;
-            mp.fuerzaSalto = 30;
+            mp.velocidad = velocidadGrande;
+            mp.fuerzaSalto = fuerzaSaltoGrande;
             mp.radioValidacion = (float)((0.45 * mp.escala) / 0.2);
         }
 
