@@ -207,4 +207,6 @@ public class PuntoPregunta : MonoBehaviour
         return 'E';
 
     }
+
+    
 }
