@@ -8,6 +8,7 @@ public class ControladorColisiones : MonoBehaviour
     public GameObject enemigo;
     public GameObject[] checkpoints;
     public GameObject[] destructores;
+    public AudioSource[] sonidosPersonaje;
     private int indiceDestructor = -1;
     private bool enDaño;
 
@@ -15,20 +16,27 @@ public class ControladorColisiones : MonoBehaviour
     void Start()
     {
         enDaño = false;
+        sonidosPersonaje = GetComponents<AudioSource>();
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag.Equals("PuntoRetro"))
         {
+            sonidosPersonaje[5].Stop();
+            sonidosPersonaje[4].Play();
             collision.GetComponent<PuntoRetroalimentacion>().MostrarPuntoRetro();
             return;
         }
+
+        
 
         if (collision.tag.Equals("Coins"))
         {
 
             Destroy(collision.gameObject);
+            //Reproduce Audio Source de Recoleccion de Monedas
+            sonidosPersonaje[0].Play();
             ControladorHUD.instance.aumentarPuntaje(5, false);
             return;
 
@@ -39,6 +47,8 @@ public class ControladorColisiones : MonoBehaviour
         {
 
             Destroy(collision.gameObject);
+            //Reproduce Audio Source de Recoleccion de Corazones
+            sonidosPersonaje[1].Play();
             ControladorHUD.instance.aumentarVida();
             return;
 
@@ -51,6 +61,8 @@ public class ControladorColisiones : MonoBehaviour
             if (collision.GetComponent<PuntoPregunta>() != null)
             {
 
+                sonidosPersonaje[5].Stop();
+                sonidosPersonaje[4].Play();
                 collision.GetComponent<PuntoPregunta>().activarPuntoPregunta();
                 ManejadorPreguntas.instanciaActiva.PuntoDePregunta = collision.GetComponent<PuntoPregunta>();
             }
@@ -61,11 +73,19 @@ public class ControladorColisiones : MonoBehaviour
         if (collision.tag.Equals("Destructor"))
         {
             indiceDestructor = compararObjeto(collision.gameObject);
+            // StartCoroutine(activarSonidoCallendo(collision.GetComponentInParent<AudioSource>()));
+
+
+
+            collision.GetComponentsInParent<AudioSource>()[0].Play();
+            Invoke("iniciarSonidoRespawn", 1.2f);
+
             if (indiceDestructor != -1)
             {
                 gameObject.SetActive(false);
                 ControladorHUD.instance.disminuirVida();
                 Invoke("reaparecerPersonaje", 2f);
+                
             }
             return;
         }
@@ -92,17 +112,24 @@ public class ControladorColisiones : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+
+        if(collision.gameObject.tag.Equals("Trampolin"))
+        {
+            sonidosPersonaje[3].Play();
+        }
         if (collision.gameObject.tag.Equals("LluviaBloques") && !enDaño)
         {
             enDaño = true;
             ControladorHUD.instance.disminuirVida();
             Destroy(collision.gameObject);
             GetComponent<Animation>().Play();
+            sonidosPersonaje[6].Play();
             return;
         }
 
         if (collision.gameObject.tag.Equals("Caen"))
         {
+
             StartCoroutine(desabilitarisKinematic(collision.gameObject));
         }
     }
@@ -112,6 +139,8 @@ public class ControladorColisiones : MonoBehaviour
         if (collision.tag.Equals("PuntoRetro"))
         {
 
+            sonidosPersonaje[4].Stop();
+            sonidosPersonaje[5].Play();
             collision.GetComponent<PuntoRetroalimentacion>().OcultarPuntoRetro();
         }
 
@@ -121,12 +150,23 @@ public class ControladorColisiones : MonoBehaviour
             if (collision.GetComponent<PuntoPregunta>() != null)
             {
 
+                sonidosPersonaje[4].Stop();
+                sonidosPersonaje[5].Play();
                 collision.GetComponent<PuntoPregunta>().desactivarPuntoPregunta();
+
             }
 
         }
 
        
+
+    }
+    IEnumerator activarSonidoCallendo(AudioSource audio)
+    {
+        audio.Play();
+       yield return new WaitForSeconds(2f);
+        audio.Stop();
+        yield return null; 
 
     }
 
@@ -148,6 +188,9 @@ public class ControladorColisiones : MonoBehaviour
         gameObject.transform.position = checkpoints[indiceDestructor].transform.position;
         gameObject.SetActive(true);
         enemigo.SetActive(false);
+        Invoke("detenerSonidoRespawn", 1.7f);
+        //sonidosPersonaje[6].Play();
+        //Invoke("detenerSonidoRespawn", 1f);
     }
 
     public void RestablecerDeDaño()
@@ -162,5 +205,15 @@ public class ControladorColisiones : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         Destroy(obj);
+    }
+
+    void iniciarSonidoRespawn()
+    {
+        destructores[0].GetComponentsInParent<AudioSource>()[1].Play();
+    }
+
+    void detenerSonidoRespawn()
+    {
+        destructores[0].GetComponentsInParent<AudioSource>()[1].Stop();
     }
 }
