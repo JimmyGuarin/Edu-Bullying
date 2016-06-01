@@ -123,7 +123,16 @@ public class ControladorColisiones : MonoBehaviour
             ControladorHUD.instance.disminuirVida();
             Destroy(collision.gameObject);
             GetComponent<Animation>().Play();
-            sonidosPersonaje[6].Play();
+            int indicePersonaje = ControladorHUD.IndexPersonaje;
+            if(indicePersonaje ==2)
+            {
+                sonidosPersonaje[7].Play();
+            }
+            else
+            {
+                sonidosPersonaje[6].Play();
+            }
+                      
             return;
         }
 
