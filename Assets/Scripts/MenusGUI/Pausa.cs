@@ -34,7 +34,7 @@ public class Pausa : MonoBehaviour
     }
 
 
-public void MenuCorredor()
+    public void MenuCorredor()
     {
 
         //Destroy(GameObject.Find("CanvasHUD"));
