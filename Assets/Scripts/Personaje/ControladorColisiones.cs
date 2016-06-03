@@ -9,7 +9,8 @@ public class ControladorColisiones : MonoBehaviour
     public GameObject[] checkpoints;
     public GameObject[] destructores;
     public AudioSource[] sonidosPersonaje;
-    private int indiceDestructor = -1;
+    [HideInInspector]
+    public int indiceDestructor = -1;
     private bool enDaño;
 
     // Use this for initialization
@@ -124,7 +125,7 @@ public class ControladorColisiones : MonoBehaviour
             Destroy(collision.gameObject);
             GetComponent<Animation>().Play();
             int indicePersonaje = ControladorHUD.IndexPersonaje;
-            if(indicePersonaje ==2)
+            if(indicePersonaje ==1)
             {
                 sonidosPersonaje[7].Play();
             }
@@ -198,6 +199,7 @@ public class ControladorColisiones : MonoBehaviour
         gameObject.SetActive(true);
         enemigo.SetActive(false);
         Invoke("detenerSonidoRespawn", 1.7f);
+        indiceDestructor = -1;
         //sonidosPersonaje[6].Play();
         //Invoke("detenerSonidoRespawn", 1f);
     }

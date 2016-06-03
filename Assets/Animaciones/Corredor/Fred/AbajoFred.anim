@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: AbajoFred
+  serializedVersion: 6
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: be97d9b930007984ea60575e58241277, type: 3}
+    - time: 0.025
+      value: {fileID: 21300000, guid: 138a172ea52c17e449c8ab30b84eb12e, type: 3}
+    - time: 0.05
+      value: {fileID: 21300000, guid: 24cb314b073f42444ac6458405c23919, type: 3}
+    - time: 0.075
+      value: {fileID: 21300000, guid: 18ed9a28bb2cd5c4bbe94b8046688010, type: 3}
+    - time: 0.1
+      value: {fileID: 21300000, guid: aafb493bbb961fa4d9b6cf2002888fa0, type: 3}
+    - time: 0.125
+      value: {fileID: 21300000, guid: a18a6cc4c5bf19d43961d40abd40cd88, type: 3}
+    - time: 0.15
+      value: {fileID: 21300000, guid: 10f37a510aa1ec54f8ae86a40d863808, type: 3}
+    - time: 0.17500001
+      value: {fileID: 21300000, guid: 0148f2f27eb1a0d49b9ec83ded1c61ff, type: 3}
+    - time: 0.20000002
+      value: {fileID: 21300000, guid: 84462a6ed9f709643a2e14257d41103b, type: 3}
+    - time: 0.22500002
+      value: {fileID: 21300000, guid: cf0f4c36acb853c48a41ca50821630f4, type: 3}
+    - time: 0.25000003
+      value: {fileID: 21300000, guid: eaee2d2846f899a4fae3a90bfce692fe, type: 3}
+    - time: 0.27500004
+      value: {fileID: 21300000, guid: 67b72b334647838428430bd6785ec1b4, type: 3}
+    - time: 0.30000004
+      value: {fileID: 21300000, guid: 9ba2a62050f5c1049a95a32b06407ff3, type: 3}
+    - time: 0.32500005
+      value: {fileID: 21300000, guid: 8659ce9aba19c5e4b935ba5c6c0d1600, type: 3}
+    - time: 0.35000005
+      value: {fileID: 21300000, guid: 76361e1c5c95be340a110dcadc7b0634, type: 3}
+    - time: 0.37500006
+      value: {fileID: 21300000, guid: e62bd846672d4ae4c9a264393e76913f, type: 3}
+    - time: 0.40000007
+      value: {fileID: 21300000, guid: 8535f0bbee6dac44295be5b9508e60c6, type: 3}
+    - time: 0.42500007
+      value: {fileID: 21300000, guid: a14e4a6153c80c541ac7d0e9cf8d7b6d, type: 3}
+    attribute: m_Sprite
+    path: 
+    classID: 212
+    script: {fileID: 0}
+  m_SampleRate: 40
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - path: 0
+      attribute: 0
+      script: {fileID: 0}
+      classID: 212
+      customType: 23
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 21300000, guid: be97d9b930007984ea60575e58241277, type: 3}
+    - {fileID: 21300000, guid: 138a172ea52c17e449c8ab30b84eb12e, type: 3}
+    - {fileID: 21300000, guid: 24cb314b073f42444ac6458405c23919, type: 3}
+    - {fileID: 21300000, guid: 18ed9a28bb2cd5c4bbe94b8046688010, type: 3}
+    - {fileID: 21300000, guid: aafb493bbb961fa4d9b6cf2002888fa0, type: 3}
+    - {fileID: 21300000, guid: a18a6cc4c5bf19d43961d40abd40cd88, type: 3}
+    - {fileID: 21300000, guid: 10f37a510aa1ec54f8ae86a40d863808, type: 3}
+    - {fileID: 21300000, guid: 0148f2f27eb1a0d49b9ec83ded1c61ff, type: 3}
+    - {fileID: 21300000, guid: 84462a6ed9f709643a2e14257d41103b, type: 3}
+    - {fileID: 21300000, guid: cf0f4c36acb853c48a41ca50821630f4, type: 3}
+    - {fileID: 21300000, guid: eaee2d2846f899a4fae3a90bfce692fe, type: 3}
+    - {fileID: 21300000, guid: 67b72b334647838428430bd6785ec1b4, type: 3}
+    - {fileID: 21300000, guid: 9ba2a62050f5c1049a95a32b06407ff3, type: 3}
+    - {fileID: 21300000, guid: 8659ce9aba19c5e4b935ba5c6c0d1600, type: 3}
+    - {fileID: 21300000, guid: 76361e1c5c95be340a110dcadc7b0634, type: 3}
+    - {fileID: 21300000, guid: e62bd846672d4ae4c9a264393e76913f, type: 3}
+    - {fileID: 21300000, guid: 8535f0bbee6dac44295be5b9508e60c6, type: 3}
+    - {fileID: 21300000, guid: a14e4a6153c80c541ac7d0e9cf8d7b6d, type: 3}
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 0.45000008
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_GenerateMotionCurves: 0
+  m_Events: []

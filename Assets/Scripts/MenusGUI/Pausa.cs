@@ -34,11 +34,11 @@ public class Pausa : MonoBehaviour
     }
 
 
-public void MenuCorredor()
+    public void MenuCorredor()
     {
 
         //Destroy(GameObject.Find("CanvasHUD"));
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void ManejarSonido()

@@ -14,7 +14,11 @@ public class PuntoPregunta : MonoBehaviour
     public int puntajePreguntaMultiple;
     public int puntajePreguntaDual;
     private int puntajePregunta;
-    
+
+    //Sonidos
+    private AudioSource[] audios;
+
+
     public GameObject[] objetosAnimados;
 
     [Tooltip("Canvas de las preguntas multiples")]
@@ -46,7 +50,7 @@ public class PuntoPregunta : MonoBehaviour
         enColision = false;
         misPreguntas = new ArrayList();
         animator = GetComponent<Animator>();
-
+        audios = GameObject.Find("CanvasPreguntas").GetComponents<AudioSource>();
         PuntosRetro pR;
 		ManejadorPreguntas puntosRetroAlimentacion =GameObject.Find("ControladorNivel").GetComponent<ManejadorPreguntas>();
 
@@ -75,6 +79,7 @@ public class PuntoPregunta : MonoBehaviour
             {
                 Time.timeScale = 0;
                 canvasHijo.SetActive(false);
+                audios[0].Play();
                 Mostrar();
                 GetComponent<Collider2D>().enabled = false;
                 enColision = false;
@@ -140,7 +145,7 @@ public class PuntoPregunta : MonoBehaviour
             botonPrecionado.GetComponent<Image>().color = Color.green;
             textoRetroAlimentacionMultiple.text= "Respuesta Correcta:    <size=60><color=green>" + RespuestaCorrecta(preguntaActual.IndexCorreta()) + "</color></size>";
             textoRetroAlimentacionDual.text= "Respuesta Correcta:    <size=60><color=green>" + RespuestaCorrecta(preguntaActual.IndexCorreta()) + "</color></size>";
-
+            audios[1].Play();
         }
         else
         {
@@ -148,6 +153,7 @@ public class PuntoPregunta : MonoBehaviour
             puntajePregunta=0;
             textoRetroAlimentacionMultiple.text = "Respuesta Correcta:    <size=60><color=green>" + RespuestaCorrecta(preguntaActual.IndexCorreta()) + "</color></size>";
             textoRetroAlimentacionDual.text = "Respuesta Correcta:    <size=60><color=green>" + RespuestaCorrecta(preguntaActual.IndexCorreta()) + "</color></size>";
+            audios[2].Play();
         }
 
         if (preguntaActual.IsMultiple){
@@ -207,4 +213,6 @@ public class PuntoPregunta : MonoBehaviour
         return 'E';
 
     }
+
+    
 }

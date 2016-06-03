@@ -25,12 +25,14 @@ public class MoveRPG : MonoBehaviour
 
     private AsyncOperation async;
 
+    public AudioSource[] audios;
+
     void Start()
     {
-
+        audios = GetComponents<AudioSource>();
         nombreNivel = "";
         enColision = false;
-        canvasNiveles= GameObject.Find("Canvas");
+        canvasNiveles = GameObject.Find("Canvas");
         curSpeed = (float)(2);
         anim = GetComponent<Animator>();
         transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = imagenesJugadores[ControladorHUD.IndexPersonaje];
@@ -42,65 +44,92 @@ public class MoveRPG : MonoBehaviour
         if (enColision && Input.GetKeyDown("f"))
         {
             enColision = false;
+            audios[3].Play();
             canvasInfografias.transform.Find(nombreNivel).gameObject.SetActive(true);
             canvasInfografias.SetActive(true);
-            
-            
+
+
             StartCoroutine(load());
             return;
-           
+
         }
 
         if (async != null && async.progress >= 0.9f)
         {
             textoCargando.SetActive(false);
             ButtonComenzar.SetActive(true);
-          
+
 
         }
 
-       
+
     }
 
     void FixedUpdate()
     {
-
-        if (Input.GetAxisRaw("Horizontal") != 0 && Input.GetAxisRaw("Vertical") == 0)
+        if ((Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0))
         {
-            anim.SetInteger("Estado", 1);
+
+            if (audios[0].isPlaying)
+                audios[0].Stop();
+
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+           
+        }
+
+
+
+        if (Input.GetAxisRaw("Horizontal") != 0 )
+        {
+            anim.SetBool("Avanzar", false);
+            anim.SetInteger("Estado", 0);
+
 
             if (Input.GetAxisRaw("Horizontal") < 0)
-                transform.localScale = new Vector3(-0.1f, 0.1f, 1);
+                transform.localScale = new Vector3(-0.2f, 0.2f, 1f);
             else
-                transform.localScale = new Vector3(0.1f, 0.1f, 1);
+                transform.localScale = new Vector3(0.2f, 0.2f, 1f);
 
+            if (!audios[0].isPlaying)
+                audios[0].Play();
             GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Lerp(0, Input.GetAxisRaw("Horizontal") * curSpeed, 1), 0);
         }
+
+
         if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") != 0)
         {
 
-            anim.SetInteger("Estado", 1);
+            anim.SetBool("Avanzar", false);
+            if (Input.GetAxisRaw("Vertical") > 0)
+                anim.SetInteger("Estado", 1);
+            else
+                anim.SetInteger("Estado", 2);
+
+            if (!audios[0].isPlaying)
+                audios[0].Play();
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, Mathf.Lerp(0, Input.GetAxisRaw("Vertical") * curSpeed, 1));
+
         }
 
-        if ((Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0) || (Input.GetAxisRaw("Horizontal") != 0 && Input.GetAxisRaw("Vertical") != 0))
-        {
-            anim.SetInteger("Estado", 0);
-            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        }
+      
+        if (GetComponent<Rigidbody2D>().velocity==Vector2.zero)
+            anim.SetBool("Avanzar", true);
+
     }
 
 
+  
+
     IEnumerator load()
     {
-        
+
 
         async = SceneManager.LoadSceneAsync(nombreNivel);
         async.allowSceneActivation = false;
-        
+
 
         yield return async;
-       
+
     }
 
     public void ActivateScene()
@@ -111,7 +140,7 @@ public class MoveRPG : MonoBehaviour
         StartCoroutine(activarFameEscena());
 
         ControladorHUD.instance.cargarCanvarJugable();
-       
+
     }
 
 
@@ -122,6 +151,7 @@ public class MoveRPG : MonoBehaviour
     {
         if (collision.tag.Equals("GameController"))
         {
+            audios[2].Play();
             enColision = true;
         }
 
@@ -136,7 +166,7 @@ public class MoveRPG : MonoBehaviour
 
         if (collision.tag.Equals("Corazon"))
         {
-
+            audios[1].Play();
             ControladorHUD.instance.cogerCorazon(collision.gameObject);
             enColision = false;
         }
@@ -145,9 +175,9 @@ public class MoveRPG : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D collision)
     {
-        if (enColision&&!collision.tag.Equals("Corazon"))
+        if (enColision && !collision.tag.Equals("Corazon"))
         {
-            
+            //audios[2].Play();
             canvasNiveles.transform.FindChild(collision.name).GetComponent<Animator>().SetBool("Salida", true);
         }
         enColision = false;

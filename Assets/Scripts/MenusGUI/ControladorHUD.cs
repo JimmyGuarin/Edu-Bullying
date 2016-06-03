@@ -123,8 +123,9 @@ public class ControladorHUD : MonoBehaviour
     {
 
         numeroVidas--;
-        if (numeroVidas == -1)
+        if (numeroVidas == 0)
         {
+            corazones[numeroVidas].color = colorBombillaApagada;
             panelDerrota.SetActive(true);
             return false;
         }
@@ -190,7 +191,7 @@ public class ControladorHUD : MonoBehaviour
     {
         gameObject.SetActive(false);
         personajes[IndexPersonaje].SetActive(false);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
 
 
     }

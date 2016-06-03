@@ -126,7 +126,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413252, guid: 92689d59e537ca843bae6dcc16cb9a9c, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 11404572, guid: 92689d59e537ca843bae6dcc16cb9a9c, type: 2}
       propertyPath: rayColor.r
@@ -7782,7 +7782,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 483826, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11489922, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
       propertyPath: profesora
@@ -7832,6 +7832,10 @@ Prefab:
       propertyPath: checkpoints.Array.data[4]
       value: 
       objectReference: {fileID: 1198987410}
+    - target: {fileID: 483826, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
   m_IsPrefabParent: 0
@@ -12722,7 +12726,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22459202, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22459202, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -12771,11 +12775,11 @@ Prefab:
         type: 3}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 345
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11444696, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_Sprite
@@ -12798,11 +12802,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -85.1076
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 138.21979
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 142576, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_IsActive
@@ -14093,7 +14097,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 427962, guid: 6c547c5b5f9d4d949ba4282af31ea9ef, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9546164, guid: 6c547c5b5f9d4d949ba4282af31ea9ef, type: 2}
       propertyPath: m_Controller
@@ -14153,6 +14157,10 @@ Prefab:
       value: 'Para hablar con Carl
 
         <color=#a52a2aff><b><size=126>Presiona F</size></b></color>'
+      objectReference: {fileID: 0}
+    - target: {fileID: 427962, guid: 6c547c5b5f9d4d949ba4282af31ea9ef, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c547c5b5f9d4d949ba4282af31ea9ef, type: 2}
@@ -18242,7 +18250,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 429720, guid: ce6fc087af59fae4d892a124540ab50f, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11418794, guid: ce6fc087af59fae4d892a124540ab50f, type: 2}
       propertyPath: m_Enabled
@@ -18256,6 +18264,10 @@ Prefab:
       propertyPath: allPaths.Array.data[0]
       value: 
       objectReference: {fileID: 282224675}
+    - target: {fileID: 429720, guid: ce6fc087af59fae4d892a124540ab50f, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce6fc087af59fae4d892a124540ab50f, type: 2}
   m_IsPrefabParent: 0

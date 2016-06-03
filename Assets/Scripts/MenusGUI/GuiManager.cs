@@ -51,7 +51,8 @@ public class GuiManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-       
+        if (indexPersonaje == 0)
+            cambiarPersonaje(1);
 
 	}
 	
@@ -100,7 +101,7 @@ public class GuiManager : MonoBehaviour {
     {
         Debug.LogWarning("ASYNC LOAD STARTED - " +
            "DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH");
-        async = SceneManager.LoadSceneAsync(1);
+        async = SceneManager.LoadSceneAsync(2);
         async.allowSceneActivation = false;
         textoCargando.SetActive(true);
         yield return async;
