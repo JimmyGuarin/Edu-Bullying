@@ -38,7 +38,7 @@ public class Pausa : MonoBehaviour
     {
 
         //Destroy(GameObject.Find("CanvasHUD"));
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void ManejarSonido()
