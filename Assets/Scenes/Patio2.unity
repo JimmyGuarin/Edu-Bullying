@@ -9212,7 +9212,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 176056, guid: fb3420b18f97a1841b988db3b264fed8, type: 2}
       propertyPath: m_Name
-      value: plataforma (1)
+      value: pruebaCae
       objectReference: {fileID: 0}
     - target: {fileID: 176056, guid: fb3420b18f97a1841b988db3b264fed8, type: 2}
       propertyPath: m_Layer
@@ -9224,7 +9224,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 176056, guid: fb3420b18f97a1841b988db3b264fed8, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 176056, guid: fb3420b18f97a1841b988db3b264fed8, type: 2}
       propertyPath: m_TagString
@@ -9433,7 +9433,7 @@ Transform:
   - {fileID: 676849999}
   - {fileID: 1444118917}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
 --- !u!82 &1072845941
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17446,7 +17446,7 @@ Transform:
   - {fileID: 748027738}
   - {fileID: 618790538}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
 --- !u!1001 &1917680457
 Prefab:
   m_ObjectHideFlags: 0
@@ -17547,19 +17547,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -85.1076
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 138.21979
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 345
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 142576, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_IsActive
