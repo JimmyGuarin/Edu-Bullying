@@ -191,7 +191,7 @@ public class ControladorHUD : MonoBehaviour
     {
         gameObject.SetActive(false);
         personajes[IndexPersonaje].SetActive(false);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
 
 
     }

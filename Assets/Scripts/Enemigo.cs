@@ -27,6 +27,7 @@ public class Enemigo : MonoBehaviour
 
             if (Input.GetKeyDown("f"))
             {
+                GameObject.Find("CanvasPreguntas").GetComponent<AudioSource>().Play();
                 mp.enabled = false;
                 transform.GetChild(0).gameObject.SetActive(false);
                 canvasConversacion.SetActive(true);

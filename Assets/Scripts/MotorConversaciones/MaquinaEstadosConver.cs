@@ -9,7 +9,7 @@ public class MaquinaEstadosConver : MonoBehaviour
     public EstadoConversacion[] estados;
 
     private int estadoActual;
-
+    private AudioSource[] audios;
 
     public Sprite[] imagenesVillano;
 
@@ -26,7 +26,7 @@ public class MaquinaEstadosConver : MonoBehaviour
     {
         estadoActual = 0;
         Debug.Log(estados.Length);
-
+        audios = GetComponents<AudioSource>();
         Moldear();
         SeleccionarVictima();
     }
@@ -72,7 +72,10 @@ public class MaquinaEstadosConver : MonoBehaviour
 
     IEnumerator MoverSlider(int valor)
     {
-
+        if (valor < 0)
+            audios[0].Play();
+        else
+            audios[1].Play();
 
         while (valor != 0)
         {
@@ -124,6 +127,8 @@ public class MaquinaEstadosConver : MonoBehaviour
 
             yield return new WaitForSeconds(0.05f);
         }
+       
+        
     }
 
    
