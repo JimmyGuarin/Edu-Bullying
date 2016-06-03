@@ -35,9 +35,9 @@ public class ActivadorMotor : MonoBehaviour {
 
     void obtenerPlataformas()
     {
-        if (gameObject.transform.GetChildCount()!=0)
+        if (gameObject.transform.childCount!=0)
         {
-           for(int i=0;i<transform.GetChildCount();i++)
+           for(int i=0;i<transform.childCount;i++)
             {
                 plataformas.Add(transform.GetChild(i).gameObject);
                 
