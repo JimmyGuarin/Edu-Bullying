@@ -402,6 +402,14 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 11417072, guid: e2d987d59bb7a024b83d9b8540bd52f5, type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417072, guid: e2d987d59bb7a024b83d9b8540bd52f5, type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2d987d59bb7a024b83d9b8540bd52f5, type: 2}
   m_IsPrefabParent: 0
@@ -418,6 +426,7 @@ GameObject:
   - 124: {fileID: 1861866681}
   - 81: {fileID: 1861866680}
   - 114: {fileID: 1861866686}
+  - 114: {fileID: 1861866685}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -493,6 +502,18 @@ Transform:
   - {fileID: 1458063046}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1861866685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1861866679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb13d81d39fce14e8b88942a83b865b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fademe: {fileID: 0}
 --- !u!114 &1861866686
 MonoBehaviour:
   m_ObjectHideFlags: 0
