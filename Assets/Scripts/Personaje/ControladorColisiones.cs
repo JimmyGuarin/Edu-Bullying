@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ControladorColisiones : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class ControladorColisiones : MonoBehaviour
     public GameObject[] checkpoints;
     public GameObject[] destructores;
     public AudioSource[] sonidosPersonaje;
+    public List<Vector3> plataformasCaen;
     [HideInInspector]
     public int indiceDestructor = -1;
     private bool enDaño;
@@ -18,6 +20,12 @@ public class ControladorColisiones : MonoBehaviour
     {
         enDaño = false;
         sonidosPersonaje = GetComponents<AudioSource>();
+        GameObject Caen = GameObject.Find("Caen");
+        if(Caen!= null)
+            obtenerPlataformasCaen(Caen);
+
+
+
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -74,6 +82,26 @@ public class ControladorColisiones : MonoBehaviour
         if (collision.tag.Equals("Destructor"))
         {
             indiceDestructor = compararObjeto(collision.gameObject);
+
+            if(collision.gameObject.name.Equals("Destructor (2)"))
+            {
+
+                Debug.Log("Entre a acomodar");
+                for (int i=0; i<plataformasCaen.Count;i++){
+
+
+                    GameObject padre = GameObject.Find("Caen");
+
+                    padre.transform.GetChild(i).GetComponent<Rigidbody2D>().isKinematic = true;
+                   
+                    padre.transform.GetChild(i).transform.position = plataformasCaen[i];
+                    padre.transform.GetChild(i).transform.rotation = new Quaternion();
+                   
+
+
+                }
+
+            }
             // StartCoroutine(activarSonidoCallendo(collision.GetComponentInParent<AudioSource>()));
 
 
@@ -215,7 +243,7 @@ public class ControladorColisiones : MonoBehaviour
         obj.GetComponent<Rigidbody2D>().isKinematic = false;
         yield return new WaitForSeconds(2f);
 
-        Destroy(obj);
+        //Destroy(obj);
     }
 
     void iniciarSonidoRespawn()
@@ -226,5 +254,19 @@ public class ControladorColisiones : MonoBehaviour
     void detenerSonidoRespawn()
     {
         destructores[0].GetComponentsInParent<AudioSource>()[1].Stop();
+    }
+    void obtenerPlataformasCaen(GameObject padre)
+    {
+        Debug.Log("obtuve pltaformas");
+        for (int i=0; i<padre.transform.childCount;i++)
+        {
+           
+            plataformasCaen.Add(padre.transform.GetChild(i).transform.position);
+        }
+    }
+
+    void reacomodarPlataformas(List<Transform> movidas)
+    {
+       
     }
 }

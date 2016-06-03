@@ -15,8 +15,7 @@ public class RotacionA : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        float tiltAroundZ = Random.Range(0, 5f) * tiltAngle;
-        float tiltAroundX = Random.Range(0, 5f) * tiltAngle;
+       
         Quaternion target = Quaternion.Euler(0,0,5f+contador);
         if(Random.Range(0,130) == 3)
         {
