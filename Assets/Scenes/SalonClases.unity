@@ -6720,6 +6720,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 302807585}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &657677244
@@ -11105,6 +11116,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 302807585}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1053551362
@@ -11441,25 +11463,13 @@ Prefab:
       value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 11489922, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: destructores.Array.data[5]
+      propertyPath: profesora
       value: 
-      objectReference: {fileID: 702919882}
+      objectReference: {fileID: 1255938707}
     - target: {fileID: 11489922, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: destructores.Array.data[0]
+      propertyPath: enemigo
       value: 
-      objectReference: {fileID: 502419010}
-    - target: {fileID: 11489922, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: destructores.Array.data[1]
-      value: 
-      objectReference: {fileID: 880123154}
-    - target: {fileID: 11489922, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: destructores.Array.data[2]
-      value: 
-      objectReference: {fileID: 1652604728}
-    - target: {fileID: 11489922, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: destructores.Array.data[3]
-      value: 
-      objectReference: {fileID: 220291244}
+      objectReference: {fileID: 51455454}
     - target: {fileID: 11489922, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
       propertyPath: checkpoints.Array.data[0]
       value: 
@@ -11476,43 +11486,22 @@ Prefab:
       propertyPath: checkpoints.Array.data[3]
       value: 
       objectReference: {fileID: 163953496}
-    - target: {fileID: 21250478, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e3bde1b10db84d048a680e825d918a19,
-        type: 3}
-    - target: {fileID: 483826, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 483826, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9562068, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9562068, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: c30049a07fe654b4fac063078a849ccf, type: 2}
     - target: {fileID: 11489922, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: profesora
+      propertyPath: destructores.Array.data[0]
       value: 
-      objectReference: {fileID: 1255938707}
+      objectReference: {fileID: 502419010}
     - target: {fileID: 11489922, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: enemigo
+      propertyPath: destructores.Array.data[1]
       value: 
-      objectReference: {fileID: 51455454}
-    - target: {fileID: 8209158, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: m_Volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8242970, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
-      propertyPath: m_audioClip
+      objectReference: {fileID: 880123154}
+    - target: {fileID: 11489922, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
+      propertyPath: destructores.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: 9cf23320d35a8f74682d65fc0cfb69e9, type: 3}
+      objectReference: {fileID: 1652604728}
+    - target: {fileID: 11489922, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
+      propertyPath: destructores.Array.data[3]
+      value: 
+      objectReference: {fileID: 220291244}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
   m_IsPrefabParent: 0
@@ -20320,6 +20309,17 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 302807585}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

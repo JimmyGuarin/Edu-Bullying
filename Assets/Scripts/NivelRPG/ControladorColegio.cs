@@ -16,11 +16,7 @@ public class ControladorColegio : MonoBehaviour {
     void Awake()
     {
 
-        if (instancia == null)
-        {
-            Debug.Log("Entra");
-           
-        }
+       
         instancia = this;
         mapa = transform.GetChild(0).gameObject;
         jugador = GameObject.FindGameObjectWithTag("Player");
@@ -50,7 +46,7 @@ public class ControladorColegio : MonoBehaviour {
 
             if (ControladorHUD.nivelesSuperados[i] != false)
             {
-                mapa.transform.GetChild(i).GetComponent<SpriteRenderer>().sprite = imagenesColorNiveles[i];
+                mapa.transform.GetChild(i-1).GetComponent<SpriteRenderer>().sprite = imagenesColorNiveles[i-1];
             }
         }
 
