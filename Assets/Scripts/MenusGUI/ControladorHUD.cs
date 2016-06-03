@@ -35,6 +35,8 @@ public class ControladorHUD : MonoBehaviour
     private static Vector3 posicionPlayer;
     private GameObject corazonesrpg;
 
+    private AudioSource sonido;
+
     void Awake()
     {
 
@@ -46,7 +48,7 @@ public class ControladorHUD : MonoBehaviour
             indexcorazonesrpg = new bool[4];
             corazonesrpg = GameObject.Find("corazones");
             DontDestroyOnLoad(this.gameObject);
-
+            sonido = GetComponents<AudioSource>()[1];
         }
         else
         {
@@ -81,7 +83,8 @@ public class ControladorHUD : MonoBehaviour
 
     IEnumerator AumentarConocimiento(int valor)
     {
-
+        if(!sonido.isPlaying)
+            sonido.Play();
 
         while (valor > 0)
         {
@@ -108,6 +111,7 @@ public class ControladorHUD : MonoBehaviour
 
             yield return new WaitForSeconds(0.05f);
         }
+
     }
 
     public void OnEnable()

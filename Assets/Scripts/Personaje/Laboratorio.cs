@@ -44,7 +44,8 @@ public class Laboratorio : MonoBehaviour
     {
         if (collision.name.Equals("ColisionGrande") && Mathf.Abs(mp.escala) <= escalaMax)
         {
-
+            if (!gameObject.GetComponents<AudioSource>()[8].isPlaying)
+                gameObject.GetComponents<AudioSource>()[8].Play();
             if (transform.localScale.x < 0)
                 transform.localScale = new Vector3(transform.localScale.x - (tasaCrecimiento * 2 * Time.deltaTime), transform.localScale.y + (tasaCrecimiento * 2 * Time.deltaTime), 1);
             else
@@ -71,6 +72,8 @@ public class Laboratorio : MonoBehaviour
 
         if (collision.name.Equals("ColisionPequeña") && Mathf.Abs(mp.escala) >= escalaMin)
         {
+            if (!gameObject.GetComponents<AudioSource>()[8].isPlaying)
+                gameObject.GetComponents<AudioSource>()[8].Play();
 
             if (transform.localScale.x < 0)
                 transform.localScale = new Vector3(transform.localScale.x + (tasaCrecimiento * 4 * Time.deltaTime), transform.localScale.y - (tasaCrecimiento * 4 * Time.deltaTime), 1);
