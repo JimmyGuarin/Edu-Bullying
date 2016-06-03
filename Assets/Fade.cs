@@ -40,7 +40,7 @@ public class Fade : MonoBehaviour
               
             yield return null;
 
-            if(cgrouo.alpha<0.016f&&seleccionPersonje!=null)
+            if(cgrouo.alpha<0.75f&&seleccionPersonje!=null)
             {
                 // Debug.Log(GuiManager.indexPersonaje);
                 
