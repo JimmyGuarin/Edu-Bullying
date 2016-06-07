@@ -3779,6 +3779,14 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 63
       objectReference: {fileID: 0}
+    - target: {fileID: 22449416, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 67
+      objectReference: {fileID: 0}
+    - target: {fileID: 22449416, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 63
+      objectReference: {fileID: 0}
     - target: {fileID: 22485454, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.x
       value: 67
@@ -3794,38 +3802,6 @@ Prefab:
     - target: {fileID: 22464638, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.y
       value: 63
-      objectReference: {fileID: 0}
-    - target: {fileID: 22449416, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 67
-      objectReference: {fileID: 0}
-    - target: {fileID: 22449416, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 63
-      objectReference: {fileID: 0}
-    - target: {fileID: 22477224, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 595
-      objectReference: {fileID: 0}
-    - target: {fileID: 22477224, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 226
-      objectReference: {fileID: 0}
-    - target: {fileID: 22459904, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 138
-      objectReference: {fileID: 0}
-    - target: {fileID: 22459904, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 136
-      objectReference: {fileID: 0}
-    - target: {fileID: 22487270, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 22487270, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 369
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
@@ -5605,7 +5581,8 @@ AudioSource:
   m_GameObject: {fileID: 1898466060}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 95cb4c6fc9487d944aee41f8dbbed0dc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.01
@@ -5720,7 +5697,8 @@ AudioSource:
   m_GameObject: {fileID: 1898466060}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: c57a5255260d9da408c7c336500f0abe, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.1
@@ -5795,7 +5773,8 @@ AudioSource:
   m_GameObject: {fileID: 1898466060}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 9cf23320d35a8f74682d65fc0cfb69e9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -5964,7 +5943,8 @@ AudioSource:
   m_GameObject: {fileID: 1898466060}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.2
