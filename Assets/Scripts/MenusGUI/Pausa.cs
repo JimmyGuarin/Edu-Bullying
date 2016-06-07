@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Pausa : MonoBehaviour
 {
+    public AudioMixer master;
+
+    public bool silencio=false;
 
 
     // Use this for initialization
     void Start()
     {
-
+        
 
     }
 
@@ -43,6 +47,17 @@ public class Pausa : MonoBehaviour
 
     public void ManejarSonido()
     {
-
-    }
+        if (!silencio)
+        {
+            master.SetFloat("silenciar",-80);
+            silencio = true;
+        }
+        else
+        {
+            master.SetFloat("silenciar", 14);
+            silencio =false;
+        }
+    
+                
+     }
 }
