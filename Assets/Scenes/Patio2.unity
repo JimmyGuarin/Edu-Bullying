@@ -2153,7 +2153,8 @@ AudioSource:
   m_GameObject: {fileID: 221362304}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.2
@@ -2227,7 +2228,8 @@ AudioSource:
   m_GameObject: {fileID: 221362304}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 075e34059df63e24bafae114b2282cc4, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.2
@@ -2301,7 +2303,8 @@ AudioSource:
   m_GameObject: {fileID: 221362304}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: af8199faa4864de499c8cec854f4855f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.2
@@ -4602,7 +4605,8 @@ AudioSource:
   m_GameObject: {fileID: 414424084}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: ef4a6a40fd6c41a44ac5eb31903a9d69, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.05
@@ -8398,7 +8402,8 @@ AudioSource:
   m_GameObject: {fileID: 908026291}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.1
@@ -9994,7 +9999,8 @@ AudioSource:
   m_GameObject: {fileID: 1072845939}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 4f587f3b420febf4a976ab14690bf3cc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.2
@@ -10068,7 +10074,8 @@ AudioSource:
   m_GameObject: {fileID: 1072845939}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 925f5d68fc439d449aefeac95fcf1146, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -10790,7 +10797,8 @@ AudioSource:
   m_GameObject: {fileID: 1110832885}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: e892978ec72b8164fb80d456a6e5af11, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.1
@@ -10864,7 +10872,8 @@ AudioSource:
   m_GameObject: {fileID: 1110832885}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 3848b6721aaf07f459d3b6c2051fbb5c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.1
@@ -12690,6 +12699,46 @@ Prefab:
       propertyPath: enemigo
       value: 
       objectReference: {fileID: 196375984}
+    - target: {fileID: 8260934, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+        type: 2}
+    - target: {fileID: 8209158, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+        type: 2}
+    - target: {fileID: 8242970, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+        type: 2}
+    - target: {fileID: 8250584, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+        type: 2}
+    - target: {fileID: 8265012, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+        type: 2}
+    - target: {fileID: 8233106, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+        type: 2}
+    - target: {fileID: 8268954, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+        type: 2}
+    - target: {fileID: 8248802, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec0bec8f936dd814e8525e921a4a22d8, type: 2}
   m_IsPrefabParent: 0
@@ -18306,19 +18355,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -85.107834
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 14.342989
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 345
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 125
       objectReference: {fileID: 0}
     - target: {fileID: 142576, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_IsActive
