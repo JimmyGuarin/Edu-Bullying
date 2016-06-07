@@ -111,9 +111,17 @@ public class ControladorColisiones : MonoBehaviour
 
             if (indiceDestructor != -1)
             {
-                gameObject.SetActive(false);
+
                 ControladorHUD.instance.disminuirVida();
-                Invoke("reaparecerPersonaje", 2f);
+                Debug.Log("Entra");
+             
+                if (ControladorHUD.numeroVidas>0)
+                {
+
+                    gameObject.SetActive(false);
+                    Invoke("reaparecerPersonaje", 2f);
+                }
+                    
                 
             }
             return;

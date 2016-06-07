@@ -123,7 +123,7 @@ public class ControladorHUD : MonoBehaviour
 
 
     //Returna false si se quedo sin vidas
-    public bool disminuirVida()
+    public void disminuirVida()
     {
 
         numeroVidas--;
@@ -131,12 +131,16 @@ public class ControladorHUD : MonoBehaviour
         {
             corazones[numeroVidas].color = colorBombillaApagada;
             panelDerrota.SetActive(true);
-            return false;
+          
         }
-            
-
-        corazones[numeroVidas].color = colorBombillaApagada;
-        return true;
+        if (numeroVidas >0)
+        {
+            Debug.Log(numeroVidas);
+            corazones[numeroVidas].color = colorBombillaApagada;
+           
+        }
+     
+       
 
 
     }
@@ -145,6 +149,8 @@ public class ControladorHUD : MonoBehaviour
     {
         if (numeroVidas < 4)
         {
+            if (numeroVidas < 0)
+                numeroVidas = 0;
             corazones[numeroVidas].color = colorBombillaEncendida;
             numeroVidas++;
         }
