@@ -11,6 +11,8 @@ public class ControladorHUD : MonoBehaviour
     //Variables controladoras del HUD
     public static int puntajeTotal = 0;
     public static int numeroVidas = 4;
+    public static string nombreJugador = "";
+    public static int posicionPuntajes = 0;
     public static bool[] nivelesSuperados = new bool[7];
     public static int IndexPersonaje;
     public static int nivelActual;
@@ -20,12 +22,16 @@ public class ControladorHUD : MonoBehaviour
     public GameObject canvasHud;
     public GameObject imagenVictoria;
     public GameObject panelDerrota;
+    public Text textoPuntajes;
+    public GameObject panelPuntajes;
+    public GameObject pedirNombre;
 
     //Propiedades del inspector
     public Image[] bombillas;
     public Image[] corazones;
     public GameObject[] personajes;
     public Text textoPuntaje;
+  
     public Slider BarraConocimiento;
     public bool[] indexcorazonesrpg;
     //Colores Bombillaswe
@@ -192,9 +198,18 @@ public class ControladorHUD : MonoBehaviour
 
 
     //MetodoLlamado si se ganó el nivel
-    public void irACorredor(int nivelJugado)
+    public void irACorredor()
     {
-        Destroy(gameObject);
+
+        if (posicionPuntajes == 0)
+        {
+            OnLevelComplete();
+        }
+        SceneManager.LoadScene(2);
+        finalizarJuego();
+
+
+
     }
 
     public void MenuPrincipal()
@@ -221,4 +236,120 @@ public class ControladorHUD : MonoBehaviour
             }
         }
     }
+
+
+    public static void OnLevelComplete()
+    {
+        int temp = 0;
+        string nameTemp = "";
+        int s =puntajeTotal;
+        //values from your scoring logic 
+        for (int i = 1; i <= 5; i++) //for top 5 highscores 
+        {
+            if (PlayerPrefs.GetInt("highscorePos" + i) < s) //if cuurent score is in top 5 
+            {
+                temp = PlayerPrefs.GetInt("highscorePos" + i); //store the old highscore in temp varible to shift it down 
+                nameTemp = PlayerPrefs.GetString("nombre" + i);
+                PlayerPrefs.SetInt("highscorePos" + i, s); //store the currentscore to highscores 
+                if (i < 5) //do this for shifting scores down 
+                {
+                    int j = i + 1;
+                    s = PlayerPrefs.GetInt("highscorePos" + j); //Try and put this here 
+                    PlayerPrefs.SetInt("highscorePos" + j, temp);
+                    PlayerPrefs.SetString("nombre" + j, nameTemp);
+                }
+            }
+        }
+
+
+        for (int i = 1; i <= 5; i++) //for top 5 highscores 
+        {
+            Debug.Log("Puntaje "+i+""+PlayerPrefs.GetInt("highscorePos" + i));
+        }
+    }
+
+
+    public  void finalizarJuego()
+    {
+
+        Time.timeScale = 0;
+        int pos = posicionPuntajes;
+
+        if (posicionPuntajes != 0&&PlayerPrefs.GetInt("highscorePos" +posicionPuntajes)!=puntajeTotal)
+        {
+            PlayerPrefs.SetInt("highscorePos" + posicionPuntajes, puntajeTotal);
+            if (nombreJugador.Equals(""))
+                PlayerPrefs.SetString("nombre" + posicionPuntajes, "Anónimo");
+            else
+                PlayerPrefs.SetString("nombre" + posicionPuntajes, nombreJugador);
+            for (int j = 1; j < 5; j++)
+            {
+
+                for (int i = 1; i < 5; i++)
+                {
+                    if (PlayerPrefs.GetInt("highscorePos" + i) < PlayerPrefs.GetInt("highscorePos" + (i + 1)))
+                    {
+                        int tmp = PlayerPrefs.GetInt("highscorePos" + (i + 1));
+                        string nombretmp = PlayerPrefs.GetString("nombre" + (i + 1));
+
+                        PlayerPrefs.SetString("nombre" + (i + 1), PlayerPrefs.GetString("nombre" + i));
+                        PlayerPrefs.SetInt("highscorePos" + (i + 1), PlayerPrefs.GetInt("highscorePos" + i));
+
+                        PlayerPrefs.SetString("nombre" + i, nombretmp);
+                        PlayerPrefs.SetInt("highscorePos" + i, tmp);
+                    }
+                }
+            }
+        }
+     
+        for (int i = 5; i >= 1; i--)
+        {
+                if (PlayerPrefs.GetInt("highscorePos" + i) == puntajeTotal)
+                {
+                    Debug.Log("entraaa");
+                    posicionPuntajes = i;
+                }
+        }
+
+        
+
+        if (pos!=posicionPuntajes)
+        {
+           
+            if (nombreJugador.Equals(""))
+            {
+                
+                pedirNombre.SetActive(true);
+            }
+            textoPuntajes.text = "Felicidades <color=#a52a2aff>" + nombreJugador+"</color>, alcanzaste la posicion <color=#a52a2aff><b><size=65>" + posicionPuntajes + "</size></b></color> en la Tabla de Posiciones";
+            panelPuntajes.SetActive(true);
+        }
+
+           
+
+    }
+
+    public void AlmacenarNombre(Text nombre)
+    {
+        Debug.Log(nombre.text);
+
+        if (nombre.text.Equals("") && nombreJugador.Equals(""))
+        {
+            nombre.text = "Anónimo";
+            PlayerPrefs.SetString("nombre" + posicionPuntajes, nombre.text);
+        }
+            
+        else
+        {
+            if(nombreJugador.Equals(""))
+                nombreJugador = nombre.text;
+            PlayerPrefs.SetString("nombre" + posicionPuntajes, nombreJugador);
+        }
+        nombre.text = "";
+
+    }
+
+
+
+
 }

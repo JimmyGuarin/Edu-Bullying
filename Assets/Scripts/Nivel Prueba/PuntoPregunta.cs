@@ -42,14 +42,11 @@ public class PuntoPregunta : MonoBehaviour
 
     public bool enColision;
 
-    private Animator animator;
-
     void Start()
     {
         preguntaActualIndex = 0;
         enColision = false;
         misPreguntas = new ArrayList();
-        animator = GetComponent<Animator>();
         audios = GameObject.Find("CanvasPreguntas").GetComponents<AudioSource>();
         PuntosRetro pR;
 		ManejadorPreguntas puntosRetroAlimentacion =GameObject.Find("ControladorNivel").GetComponent<ManejadorPreguntas>();

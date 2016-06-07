@@ -32,7 +32,7 @@ public class GuiManager : MonoBehaviour {
 
         listo = false;
 
-        
+        //PlayerPrefs.DeleteAll();
 
 
         if (indexPersonaje != 0)
