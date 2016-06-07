@@ -3771,37 +3771,66 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 22481850, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 67
-      objectReference: {fileID: 0}
-    - target: {fileID: 22481850, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 63
-      objectReference: {fileID: 0}
-    - target: {fileID: 22449416, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 67
-      objectReference: {fileID: 0}
-    - target: {fileID: 22449416, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 63
-      objectReference: {fileID: 0}
-    - target: {fileID: 22485454, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 67
-      objectReference: {fileID: 0}
-    - target: {fileID: 22485454, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 63
-      objectReference: {fileID: 0}
     - target: {fileID: 22464638, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 67
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22464638, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 63
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22485454, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22485454, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22481850, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22481850, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22449416, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22449416, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8237422, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+        type: 2}
+    - target: {fileID: 22459904, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22459904, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22487270, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22487270, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22477224, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22477224, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
@@ -3928,7 +3957,8 @@ AudioSource:
   m_GameObject: {fileID: 1404758005}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
