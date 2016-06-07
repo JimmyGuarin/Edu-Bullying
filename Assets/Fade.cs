@@ -38,9 +38,9 @@ public class Fade : MonoBehaviour
             cgrouo.alpha -= Time.deltaTime / 2;
             alpha = cgrouo.alpha;
               
-            yield return null;
+            
 
-            if(cgrouo.alpha<0.75f&&seleccionPersonje!=null)
+            if(cgrouo.alpha<0.95f&&seleccionPersonje!=null)
             {
                 // Debug.Log(GuiManager.indexPersonaje);
                 
@@ -55,6 +55,7 @@ public class Fade : MonoBehaviour
 
                 }
              }
+            yield return null;
         }
         //Debug.Log(contador);
 
