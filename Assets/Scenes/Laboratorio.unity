@@ -27860,7 +27860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   escalaMax: 0.5
   escalaMin: 0.2
-  tasaCrecimiento: 0.01
+  tasaCrecimiento: 0.1
   fuerzaSaltoGrande: 30
   velocidadGrande: 10
 --- !u!4 &2096319714
@@ -28593,6 +28593,7 @@ MonoBehaviour:
   - {fileID: 676849998}
   - {fileID: 1444118916}
   sonidosPersonaje: []
+  plataformasCaen: []
   indiceDestructor: -1
 --- !u!50 &2096319726
 Rigidbody2D:

@@ -74,7 +74,7 @@ public class UltimaOportunidad : MonoBehaviour
         {
 
             botonPrecionado.GetComponent<Image>().color = Color.green;
-            textoPuntaje.text = " conseguiste una Vida";
+            textoPuntaje.text = " Conseguiste una Vida";
             ControladorHUD.instance.aumentarVida();
             botonCerrar.SetActive(true);
             corazon.SetActive(true);
@@ -120,8 +120,13 @@ public class UltimaOportunidad : MonoBehaviour
     public void ContinuarNivel()
     {
         ControladorColisiones cc = GameObject.FindGameObjectWithTag("Player").GetComponent<ControladorColisiones>();
-        if (cc.indiceDestructor!=-1)
+        if (cc.indiceDestructor != -1)
+        {
+           
             GameObject.FindGameObjectWithTag("Player").GetComponent<ControladorColisiones>().reaparecerPersonaje();
+            
+        }
+            
     }
 
     public void ReiniciarNivel()
