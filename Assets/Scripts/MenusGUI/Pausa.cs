@@ -9,7 +9,7 @@ public class Pausa : MonoBehaviour
 
     public bool silencio=false;
 
-    
+    public GameObject panelPausa;
 
 
     // Use this for initialization
@@ -24,20 +24,35 @@ public class Pausa : MonoBehaviour
     void Update()
     {
 
+        if (Input.GetKeyDown("p")|| Input.GetKeyDown(KeyCode.Escape))
+        {
+            ControladorHUD.instance.GetComponent<AudioSource>().Play();
+            ToggleMenuPausa();
+        }
+
     }
 
-    public void OnEnable()
+    public void ToggleMenuPausa()
     {
 
-       Time.timeScale = 0;
+        if (Time.timeScale == 1)
+        {
+            Time.timeScale = 0;
+            gameObject.SetActive(false);
+            panelPausa.SetActive(true);
+        }
+        else
+        {
+            Time.timeScale = 1;
+            gameObject.SetActive(true);
+            panelPausa.SetActive(false);
+        }
+
 
     }
 
-    public void OnDisable()
-    {
+   
 
-       Time.timeScale = 1;
-    }
 
 
     public void MenuCorredor()
@@ -56,7 +71,7 @@ public class Pausa : MonoBehaviour
         }
         else
         {
-            master.SetFloat("silenciar", 14);
+            master.SetFloat("silenciar", 0);
             silencio =false;
         }
     

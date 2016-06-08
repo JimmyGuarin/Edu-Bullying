@@ -202,12 +202,12 @@ public class MoveRPG : MonoBehaviour
     IEnumerator activarFameEscena()
     {
         async.allowSceneActivation = true;
-       
+        fademe.alpha = 0;
         while (!async.isDone)
         {
 
             Debug.Log("Entra a corrutina" + async.progress);
-            fademe.alpha += Time.deltaTime / 4;
+            fademe.alpha += Time.deltaTime / 2;
             Fade.alpha = fademe.alpha;
 
             yield return null;
