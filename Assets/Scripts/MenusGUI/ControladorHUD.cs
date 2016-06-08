@@ -140,6 +140,7 @@ public class ControladorHUD : MonoBehaviour
         {
             corazones[numeroVidas].color = colorBombillaApagada;
             panelDerrota.SetActive(true);
+            Time.timeScale = 0;
           
         }
         if (numeroVidas >0)

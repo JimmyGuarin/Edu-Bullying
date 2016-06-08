@@ -12,12 +12,13 @@ public class ControladorColisiones : MonoBehaviour
     public AudioSource[] sonidosPersonaje;
     public List<Vector3> plataformasCaen;
     [HideInInspector]
-    public int indiceDestructor = -1;
+    public int indiceDestructor;
     private bool enDaño;
 
     // Use this for initialization
     void Start()
     {
+        indiceDestructor = 0;
         enDaño = false;
         sonidosPersonaje = GetComponents<AudioSource>();
         GameObject Caen = GameObject.Find("Caen");
@@ -235,7 +236,7 @@ public class ControladorColisiones : MonoBehaviour
         gameObject.SetActive(true);
         enemigo.SetActive(false);
         Invoke("detenerSonidoRespawn", 1.7f);
-        indiceDestructor = -1;
+        indiceDestructor =0;
         //sonidosPersonaje[6].Play();
         //Invoke("detenerSonidoRespawn", 1f);
     }

@@ -1622,7 +1622,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 146486, guid: e2d987d59bb7a024b83d9b8540bd52f5, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22473034, guid: e2d987d59bb7a024b83d9b8540bd52f5, type: 2}
       propertyPath: m_AnchoredPosition.y
@@ -3964,7 +3964,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5618,7 +5618,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 95cb4c6fc9487d944aee41f8dbbed0dc, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5815,7 +5815,7 @@ AudioSource:
   Loop: 0
   Mute: 0
   Spatialize: 0
-  Priority: 128
+  Priority: 100
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -5980,7 +5980,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
