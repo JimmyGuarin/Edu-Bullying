@@ -15,13 +15,15 @@ public class ManejadorPreguntas : MonoBehaviour
     public Image[] coloresBotones;
     public ArrayList misPuntosRetro;
     public int puntajePuntoPregunta;
+
+    private GameObject personaje;
     // Use this for initialization
     void Start()
     {
-
+        personaje = GameObject.FindGameObjectWithTag("Player");
         ControladorHUD.nivelActual = SceneManager.GetActiveScene().buildIndex-2;
         instanciaActiva = this; 
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().runtimeAnimatorController=controladoresAnimaciones[ControladorHUD.IndexPersonaje];
+        personaje.GetComponent<Animator>().runtimeAnimatorController=controladoresAnimaciones[ControladorHUD.IndexPersonaje];
 
     }
 
@@ -47,6 +49,8 @@ public class ManejadorPreguntas : MonoBehaviour
     public void ManejarTiempo()
     {
         Time.timeScale = 1;
+        personaje.GetComponent<MovimientoPersonaje>().enabled = true;
+
         if (PuntoDePregunta != null)
         {
             if (PuntoDePregunta.GetComponent<Collider2D>() != null)
