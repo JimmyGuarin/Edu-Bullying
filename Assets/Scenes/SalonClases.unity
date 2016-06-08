@@ -969,11 +969,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -85.10772
+      value: -85.1076
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 46.830196
+      value: -1790.2344
       objectReference: {fileID: 0}
     - target: {fileID: 11440754, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_Color.r
@@ -1018,6 +1018,25 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &65476934 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 142576, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
+  m_PrefabInternal: {fileID: 65476933}
+--- !u!111 &65476935
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 65476934}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: a35690627fe86434c9db80eb86b52910, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: a35690627fe86434c9db80eb86b52910, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &65598149
 GameObject:
   m_ObjectHideFlags: 0
@@ -4801,6 +4820,7 @@ GameObject:
   - 223: {fileID: 422842303}
   - 114: {fileID: 422842302}
   - 114: {fileID: 422842301}
+  - 95: {fileID: 422842305}
   m_Layer: 5
   m_Name: CanvasPregunta
   m_TagString: Untagged
@@ -4886,7 +4906,24 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.3082538, y: 0.1770207}
+--- !u!95 &422842305
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 422842300}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f5aedfb47eff744c91c70bee6890656, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &431228209
 GameObject:
   m_ObjectHideFlags: 0
@@ -13981,6 +14018,7 @@ GameObject:
   - 223: {fileID: 1372055544}
   - 114: {fileID: 1372055543}
   - 114: {fileID: 1372055542}
+  - 95: {fileID: 1372055546}
   m_Layer: 5
   m_Name: CanvasPreguntaSimple
   m_TagString: Untagged
@@ -14066,7 +14104,24 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.000030517578, y: -0.000015258789}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.3082538, y: 0.1770207}
+--- !u!95 &1372055546
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1372055541}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f5aedfb47eff744c91c70bee6890656, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &1377918751 stripped
 Transform:
   m_PrefabParentObject: {fileID: 486610, guid: 0b4e35e9a64faad4ca7e27067d5987c2, type: 2}

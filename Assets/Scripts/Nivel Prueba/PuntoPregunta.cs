@@ -74,12 +74,14 @@ public class PuntoPregunta : MonoBehaviour
 
             if (Input.GetKeyDown("f"))
             {
-                Time.timeScale = 0;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<MovimientoPersonaje>().enabled = false;
                 canvasHijo.SetActive(false);
                 audios[0].Play();
                 Mostrar();
                 GetComponent<Collider2D>().enabled = false;
                 enColision = false;
+                
+                
             }
         }
     }
@@ -111,6 +113,7 @@ public class PuntoPregunta : MonoBehaviour
             enunciadoPreguntaMultiple.text = preguntaActual.Enunciado;
             respuestas = respuestasMultiples;
             canvasPreguntaMultiple.SetActive(true);
+            canvasPreguntaMultiple.GetComponent<Animator>().enabled = true;
             puntajePregunta =puntajePreguntaMultiple;
 
         }
@@ -120,6 +123,7 @@ public class PuntoPregunta : MonoBehaviour
             respuestas = respuestasDual;
             puntajePregunta = puntajePreguntaDual;
             canvasPreguntaDual.SetActive(true);
+            canvasPreguntaDual.GetComponent<Animator>().enabled = true;
         }
 
         for (int i = 0; i < preguntaActual.Respuestas.Length; i++)
@@ -146,6 +150,18 @@ public class PuntoPregunta : MonoBehaviour
         }
         else
         {
+            if(puntajePreguntaDual>0&&puntajePreguntaMultiple>0)
+            {
+                puntajePreguntaDual -= 5;
+                puntajePreguntaMultiple -= 5;
+            }
+            else
+            {
+                puntajePreguntaDual = 0;
+                puntajePreguntaMultiple = 0;
+            }
+
+
             botonPrecionado.GetComponent<Image>().color = Color.red;
             puntajePregunta=0;
             textoRetroAlimentacionMultiple.text = "Respuesta Correcta:    <size=60><color=green>" + RespuestaCorrecta(preguntaActual.IndexCorreta()) + "</color></size>";
@@ -211,5 +227,6 @@ public class PuntoPregunta : MonoBehaviour
 
     }
 
+    
     
 }
