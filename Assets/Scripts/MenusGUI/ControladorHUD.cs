@@ -204,14 +204,13 @@ public class ControladorHUD : MonoBehaviour
     public void irACorredor()
     {
 
+        SceneManager.LoadScene(2);
+
         if (posicionPuntajes == 0)
         {
             OnLevelComplete();
         }
-        SceneManager.LoadScene(2);
-
-
-
+        
         finalizarJuego();
         
 
@@ -340,7 +339,7 @@ public class ControladorHUD : MonoBehaviour
 
     public void AlmacenarNombre(Text nombre)
     {
-        Debug.Log(nombre.text);
+        
 
         if (nombre.text.Equals("") && nombreJugador.Equals(""))
         {
@@ -354,6 +353,7 @@ public class ControladorHUD : MonoBehaviour
                 nombreJugador = nombre.text;
             PlayerPrefs.SetString("nombre" + posicionPuntajes, nombreJugador);
         }
+        Debug.Log("Nombre Jugador: " + nombreJugador);
         nombre.text = "";
         GameObject.FindGameObjectWithTag("Player").GetComponent<MoveRPG>().enabled = true;
     }
