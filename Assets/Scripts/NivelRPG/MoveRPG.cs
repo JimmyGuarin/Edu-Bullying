@@ -31,7 +31,11 @@ public class MoveRPG : MonoBehaviour
 
     void Start()
     {
-        
+
+        if (ControladorHUD.instance.panelPuntajes.activeSelf)
+            this.enabled = false;
+
+
         audios = GetComponents<AudioSource>();
         nombreNivel = "";
         enColision = false;
@@ -136,7 +140,7 @@ public class MoveRPG : MonoBehaviour
 
     public void ActivateScene()
     {
-        fademe.alpha = 1f;
+       
         fademe.gameObject.SetActive(true);
 
         StartCoroutine(activarFameEscena());
@@ -198,12 +202,12 @@ public class MoveRPG : MonoBehaviour
     IEnumerator activarFameEscena()
     {
         async.allowSceneActivation = true;
-        
+       
         while (!async.isDone)
         {
 
             Debug.Log("Entra a corrutina" + async.progress);
-            fademe.alpha -= Time.deltaTime / 8;
+            fademe.alpha += Time.deltaTime / 4;
             Fade.alpha = fademe.alpha;
 
             yield return null;
