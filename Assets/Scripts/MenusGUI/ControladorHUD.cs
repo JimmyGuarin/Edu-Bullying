@@ -25,6 +25,8 @@ public class ControladorHUD : MonoBehaviour
     public Text textoPuntajes;
     public GameObject panelPuntajes;
     public GameObject pedirNombre;
+    public GameObject jugador;
+   
 
     //Propiedades del inspector
     public Image[] bombillas;
@@ -42,6 +44,7 @@ public class ControladorHUD : MonoBehaviour
     private GameObject corazonesrpg;
 
     private AudioSource sonido;
+   
 
     void Awake()
     {
@@ -69,7 +72,7 @@ public class ControladorHUD : MonoBehaviour
     void Start()
     {
 
-
+       
 
         personajes[IndexPersonaje].SetActive(true);
 
@@ -206,9 +209,11 @@ public class ControladorHUD : MonoBehaviour
             OnLevelComplete();
         }
         SceneManager.LoadScene(2);
+
+
+
         finalizarJuego();
-
-
+        
 
     }
 
@@ -272,7 +277,8 @@ public class ControladorHUD : MonoBehaviour
     public  void finalizarJuego()
     {
 
-        Time.timeScale = 0;
+       
+       
         int pos = posicionPuntajes;
 
         if (posicionPuntajes != 0&&PlayerPrefs.GetInt("highscorePos" +posicionPuntajes)!=puntajeTotal)
@@ -311,18 +317,21 @@ public class ControladorHUD : MonoBehaviour
                 }
         }
 
-        
 
-        if (pos!=posicionPuntajes)
+
+        if (pos != posicionPuntajes)
         {
-           
+
             if (nombreJugador.Equals(""))
             {
-                
+
                 pedirNombre.SetActive(true);
             }
-            textoPuntajes.text = "Felicidades <color=#a52a2aff>" + nombreJugador+"</color>, alcanzaste la posicion <color=#a52a2aff><b><size=65>" + posicionPuntajes + "</size></b></color> en la Tabla de Posiciones";
+            textoPuntajes.text = "Felicidades <color=#a52a2aff>" + nombreJugador + "</color>, alcanzaste la posicion <color=#a52a2aff><b><size=65>" + posicionPuntajes + "</size></b></color> en la Tabla de Posiciones";
             panelPuntajes.SetActive(true);
+          
+            
+
         }
 
            
@@ -338,15 +347,15 @@ public class ControladorHUD : MonoBehaviour
             nombre.text = "Anónimo";
             PlayerPrefs.SetString("nombre" + posicionPuntajes, nombre.text);
         }
-            
+
         else
         {
-            if(nombreJugador.Equals(""))
+            if (nombreJugador.Equals(""))
                 nombreJugador = nombre.text;
             PlayerPrefs.SetString("nombre" + posicionPuntajes, nombreJugador);
         }
         nombre.text = "";
-
+        GameObject.FindGameObjectWithTag("Player").GetComponent<MoveRPG>().enabled = true;
     }
 
 

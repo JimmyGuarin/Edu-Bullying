@@ -9,6 +9,8 @@ public class Pausa : MonoBehaviour
 
     public bool silencio=false;
 
+    
+
 
     // Use this for initialization
     void Start()
@@ -26,15 +28,15 @@ public class Pausa : MonoBehaviour
 
     public void OnEnable()
     {
-    
-        Time.timeScale = 0;
+
+       Time.timeScale = 0;
 
     }
 
     public void OnDisable()
     {
 
-        Time.timeScale = 1;
+       Time.timeScale = 1;
     }
 
 
