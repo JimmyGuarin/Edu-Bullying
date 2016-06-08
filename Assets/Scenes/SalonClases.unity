@@ -1006,18 +1006,59 @@ Prefab:
     - target: {fileID: 11493820, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 302807585}
+      objectReference: {fileID: 65476934}
     - target: {fileID: 11493820, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Play
+      value: Funcion
       objectReference: {fileID: 0}
     - target: {fileID: 11493820, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 11493820, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 302807585}
+    - target: {fileID: 11493820, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493820, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22433850, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.11031666
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &65476934 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11465886, guid: 9f9492317fb26164fbd472cde92c4610,
+    type: 2}
+  m_PrefabInternal: {fileID: 65476933}
+  m_Script: {fileID: 11500000, guid: 7778af5943b11f542a7f862ebbc5c92d, type: 3}
+--- !u!1 &65476935 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 142576, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
+  m_PrefabInternal: {fileID: 65476933}
+--- !u!111 &65476936
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 65476935}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: a35690627fe86434c9db80eb86b52910, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: a35690627fe86434c9db80eb86b52910, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &65598149
 GameObject:
   m_ObjectHideFlags: 0
@@ -2473,7 +2514,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.0000333786, y: 21}
-  m_SizeDelta: {x: -155.99988, y: -71.60303}
+  m_SizeDelta: {x: -156.00012, y: -72.00842}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &203947248
 MonoBehaviour:
@@ -3240,7 +3281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3897059, g: 0.3897059, b: 0.3897059, a: 0.903}
+  m_Color: {r: 0.09558821, g: 0.09488535, b: 0.09488535, a: 0.941}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3438,7 +3479,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: c706ee9652e87b644b69959507848fe8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.1
   m_Pitch: 1
@@ -4801,6 +4842,7 @@ GameObject:
   - 223: {fileID: 422842303}
   - 114: {fileID: 422842302}
   - 114: {fileID: 422842301}
+  - 95: {fileID: 422842305}
   m_Layer: 5
   m_Name: CanvasPregunta
   m_TagString: Untagged
@@ -4886,7 +4928,24 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.3082538, y: 0.1770207}
+--- !u!95 &422842305
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 422842300}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f5aedfb47eff744c91c70bee6890656, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &431228209
 GameObject:
   m_ObjectHideFlags: 0
@@ -10011,7 +10070,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.0000333786, y: 21}
-  m_SizeDelta: {x: -155.99988, y: -70.502075}
+  m_SizeDelta: {x: -156.00012, y: -72.00842}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &956902294
 MonoBehaviour:
@@ -13981,6 +14040,7 @@ GameObject:
   - 223: {fileID: 1372055544}
   - 114: {fileID: 1372055543}
   - 114: {fileID: 1372055542}
+  - 95: {fileID: 1372055546}
   m_Layer: 5
   m_Name: CanvasPreguntaSimple
   m_TagString: Untagged
@@ -14066,7 +14126,24 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.000030517578, y: -0.000015258789}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.3082538, y: 0.1770207}
+--- !u!95 &1372055546
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1372055541}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f5aedfb47eff744c91c70bee6890656, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &1377918751 stripped
 Transform:
   m_PrefabParentObject: {fileID: 486610, guid: 0b4e35e9a64faad4ca7e27067d5987c2, type: 2}

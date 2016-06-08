@@ -102,18 +102,18 @@ public class ControladorHUD : MonoBehaviour
 
             switch ((int)BarraConocimiento.value)
             {
-                case 36:
+                case 45:
                     bombillas[0].color = colorBombillaEncendida;
                     break;
-                case 68:
+                case 80:
                     bombillas[1].color = colorBombillaEncendida;
                     break;
-                case 97:
+                case 120:
                     bombillas[2].color = colorBombillaEncendida;
                     break;
             }
 
-            if (BarraConocimiento.value == 36)
+            if (BarraConocimiento.value == 45)
             {
                 bombillas[0].color = colorBombillaEncendida;
             }
