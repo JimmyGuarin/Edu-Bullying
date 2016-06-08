@@ -28714,6 +28714,7 @@ MonoBehaviour:
   - {fileID: 676849998}
   - {fileID: 1444118916}
   sonidosPersonaje: []
+  destructor: {fileID: 1444118916}
   plataformasCaen: []
   indiceDestructor: -1
 --- !u!50 &2096319726
