@@ -57,7 +57,7 @@ public class Pausa : MonoBehaviour
 
     public void MenuCorredor()
     {
-
+        Time.timeScale = 1;
         //Destroy(GameObject.Find("CanvasHUD"));
         SceneManager.LoadScene(2);
     }

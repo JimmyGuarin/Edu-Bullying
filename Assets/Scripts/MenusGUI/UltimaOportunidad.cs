@@ -19,17 +19,18 @@ public class UltimaOportunidad : MonoBehaviour
     private ArrayList puntosRetro;
     private Preguntas pregunta;
     private PuntosRetro pr;
-    // Use this for initialization
-    //void Start()
-    //{
+  
 
-    //    puntosRetro = ManejadorPreguntas.instanciaActiva.misPuntosRetro;
-    //    pr = (PuntosRetro)puntosRetro[(int)Random.Range(0, puntosRetro.Count - 1)];
-    //    pr.Barajar();
-    //    Moldear();
+   void Start()
+    {
 
+        //puntosRetro = ManejadorPreguntas.instanciaActiva.misPuntosRetro;
+        //pr = (PuntosRetro)puntosRetro[(int)Random.Range(0, puntosRetro.Count - 1)];
+        //pr.Barajar();
+        //Moldear();
+        //Time.timeScale = 0;
 
-    //}
+    }
 
     public void OnEnable()
     {
@@ -124,7 +125,7 @@ public class UltimaOportunidad : MonoBehaviour
         ControladorColisiones cc = GameObject.FindGameObjectWithTag("Player").GetComponent<ControladorColisiones>();
         if (cc.indiceDestructor != -1)
         {
-           
+            Debug.Log(cc.indiceDestructor + " destructor");
             GameObject.FindGameObjectWithTag("Player").GetComponent<ControladorColisiones>().reaparecerPersonaje();
             
         }
