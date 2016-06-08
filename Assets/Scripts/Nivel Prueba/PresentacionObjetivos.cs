@@ -18,8 +18,15 @@ public class PresentacionObjetivos : MonoBehaviour
 
     }
 
-    public void OnDisable()
+    public void Deshabilitar()
+    {
+        gameObject.SetActive(false);
+    }
+
+    public void Funcion()
     {
         Time.timeScale = 1;
+        GetComponent<Animation>().Play();
+        
     }
 }
