@@ -1685,7 +1685,7 @@ RectTransform:
   m_AnchorMin: {x: 0.018461538, y: 0.038251363}
   m_AnchorMax: {x: 0.9815385, y: 0.929}
   m_AnchoredPosition: {x: 0, y: 1}
-  m_SizeDelta: {x: -85.1076, y: 46.0048}
+  m_SizeDelta: {x: -85.10772, y: 46.830196}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &676454152
 MonoBehaviour:
@@ -2235,8 +2235,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1828591}
-        m_MethodName: ActivateScene
+      - m_Target: {fileID: 959641672}
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2246,8 +2246,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 959641672}
-        m_MethodName: Play
+      - m_Target: {fileID: 1828591}
+        m_MethodName: ActivateScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3832,7 +3832,8 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 226
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11425878, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1404758005
