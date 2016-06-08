@@ -13,6 +13,8 @@ public class MoveRPG : MonoBehaviour
     private GameObject canvasNiveles;
     private bool enColision;
     private Animator anim;
+    private bool listo;
+
 
     public string nombreNivel;
     public GameObject canvasInfografias;
@@ -29,6 +31,7 @@ public class MoveRPG : MonoBehaviour
 
     void Start()
     {
+        
         audios = GetComponents<AudioSource>();
         nombreNivel = "";
         enColision = false;
@@ -36,7 +39,7 @@ public class MoveRPG : MonoBehaviour
         curSpeed = (float)(2);
         anim = GetComponent<Animator>();
         transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = imagenesJugadores[ControladorHUD.IndexPersonaje];
-
+        listo = false;
     }
 
     public void Update()
@@ -54,11 +57,10 @@ public class MoveRPG : MonoBehaviour
 
         }
 
-        if (async != null && async.progress >= 0.9f)
+        if (async != null && async.progress >= 0.9f&& !listo)
         {
-            textoCargando.SetActive(false);
-            ButtonComenzar.SetActive(true);
-
+            listo = true;
+            StartCoroutine("activarBoton");
 
         }
 
@@ -143,6 +145,14 @@ public class MoveRPG : MonoBehaviour
 
     }
 
+    IEnumerator activarBoton()
+    {
+        Debug.Log("Entra A boton");
+        yield return new WaitForSeconds(1f);
+        textoCargando.SetActive(false);
+        ButtonComenzar.SetActive(true);
+    }
+
 
 
 
@@ -188,11 +198,12 @@ public class MoveRPG : MonoBehaviour
     IEnumerator activarFameEscena()
     {
         async.allowSceneActivation = true;
+        
         while (!async.isDone)
         {
 
             Debug.Log("Entra a corrutina" + async.progress);
-            fademe.alpha -= Time.deltaTime / 2;
+            fademe.alpha -= Time.deltaTime / 8;
             Fade.alpha = fademe.alpha;
 
             yield return null;
