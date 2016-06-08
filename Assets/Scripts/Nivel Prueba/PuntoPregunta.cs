@@ -150,15 +150,15 @@ public class PuntoPregunta : MonoBehaviour
         }
         else
         {
-            if(puntajePreguntaDual>0&&puntajePreguntaMultiple>0)
+            if(puntajePreguntaDual>5&&puntajePreguntaMultiple>0)
             {
                 puntajePreguntaDual -= 5;
                 puntajePreguntaMultiple -= 5;
             }
             else
             {
-                puntajePreguntaDual = 0;
-                puntajePreguntaMultiple = 0;
+                puntajePreguntaDual = 5;
+                puntajePreguntaMultiple = 5;
             }
 
 
