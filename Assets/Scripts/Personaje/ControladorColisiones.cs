@@ -10,6 +10,7 @@ public class ControladorColisiones : MonoBehaviour
     public GameObject[] checkpoints;
     public GameObject[] destructores;
     public AudioSource[] sonidosPersonaje;
+    public GameObject destructor;
     public List<Vector3> plataformasCaen;
     [HideInInspector]
     public int indiceDestructor;
@@ -84,7 +85,7 @@ public class ControladorColisiones : MonoBehaviour
         {
             indiceDestructor = compararObjeto(collision.gameObject);
 
-            if(collision.gameObject.name.Equals("Destructor (2)"))
+            if(collision.gameObject == destructor)
             {
 
                 Debug.Log("Entre a acomodar");
