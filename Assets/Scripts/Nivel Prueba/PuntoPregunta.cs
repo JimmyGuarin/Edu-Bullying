@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -42,8 +43,12 @@ public class PuntoPregunta : MonoBehaviour
 
     public bool enColision;
 
+
+   
+
     void Start()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         preguntaActualIndex = 0;
         enColision = false;
         misPreguntas = new ArrayList();
@@ -72,9 +77,11 @@ public class PuntoPregunta : MonoBehaviour
 
         if (enColision){
 
+
             if (Input.GetKeyDown("f"))
             {
                 GameObject.FindGameObjectWithTag("Player").GetComponent<MovimientoPersonaje>().enabled = false;
+               
                 canvasHijo.SetActive(false);
                 audios[0].Play();
                 Mostrar();
@@ -105,26 +112,31 @@ public class PuntoPregunta : MonoBehaviour
     {
         preguntaActual = (Preguntas)misPreguntas[preguntaActualIndex];
 
+        Invoke("KeyEventSelectButton", 0.5f);
 
         if (preguntaActual.IsMultiple)
         {
-            
 
             enunciadoPreguntaMultiple.text = preguntaActual.Enunciado;
             respuestas = respuestasMultiples;
             canvasPreguntaMultiple.SetActive(true);
             canvasPreguntaMultiple.GetComponent<Animator>().enabled = true;
             puntajePregunta =puntajePreguntaMultiple;
+          
 
         }
         else
         {
+          
             enunciadoPreguntaDual.text = preguntaActual.Enunciado;
             respuestas = respuestasDual;
             puntajePregunta = puntajePreguntaDual;
             canvasPreguntaDual.SetActive(true);
             canvasPreguntaDual.GetComponent<Animator>().enabled = true;
         }
+
+       
+
 
         for (int i = 0; i < preguntaActual.Respuestas.Length; i++)
         {
@@ -175,6 +187,7 @@ public class PuntoPregunta : MonoBehaviour
             textoPuntajeMultiple.transform.parent.gameObject.SetActive(true);
             textoRetroAlimentacionMultiple.transform.parent.gameObject.SetActive(true);
             botonCerrarMultiple.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(botonCerrarMultiple);
         }
         else
         {
@@ -182,6 +195,7 @@ public class PuntoPregunta : MonoBehaviour
             textoPuntajeDual.transform.parent.gameObject.SetActive(true);
             textoRetroAlimentacionDual.transform.parent.gameObject.SetActive(true);
             botonCerrarDual.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(botonCerrarDual);
 
         }
 
@@ -228,5 +242,18 @@ public class PuntoPregunta : MonoBehaviour
     }
 
     
+    public void KeyEventSelectButton()
+    {
+        if (preguntaActual.IsMultiple)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(respuestasMultiples[0].gameObject);
+        }
+        else
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(respuestasDual[0].gameObject);
+        }
+    }
     
 }
