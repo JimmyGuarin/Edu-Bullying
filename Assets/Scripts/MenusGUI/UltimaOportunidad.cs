@@ -129,18 +129,22 @@ public class UltimaOportunidad : MonoBehaviour
     {
         Time.timeScale = 1;
         ControladorColisiones cc = GameObject.FindGameObjectWithTag("Player").GetComponent<ControladorColisiones>();
+        cc.sonidosPersonaje[2].volume = 1;
         if (cc.indiceDestructor != -1)
         {
             Debug.Log(cc.indiceDestructor + " destructor");
             GameObject.FindGameObjectWithTag("Player").GetComponent<ControladorColisiones>().reaparecerPersonaje();
             
         }
+        
             
     }
 
     public void MenuPrincipal()
     {
         Time.timeScale = 1;
+        Debug.Log("Menu Principal");
+        ControladorHUD.numeroVidas = 0;
         ControladorHUD.instance.aumentarVida();
         ControladorHUD.instance.aumentarVida();
         SceneManager.LoadScene(2);
@@ -150,6 +154,7 @@ public class UltimaOportunidad : MonoBehaviour
     public void ReiniciarNivel()
     {
         Time.timeScale = 1;
+        ControladorHUD.numeroVidas = 0;
         ControladorHUD.instance.aumentarVida();
         ControladorHUD.instance.aumentarVida();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

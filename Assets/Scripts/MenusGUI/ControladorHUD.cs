@@ -141,9 +141,13 @@ public class ControladorHUD : MonoBehaviour
         {
             corazones[numeroVidas].color = colorBombillaApagada;
             panelDerrota.SetActive(true);
+            
             EventSystem.current.SetSelectedGameObject(panelDerrota.transform.GetChild(0).GetChild(2).gameObject);
+            Debug.Log(GameObject.FindGameObjectWithTag("Player"));
+            GameObject.FindGameObjectWithTag("Player").GetComponents<AudioSource>()[2].volume = 0;
             Time.timeScale = 0;
-          
+           
+
         }
         if (numeroVidas >0)
         {

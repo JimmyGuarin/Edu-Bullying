@@ -4,13 +4,15 @@ using System.Collections;
 
 public class PresentacionObjetivos : MonoBehaviour
 {
-
+    private MovimientoPersonaje mp;
   
 
     // Use this for initialization
     void Start()
     {
         EventSystem.current.SetSelectedGameObject(transform.GetChild(0).FindChild("Button").gameObject);
+        mp = GameObject.FindGameObjectWithTag("Player").GetComponent<MovimientoPersonaje>();
+        mp.enabled = false;
         //Time.timeScale = 0;
     }
 
@@ -24,6 +26,7 @@ public class PresentacionObjetivos : MonoBehaviour
     public void Deshabilitar()
     {
         gameObject.SetActive(false);
+        mp.enabled = true;
     }
 
     public void Funcion()
