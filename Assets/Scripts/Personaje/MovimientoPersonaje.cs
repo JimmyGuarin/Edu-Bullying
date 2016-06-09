@@ -101,7 +101,7 @@ public class MovimientoPersonaje : MonoBehaviour
                 
         }
 
-        if (Input.GetKey(KeyCode.UpArrow) && (tocaPiso))
+        if (Input.GetKey(KeyCode.Space) && (tocaPiso))
         {
 
 

@@ -48,7 +48,6 @@ public class PuntoPregunta : MonoBehaviour
 
     void Start()
     {
-        EventSystem.current.SetSelectedGameObject(null);
         preguntaActualIndex = 0;
         enColision = false;
         misPreguntas = new ArrayList();

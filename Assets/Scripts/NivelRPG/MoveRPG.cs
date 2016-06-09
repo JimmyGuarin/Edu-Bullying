@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
@@ -155,6 +156,7 @@ public class MoveRPG : MonoBehaviour
         yield return new WaitForSeconds(1f);
         textoCargando.SetActive(false);
         ButtonComenzar.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(ButtonComenzar);
     }
 
 
