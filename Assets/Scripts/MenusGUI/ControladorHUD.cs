@@ -141,9 +141,13 @@ public class ControladorHUD : MonoBehaviour
         {
             corazones[numeroVidas].color = colorBombillaApagada;
             panelDerrota.SetActive(true);
+            
             EventSystem.current.SetSelectedGameObject(panelDerrota.transform.GetChild(0).GetChild(2).gameObject);
+            Debug.Log(GameObject.FindGameObjectWithTag("Player"));
+            GameObject.FindGameObjectWithTag("Player").GetComponents<AudioSource>()[2].volume = 0;
             Time.timeScale = 0;
-          
+           
+
         }
         if (numeroVidas >0)
         {
@@ -199,7 +203,8 @@ public class ControladorHUD : MonoBehaviour
     {
         imagenVictoria.SetActive(true);
         nivelesSuperados[nivelActual] = true;
-
+        EventSystem.current.SetSelectedGameObject(null);
+       EventSystem.current.SetSelectedGameObject(imagenVictoria.transform.GetChild(0).GetChild(0).gameObject);
     }
 
 
@@ -331,8 +336,10 @@ public class ControladorHUD : MonoBehaviour
             }
             textoPuntajes.text = "Felicidades <color=#a52a2aff>" + nombreJugador + "</color>, alcanzaste la posicion <color=#a52a2aff><b><size=65>" + posicionPuntajes + "</size></b></color> en la Tabla de Posiciones";
             panelPuntajes.SetActive(true);
-          
-            
+
+            StartCoroutine(activarButton(panelPuntajes.transform.GetChild(0).GetChild(0).gameObject));
+
+
 
         }
 
@@ -362,6 +369,12 @@ public class ControladorHUD : MonoBehaviour
     }
 
 
-
+    IEnumerator activarButton(GameObject b)
+    {
+        yield return new WaitForSeconds(0.5f);
+        Debug.Log("Entra a activar");
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(b);
+    }
 
 }

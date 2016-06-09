@@ -80,7 +80,7 @@ public class PuntoPregunta : MonoBehaviour
             if (Input.GetKeyDown("f"))
             {
                 GameObject.FindGameObjectWithTag("Player").GetComponent<MovimientoPersonaje>().enabled = false;
-               
+                GameObject.FindGameObjectWithTag("Player").GetComponent<ControladorColisiones>().sonidosPersonaje[2].Stop();
                 canvasHijo.SetActive(false);
                 audios[0].Play();
                 Mostrar();
@@ -253,6 +253,7 @@ public class PuntoPregunta : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(respuestasDual[0].gameObject);
         }
+       
     }
     
 }

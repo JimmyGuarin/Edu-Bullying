@@ -27,7 +27,7 @@ public class MoveOnPath : MonoBehaviour
         current_position = last_position;
         currentWayPointID = 0;
         correr = false;
-        Debug.Log(pathToFollow.path_objs.Count+"total");
+       
     }
 
     // Update is called once per frame
@@ -36,7 +36,7 @@ public class MoveOnPath : MonoBehaviour
 
         if (correr)
         {
-            Debug.Log(currentWayPointID);
+          
 
             float distance = Vector3.Distance(pathToFollow.path_objs[currentWayPointID].position, transform.position);
             transform.position = Vector3.MoveTowards(transform.position, pathToFollow.path_objs[currentWayPointID].position, Time.deltaTime * speed);
@@ -47,7 +47,7 @@ public class MoveOnPath : MonoBehaviour
 
             if (currentWayPointID >= pathToFollow.path_objs.Count)
             {
-                Debug.Log(pathToFollow.path_objs.Count + "puntos a correr");
+              
 
                 GetComponent<Animator>().SetBool("Correr", false);
                 correr = false;

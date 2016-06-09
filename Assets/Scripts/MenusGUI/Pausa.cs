@@ -38,6 +38,7 @@ public class Pausa : MonoBehaviour
 
         if (Time.timeScale == 1)
         {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<MovimientoPersonaje>().enabled =false;
             Time.timeScale = 0;
             gameObject.SetActive(false);
             panelPausa.SetActive(true);
@@ -46,6 +47,7 @@ public class Pausa : MonoBehaviour
         else
         {
             Time.timeScale = 1;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<MovimientoPersonaje>().enabled = true;
             gameObject.SetActive(true);
             panelPausa.SetActive(false);
             EventSystem.current.SetSelectedGameObject(null);

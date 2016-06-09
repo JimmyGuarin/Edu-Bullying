@@ -113,7 +113,7 @@ public class ControladorColisiones : MonoBehaviour
 
             if (indiceDestructor != -1)
             {
-
+                sonidosPersonaje[2].Stop();
                 ControladorHUD.instance.disminuirVida();
                 Debug.Log("Entra");
              
@@ -142,10 +142,20 @@ public class ControladorColisiones : MonoBehaviour
 
         if (collision.tag.Equals("LluviaBloques"))
         {
-            ControladorHUD.instance.disminuirVida();
+          
             Destroy(collision.gameObject);
+            sonidosPersonaje[2].Stop();
+            ControladorHUD.instance.disminuirVida();
+            Debug.Log("Entra");
+
+            if (ControladorHUD.numeroVidas > 0)
+            {
+
+                gameObject.SetActive(false);
+                Invoke("reaparecerPersonaje", 2f);
+            }
+
             
-            return;
         }
     }
 
