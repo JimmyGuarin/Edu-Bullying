@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using System.Collections;
@@ -40,12 +41,14 @@ public class Pausa : MonoBehaviour
             Time.timeScale = 0;
             gameObject.SetActive(false);
             panelPausa.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(panelPausa.transform.GetChild(0).GetChild(0).gameObject);
         }
         else
         {
             Time.timeScale = 1;
             gameObject.SetActive(true);
             panelPausa.SetActive(false);
+            EventSystem.current.SetSelectedGameObject(null);
         }
 
 
@@ -74,15 +77,20 @@ public class Pausa : MonoBehaviour
 
     public void ManejarSonido()
     {
+       
+
         if (!silencio)
         {
             master.SetFloat("silenciar",-80);
             silencio = true;
+            EventSystem.current.SetSelectedGameObject(panelPausa.transform.GetChild(0).GetChild(3).gameObject);
+
         }
         else
         {
             master.SetFloat("silenciar", 0);
             silencio =false;
+            EventSystem.current.SetSelectedGameObject(panelPausa.transform.GetChild(0).GetChild(2).gameObject);
         }
     
                 
