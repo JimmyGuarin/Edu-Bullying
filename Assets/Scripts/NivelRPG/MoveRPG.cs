@@ -55,8 +55,8 @@ public class MoveRPG : MonoBehaviour
             audios[3].Play();
             canvasInfografias.transform.Find(nombreNivel).gameObject.SetActive(true);
             canvasInfografias.SetActive(true);
-
-
+            audios[0].Stop();
+            audios[0].volume = 0;
             StartCoroutine(load());
             return;
 

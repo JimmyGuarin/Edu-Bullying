@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -29,6 +30,8 @@ public class MaquinaEstadosConver : MonoBehaviour
         audios = GetComponents<AudioSource>();
         Moldear();
         SeleccionarVictima();
+        StartCoroutine(activar());
+
     }
 
 
@@ -127,11 +130,11 @@ public class MaquinaEstadosConver : MonoBehaviour
 
             yield return new WaitForSeconds(0.05f);
         }
-       
-        
+
+
     }
 
-   
+
 
     void terminarConversacion()
     {
@@ -161,5 +164,15 @@ public class MaquinaEstadosConver : MonoBehaviour
         }
     }
 
+    IEnumerator activar()
+    {
+        yield return new WaitForEndOfFrame();
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(botonesNpc[0].gameObject);
+    }
 
+    public void OnEnable()
+    {
+        StartCoroutine(activar());
+    }
 }
