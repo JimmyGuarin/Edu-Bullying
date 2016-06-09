@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
@@ -34,17 +35,20 @@ public class UltimaOportunidad : MonoBehaviour
 
     public void OnEnable()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         puntosRetro = ManejadorPreguntas.instanciaActiva.misPuntosRetro;
         ResetearCanvas();
         pr = (PuntosRetro)puntosRetro[(int)Random.Range(0, puntosRetro.Count - 1)];
         pr.Barajar();
         Moldear();
-        Time.timeScale = 0;
+        StartCoroutine(Activar());
+        //Time.timeScale = 0;
+        Debug.Log("Entra");
     }
 
     void Moldear()
     {
-
+        
         int indice = 0;
 
         pregunta = (Preguntas)pr.misPreguntas[indice];
@@ -63,8 +67,7 @@ public class UltimaOportunidad : MonoBehaviour
         {
             botones[i].GetComponentInChildren<Text>().text = pregunta.Respuestas[i];
         }
-
-
+       
     }
 
 
@@ -79,6 +82,7 @@ public class UltimaOportunidad : MonoBehaviour
             textoPuntaje.text = " Conseguiste una Vida";
             ControladorHUD.instance.aumentarVida();
             botonCerrar.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(botonCerrar);
             corazon.SetActive(true);
         }
         else
@@ -86,6 +90,8 @@ public class UltimaOportunidad : MonoBehaviour
             botonPrecionado.GetComponent<Image>().color = Color.red;
             textoPuntaje.text = "No conseguiste una vida";
             botonCerrar2.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(botonCerrar2);
+
         }
 
 
@@ -161,5 +167,11 @@ public class UltimaOportunidad : MonoBehaviour
 
     }
 
-
+    IEnumerator  Activar()
+    {
+        yield return new WaitForEndOfFrame();
+        Debug.Log("activeb");
+        EventSystem.current.SetSelectedGameObject(botones[0].gameObject);
+        
+    }
 }

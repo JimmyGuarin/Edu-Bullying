@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
@@ -140,6 +141,7 @@ public class ControladorHUD : MonoBehaviour
         {
             corazones[numeroVidas].color = colorBombillaApagada;
             panelDerrota.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(panelDerrota.transform.GetChild(0).GetChild(2).gameObject);
             Time.timeScale = 0;
           
         }
