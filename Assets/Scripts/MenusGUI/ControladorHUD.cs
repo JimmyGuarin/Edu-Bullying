@@ -199,7 +199,8 @@ public class ControladorHUD : MonoBehaviour
     {
         imagenVictoria.SetActive(true);
         nivelesSuperados[nivelActual] = true;
-
+        EventSystem.current.SetSelectedGameObject(null);
+       EventSystem.current.SetSelectedGameObject(imagenVictoria.transform.GetChild(0).GetChild(0).gameObject);
     }
 
 
@@ -331,8 +332,10 @@ public class ControladorHUD : MonoBehaviour
             }
             textoPuntajes.text = "Felicidades <color=#a52a2aff>" + nombreJugador + "</color>, alcanzaste la posicion <color=#a52a2aff><b><size=65>" + posicionPuntajes + "</size></b></color> en la Tabla de Posiciones";
             panelPuntajes.SetActive(true);
-          
-            
+
+            StartCoroutine(activarButton(panelPuntajes.transform.GetChild(0).GetChild(0).gameObject));
+
+
 
         }
 
@@ -362,6 +365,12 @@ public class ControladorHUD : MonoBehaviour
     }
 
 
-
+    IEnumerator activarButton(GameObject b)
+    {
+        yield return new WaitForSeconds(0.5f);
+        Debug.Log("Entra a activar");
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(b);
+    }
 
 }
