@@ -2280,27 +2280,6 @@ Prefab:
     - {fileID: 6162330, guid: b70865e06af5b414380fc532c2395ee1, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b70865e06af5b414380fc532c2395ee1, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &259779140 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 176548, guid: b70865e06af5b414380fc532c2395ee1, type: 2}
-  m_PrefabInternal: {fileID: 1974791657}
---- !u!50 &259779141
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 259779140}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &260007212 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 111504, guid: 0b4e35e9a64faad4ca7e27067d5987c2, type: 2}
@@ -4316,7 +4295,6 @@ GameObject:
   - 4: {fileID: 484832485}
   - 212: {fileID: 484832487}
   - 61: {fileID: 484832486}
-  - 50: {fileID: 484832488}
   m_Layer: 8
   m_Name: props (40)
   m_TagString: Untagged
@@ -4380,23 +4358,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!50 &484832488
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 484832484}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &491632404
 GameObject:
   m_ObjectHideFlags: 0
@@ -4722,7 +4683,6 @@ GameObject:
   - 4: {fileID: 523014186}
   - 212: {fileID: 523014185}
   - 61: {fileID: 523014184}
-  - 50: {fileID: 523014187}
   m_Layer: 8
   m_Name: props (39)
   m_TagString: Untagged
@@ -4786,23 +4746,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1730324529}
   m_RootOrder: 0
---- !u!50 &523014187
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 523014183}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1001 &524385484
 Prefab:
   m_ObjectHideFlags: 0
@@ -6475,27 +6418,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &717077736 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 176548, guid: b70865e06af5b414380fc532c2395ee1, type: 2}
-  m_PrefabInternal: {fileID: 711087751}
---- !u!50 &717077737
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 717077736}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!4 &718700582 stripped
 Transform:
   m_PrefabParentObject: {fileID: 486610, guid: 0b4e35e9a64faad4ca7e27067d5987c2, type: 2}
@@ -7970,7 +7892,6 @@ GameObject:
   - 4: {fileID: 902903603}
   - 212: {fileID: 902903602}
   - 61: {fileID: 902903604}
-  - 50: {fileID: 902903605}
   m_Layer: 8
   m_Name: props (43)
   m_TagString: Untagged
@@ -8034,69 +7955,10 @@ BoxCollider2D:
   m_Offset: {x: 0.021827698, y: -0.046242476}
   serializedVersion: 2
   m_Size: {x: 3.3245258, y: 5.1756597}
---- !u!50 &902903605
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 902903601}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!1 &903027873 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 176548, guid: b70865e06af5b414380fc532c2395ee1, type: 2}
-  m_PrefabInternal: {fileID: 867799016}
---- !u!50 &903027874
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 903027873}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!4 &918738433 stripped
 Transform:
   m_PrefabParentObject: {fileID: 490024, guid: b2a8d107f3f5e0e4191a16baeddddfce, type: 2}
   m_PrefabInternal: {fileID: 1954713989}
---- !u!1 &918925357 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 176548, guid: b70865e06af5b414380fc532c2395ee1, type: 2}
-  m_PrefabInternal: {fileID: 823172219}
---- !u!50 &918925358
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 918925357}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!4 &923131328 stripped
 Transform:
   m_PrefabParentObject: {fileID: 421432, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
@@ -8330,7 +8192,6 @@ GameObject:
   - 4: {fileID: 952703740}
   - 212: {fileID: 952703739}
   - 61: {fileID: 952703738}
-  - 50: {fileID: 952703741}
   m_Layer: 8
   m_Name: props (42)
   m_TagString: Untagged
@@ -8394,44 +8255,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1730324529}
   m_RootOrder: 1
---- !u!50 &952703741
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 952703737}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!1 &953891930 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 176548, guid: b70865e06af5b414380fc532c2395ee1, type: 2}
-  m_PrefabInternal: {fileID: 1707914061}
---- !u!50 &953891931
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 953891930}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1001 &956643513
 Prefab:
   m_ObjectHideFlags: 0
@@ -11959,7 +11782,6 @@ GameObject:
   - 4: {fileID: 1270225366}
   - 212: {fileID: 1270225368}
   - 61: {fileID: 1270225367}
-  - 50: {fileID: 1270225369}
   m_Layer: 8
   m_Name: props (43)
   m_TagString: Untagged
@@ -12023,23 +11845,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!50 &1270225369
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1270225365}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!4 &1273480807 stripped
 Transform:
   m_PrefabParentObject: {fileID: 454838, guid: b70865e06af5b414380fc532c2395ee1, type: 2}
@@ -12639,27 +12444,6 @@ BoxCollider2D:
   m_Offset: {x: 22.07555, y: -0.079818726}
   serializedVersion: 2
   m_Size: {x: 59.819542, y: 0.84048283}
---- !u!1 &1362594903 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 176548, guid: b70865e06af5b414380fc532c2395ee1, type: 2}
-  m_PrefabInternal: {fileID: 1144852888}
---- !u!50 &1362594904
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1362594903}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!4 &1371427939 stripped
 Transform:
   m_PrefabParentObject: {fileID: 429956, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
@@ -13482,11 +13266,11 @@ Prefab:
         type: 3}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 345
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11444696, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_Sprite
@@ -13509,11 +13293,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -85.10772
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: -1440.7996
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 142576, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_IsActive
@@ -14022,7 +13806,6 @@ GameObject:
   - 4: {fileID: 1511503350}
   - 212: {fileID: 1511503349}
   - 61: {fileID: 1511503348}
-  - 50: {fileID: 1511503351}
   m_Layer: 8
   m_Name: props (44)
   m_TagString: Untagged
@@ -14086,23 +13869,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1730324529}
   m_RootOrder: 11
---- !u!50 &1511503351
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1511503347}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &1512201574
 GameObject:
   m_ObjectHideFlags: 0
@@ -14309,7 +14075,6 @@ GameObject:
   - 4: {fileID: 1523379407}
   - 212: {fileID: 1523379409}
   - 61: {fileID: 1523379408}
-  - 50: {fileID: 1523379410}
   m_Layer: 8
   m_Name: props (46)
   m_TagString: Untagged
@@ -14373,23 +14138,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!50 &1523379410
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1523379406}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &1534918894 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 111504, guid: 0b4e35e9a64faad4ca7e27067d5987c2, type: 2}
@@ -15197,7 +14945,6 @@ GameObject:
   - 4: {fileID: 1654267791}
   - 212: {fileID: 1654267793}
   - 61: {fileID: 1654267792}
-  - 50: {fileID: 1654267794}
   m_Layer: 8
   m_Name: props (41)
   m_TagString: Untagged
@@ -15261,23 +15008,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!50 &1654267794
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1654267790}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &1655012778 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 167394, guid: e17a228ac5f363e4a83a41ff94b1b93e, type: 2}
