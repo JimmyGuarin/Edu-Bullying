@@ -58,6 +58,16 @@ public class Pausa : MonoBehaviour
     public void MenuCorredor()
     {
         Time.timeScale = 1;
+        Debug.Log(ControladorHUD.numeroVidas);
+
+        if (ControladorHUD.numeroVidas <= 0)
+        {
+            ControladorHUD.numeroVidas = 0;
+            Debug.Log("Entra aumenta");
+            ControladorHUD.instance.aumentarVida();
+            ControladorHUD.instance.aumentarVida();
+        }
+        
         //Destroy(GameObject.Find("CanvasHUD"));
         SceneManager.LoadScene(2);
     }
