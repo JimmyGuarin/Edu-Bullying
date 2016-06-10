@@ -13350,7 +13350,7 @@ Prefab:
         responder las preguntas necesarias para completar el nivel.\n\n<color=#250601FF>3.</color>
         Encuentra la profesora, ella te guiar\xE1 al final del nivel donde tendr\xE1s
         que resolver el conflicto de cada Bullying.\n\n<color=#250601FF>4.</color>
-        Llega con la profesora a donde Carl, habla con \xE9l y mediantes una charla
+        Llega con la profesora a donde Carl, habla con \xE9l y mediante una charla
         convenselo de dejar de hacer Bullying.\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 11417566, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
