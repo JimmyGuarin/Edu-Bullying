@@ -16,8 +16,8 @@ public class Pausa : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        
 
+       
     }
 
 
@@ -27,6 +27,7 @@ public class Pausa : MonoBehaviour
 
         if (Input.GetKeyDown("p")|| Input.GetKeyDown(KeyCode.Escape))
         {
+            GameObject.Find("OrangeCursor").GetComponent<RotatingCursor>().enabled = true;
             ControladorHUD.instance.GetComponent<AudioSource>().Play();
             ToggleMenuPausa();
         }

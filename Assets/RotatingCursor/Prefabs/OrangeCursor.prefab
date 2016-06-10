@@ -41,7 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorTexture: {fileID: 2800000, guid: 2617143364320f94ebc507ce5587ae0a, type: 3}
   textureAngle: 0
-  scale: 0.3
+  scale: 0.4
   pixelsHotSpot: {x: 32, y: 1}
   smoothness: 0.8
   maxTurn: 15

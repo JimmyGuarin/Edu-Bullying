@@ -48,15 +48,14 @@ public class ControladorHUD : MonoBehaviour
 
 
     private Vector3 mousePosition;
-    private bool oculto;
 
     void Awake()
     {
 
         Cursor.visible = false;
-        oculto = false;
+
         mousePosition = Input.mousePosition;
-        //InvokeRepeating("OcultarMouse",0.5f,0.5f);
+        InvokeRepeating("OcultarMouse", 0.5f, 0.5f);
 
 
         if (instance == null)
@@ -89,39 +88,35 @@ public class ControladorHUD : MonoBehaviour
     }
 
 
-    //private void OcultarMouse()
-    //{
-    //    RotatingCursor mouse = GameObject.Find("OrangeCursor").GetComponent<RotatingCursor>();
+    private void OcultarMouse()
+    {
+        RotatingCursor mouse = GameObject.Find("OrangeCursor").GetComponent<RotatingCursor>();
 
-        
 
-    //    if (Input.mousePosition == mousePosition&&mouse.enabled==true)
-    //    {
-    //        oculto = true;
-    //        Cursor.lockState = CursorLockMode.Confined;
-    //        mousePosition = Input.mousePosition;
-    //        Debug.Log(Input.mousePosition);
-    //        Debug.Log("Entra");
-            
-    //        mouse.enabled = false;
+
+        if (Input.mousePosition == mousePosition && mouse.enabled == true)
+        {
            
-            
-    //    }
-    //    else
-    //    {
-         
+            Cursor.lockState = CursorLockMode.Confined;
+            mousePosition = Input.mousePosition;
+            mouse.enabled = false;
 
-    //        if (Input.mousePosition != mousePosition)
-    //        {
-    //            oculto = false;
-    //            mousePosition = Input.mousePosition;
-    //            Cursor.lockState = CursorLockMode.None;
-    //            if (mouse != null)
-    //                mouse.enabled = true;
-    //        }
-    //    }
 
-    //}
+        }
+        else
+        {
+
+
+            if (Input.mousePosition != mousePosition)
+            {
+                mousePosition = Input.mousePosition;
+                Cursor.lockState = CursorLockMode.None;
+                if (mouse != null)
+                    mouse.enabled = true;
+            }
+        }
+
+    }
 
 
 
@@ -182,7 +177,9 @@ public class ControladorHUD : MonoBehaviour
         numeroVidas--;
         if (numeroVidas == 0)
         {
+            GameObject.Find("OrangeCursor").GetComponent<RotatingCursor>().enabled = true;
             corazones[numeroVidas].color = colorBombillaApagada;
+            HideMouse.SetCursorPos(Screen.width / 2, Screen.height / 4);
             panelDerrota.SetActive(true);
             
             EventSystem.current.SetSelectedGameObject(panelDerrota.transform.GetChild(0).GetChild(2).gameObject);
