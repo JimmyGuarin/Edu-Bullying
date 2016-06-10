@@ -46,7 +46,7 @@ public class Fade : MonoBehaviour
                 
                 if (entradaInicial ==true)
                 {
-                    Debug.Log("primera vez");
+
                     seleccionPersonje.SetActive(true);
                     seleccionPersonje.GetComponentInChildren<Animator>().enabled = true;
                     //reacomodarMenu();

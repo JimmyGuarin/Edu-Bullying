@@ -61,7 +61,7 @@ public class Laboratorio : MonoBehaviour
 
         if (collision.tag.Equals("Destructor"))
         {
-            Debug.Log("Entra");
+
             mp.escala = 0.2f;
             mp.velocidad = 8;
             mp.fuerzaSalto = 25;

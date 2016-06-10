@@ -26,7 +26,6 @@ public class MaquinaEstadosConver : MonoBehaviour
     void Start()
     {
         estadoActual = 0;
-        Debug.Log(estados.Length);
         audios = GetComponents<AudioSource>();
         Moldear();
         SeleccionarVictima();
@@ -118,6 +117,7 @@ public class MaquinaEstadosConver : MonoBehaviour
                     jugador.GetComponent<Animation>().Play();
                     jugador.GetComponent<MovimientoPersonaje>().enabled = true;
                     jugador.GetComponent<ControladorColisiones>().enemigo.GetComponent<Collider2D>().enabled = true;
+                    jugador.GetComponents<AudioSource>()[2].volume =1;
                     ControladorHUD.instance.disminuirVida();
                     break;
                 case 60:

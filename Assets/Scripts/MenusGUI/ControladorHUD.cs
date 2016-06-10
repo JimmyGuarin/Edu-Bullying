@@ -194,7 +194,6 @@ public class ControladorHUD : MonoBehaviour
         }
         if (numeroVidas >0)
         {
-            Debug.Log(numeroVidas);
             corazones[numeroVidas].color = colorBombillaApagada;
            
         }
@@ -315,12 +314,6 @@ public class ControladorHUD : MonoBehaviour
                 }
             }
         }
-
-
-        for (int i = 1; i <= 5; i++) //for top 5 highscores 
-        {
-            Debug.Log("Puntaje "+i+""+PlayerPrefs.GetInt("highscorePos" + i));
-        }
     }
 
 
@@ -362,7 +355,7 @@ public class ControladorHUD : MonoBehaviour
         {
                 if (PlayerPrefs.GetInt("highscorePos" + i) == puntajeTotal)
                 {
-                    Debug.Log("entraaa");
+                   
                     posicionPuntajes = i;
                 }
         }
@@ -406,7 +399,6 @@ public class ControladorHUD : MonoBehaviour
                 nombreJugador = nombre.text;
             PlayerPrefs.SetString("nombre" + posicionPuntajes, nombreJugador);
         }
-        Debug.Log("Nombre Jugador: " + nombreJugador);
         nombre.text = "";
         GameObject.FindGameObjectWithTag("Player").GetComponent<MoveRPG>().enabled = true;
     }
@@ -415,7 +407,6 @@ public class ControladorHUD : MonoBehaviour
     IEnumerator activarButton(GameObject b)
     {
         yield return new WaitForSeconds(0.5f);
-        Debug.Log("Entra a activar");
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(b);
     }
