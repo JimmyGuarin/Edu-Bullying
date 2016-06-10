@@ -12,6 +12,7 @@ public class Presentacion : MonoBehaviour {
 
     void Start () {
         load();
+      
 	}
 	
 	// Update is called once per frame
