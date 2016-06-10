@@ -31,6 +31,7 @@ public class Enemigo : MonoBehaviour
                 mp.GetComponent<ControladorColisiones>().indiceDestructor = mp.GetComponent<ControladorColisiones>().destructores.Length - 1;
                 mp.GetComponents<AudioSource>()[2].volume = 0;
                 mp.enabled = false;
+                HideMouse.SetCursorPos(Screen.width / 2, Screen.height / 4);
                 transform.GetChild(0).gameObject.SetActive(false);
                 canvasConversacion.SetActive(true);
                 GetComponent<Collider2D>().enabled = false;

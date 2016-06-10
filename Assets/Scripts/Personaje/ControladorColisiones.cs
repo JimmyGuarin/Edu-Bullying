@@ -88,20 +88,7 @@ public class ControladorColisiones : MonoBehaviour
             if(collision.gameObject == destructor)
             {
 
-                Debug.Log("Entre a acomodar");
-                for (int i=0; i<plataformasCaen.Count;i++){
-
-
-                    GameObject padre = GameObject.Find("Caen");
-
-                    padre.transform.GetChild(i).GetComponent<Rigidbody2D>().isKinematic = true;
-                   
-                    padre.transform.GetChild(i).transform.position = plataformasCaen[i];
-                    padre.transform.GetChild(i).transform.rotation = new Quaternion();
-                   
-
-
-                }
+               
 
             }
             // StartCoroutine(activarSonidoCallendo(collision.GetComponentInParent<AudioSource>()));
@@ -151,8 +138,8 @@ public class ControladorColisiones : MonoBehaviour
             if (ControladorHUD.numeroVidas > 0)
             {
 
-                gameObject.SetActive(false);
-                Invoke("reaparecerPersonaje", 2f);
+                //gameObject.SetActive(false);
+               //s Invoke("reaparecerPersonaje", 2f);
             }
 
             
@@ -182,7 +169,7 @@ public class ControladorColisiones : MonoBehaviour
                 sonidosPersonaje[6].Play();
             }
                       
-            return;
+            
         }
 
         if (collision.gameObject.tag.Equals("Caen"))
@@ -247,6 +234,15 @@ public class ControladorColisiones : MonoBehaviour
         gameObject.SetActive(true);
         enemigo.SetActive(false);
         Invoke("detenerSonidoRespawn", 1.7f);
+        GetComponent<MovimientoPersonaje>().escala = 0.2f;
+        GetComponent<MovimientoPersonaje>().velocidad = 8;
+        GetComponent<MovimientoPersonaje>().fuerzaSalto = 25;
+        transform.localScale = new Vector3(0.2f, 0.2f, 1);
+        GetComponent<MovimientoPersonaje>().radioValidacion = 0.45f;
+
+
+
+        reacomodarPlataformas();
         indiceDestructor =0;
         //sonidosPersonaje[6].Play();
         //Invoke("detenerSonidoRespawn", 1f);
@@ -285,8 +281,26 @@ public class ControladorColisiones : MonoBehaviour
         }
     }
 
-    void reacomodarPlataformas(List<Transform> movidas)
+    void reacomodarPlataformas()
     {
-       
+        if (destructor != null)
+        {
+            Debug.Log("Entre a acomodar");
+            for (int i = 0; i < plataformasCaen.Count; i++)
+            {
+
+
+                GameObject padre = GameObject.Find("Caen");
+
+                padre.transform.GetChild(i).GetComponent<Rigidbody2D>().isKinematic = true;
+
+                padre.transform.GetChild(i).transform.position = plataformasCaen[i];
+                padre.transform.GetChild(i).transform.rotation = new Quaternion();
+            }
+
+
+        }
+
+      
     }
 }
