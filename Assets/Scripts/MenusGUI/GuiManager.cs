@@ -32,7 +32,7 @@ public class GuiManager : MonoBehaviour {
 
         listo = false;
 
-        //  PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
         Cursor.visible = false;
 
         if (indexPersonaje != 0)
@@ -63,11 +63,7 @@ public class GuiManager : MonoBehaviour {
 
         if (async != null && async.progress==0.9f&& !listo)
         {
-
-            Debug.Log("Entra a activar");
             listo = true;
-          
-
             StartCoroutine("activarBoton");
 
 
@@ -124,7 +120,7 @@ public class GuiManager : MonoBehaviour {
     }
     IEnumerator activarBoton()
     {
-        Debug.Log("Entra A boton");
+     
         yield return new WaitForSeconds(1f);
         textoCargando.SetActive(false);
         bottonCambiarEscena.SetActive(true);
@@ -135,8 +131,7 @@ public class GuiManager : MonoBehaviour {
         async.allowSceneActivation = true;
         while (!async.isDone)
         {
-            
-            Debug.Log("Entra a corrutina" + async.progress);
+
             fademe.alpha += Time.deltaTime / 2;
             Fade.alpha = fademe.alpha;
            

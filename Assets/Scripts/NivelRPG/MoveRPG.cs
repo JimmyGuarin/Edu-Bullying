@@ -152,7 +152,7 @@ public class MoveRPG : MonoBehaviour
 
     IEnumerator activarBoton()
     {
-        Debug.Log("Entra A boton");
+
         yield return new WaitForSeconds(1f);
         textoCargando.SetActive(false);
         ButtonComenzar.SetActive(true);
@@ -208,7 +208,7 @@ public class MoveRPG : MonoBehaviour
         while (!async.isDone)
         {
 
-            Debug.Log("Entra a corrutina" + async.progress);
+
             fademe.alpha += Time.deltaTime / 2;
             Fade.alpha = fademe.alpha;
 

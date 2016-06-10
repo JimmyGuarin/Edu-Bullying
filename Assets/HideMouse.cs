@@ -23,7 +23,7 @@ public class HideMouse : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        SetCursorPos(0,0);
+      //  SetCursorPos(0,0);
 	
 	}
 }

@@ -35,6 +35,7 @@ public class UltimaOportunidad : MonoBehaviour
 
     public void OnEnable()
     {
+        HideMouse.SetCursorPos(Screen.width / 2, Screen.height / 4);
         EventSystem.current.SetSelectedGameObject(null);
         puntosRetro = ManejadorPreguntas.instanciaActiva.misPuntosRetro;
         ResetearCanvas();
@@ -129,6 +130,7 @@ public class UltimaOportunidad : MonoBehaviour
     {
         Time.timeScale = 1;
         ControladorColisiones cc = GameObject.FindGameObjectWithTag("Player").GetComponent<ControladorColisiones>();
+
         cc.sonidosPersonaje[2].volume = 1;
         if (cc.indiceDestructor != -1)
         {

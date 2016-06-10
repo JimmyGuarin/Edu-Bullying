@@ -45,12 +45,17 @@ public class ControladorHUD : MonoBehaviour
     private GameObject corazonesrpg;
 
     private AudioSource sonido;
-   
+
+
+    private Vector3 mousePosition;
 
     void Awake()
     {
 
         Cursor.visible = false;
+
+        mousePosition = Input.mousePosition;
+        InvokeRepeating("OcultarMouse", 0.5f, 0.5f);
 
 
         if (instance == null)
@@ -81,6 +86,38 @@ public class ControladorHUD : MonoBehaviour
 
 
     }
+
+
+    private void OcultarMouse()
+    {
+        RotatingCursor mouse = GameObject.Find("OrangeCursor").GetComponent<RotatingCursor>();
+
+
+
+        if (Input.mousePosition == mousePosition && mouse.enabled == true)
+        {
+           
+            Cursor.lockState = CursorLockMode.Confined;
+            mousePosition = Input.mousePosition;
+            mouse.enabled = false;
+
+
+        }
+        else
+        {
+
+
+            if (Input.mousePosition != mousePosition)
+            {
+                mousePosition = Input.mousePosition;
+                Cursor.lockState = CursorLockMode.None;
+                if (mouse != null)
+                    mouse.enabled = true;
+            }
+        }
+
+    }
+
 
 
     public void aumentarPuntaje(int cantidad, bool conocimiento)
@@ -140,7 +177,9 @@ public class ControladorHUD : MonoBehaviour
         numeroVidas--;
         if (numeroVidas == 0)
         {
+            GameObject.Find("OrangeCursor").GetComponent<RotatingCursor>().enabled = true;
             corazones[numeroVidas].color = colorBombillaApagada;
+            HideMouse.SetCursorPos(Screen.width / 2, Screen.height / 4);
             panelDerrota.SetActive(true);
             
             EventSystem.current.SetSelectedGameObject(panelDerrota.transform.GetChild(0).GetChild(2).gameObject);
@@ -152,7 +191,6 @@ public class ControladorHUD : MonoBehaviour
         }
         if (numeroVidas >0)
         {
-            Debug.Log(numeroVidas);
             corazones[numeroVidas].color = colorBombillaApagada;
            
         }
@@ -273,12 +311,6 @@ public class ControladorHUD : MonoBehaviour
                 }
             }
         }
-
-
-        for (int i = 1; i <= 5; i++) //for top 5 highscores 
-        {
-            Debug.Log("Puntaje "+i+""+PlayerPrefs.GetInt("highscorePos" + i));
-        }
     }
 
 
@@ -320,7 +352,7 @@ public class ControladorHUD : MonoBehaviour
         {
                 if (PlayerPrefs.GetInt("highscorePos" + i) == puntajeTotal)
                 {
-                    Debug.Log("entraaa");
+                   
                     posicionPuntajes = i;
                 }
         }
@@ -364,7 +396,6 @@ public class ControladorHUD : MonoBehaviour
                 nombreJugador = nombre.text;
             PlayerPrefs.SetString("nombre" + posicionPuntajes, nombreJugador);
         }
-        Debug.Log("Nombre Jugador: " + nombreJugador);
         nombre.text = "";
         GameObject.FindGameObjectWithTag("Player").GetComponent<MoveRPG>().enabled = true;
     }
@@ -373,7 +404,6 @@ public class ControladorHUD : MonoBehaviour
     IEnumerator activarButton(GameObject b)
     {
         yield return new WaitForSeconds(0.5f);
-        Debug.Log("Entra a activar");
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(b);
     }
