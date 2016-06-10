@@ -115,7 +115,7 @@ public class ControladorColisiones : MonoBehaviour
             {
                 sonidosPersonaje[2].Stop();
                 ControladorHUD.instance.disminuirVida();
-                Debug.Log("Entra");
+
              
                 if (ControladorHUD.numeroVidas>0)
                 {
@@ -131,7 +131,7 @@ public class ControladorColisiones : MonoBehaviour
 
         if (collision.gameObject==profesora)
         {
-            Debug.Log("Toca Profesora");
+
 
                 collision.GetComponent<Collider2D>().enabled = false;
                 collision.GetComponent<MoveOnPath>().currentWayPointID = 0;

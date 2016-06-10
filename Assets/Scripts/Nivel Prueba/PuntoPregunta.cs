@@ -81,6 +81,7 @@ public class PuntoPregunta : MonoBehaviour
             {
                 GameObject.FindGameObjectWithTag("Player").GetComponent<MovimientoPersonaje>().enabled = false;
                 GameObject.FindGameObjectWithTag("Player").GetComponent<ControladorColisiones>().sonidosPersonaje[2].Stop();
+
                 canvasHijo.SetActive(false);
                 audios[0].Play();
                 Mostrar();

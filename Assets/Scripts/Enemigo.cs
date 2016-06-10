@@ -29,6 +29,7 @@ public class Enemigo : MonoBehaviour
             {
                 GameObject.Find("CanvasPreguntas").GetComponent<AudioSource>().Play();
                 mp.GetComponent<ControladorColisiones>().indiceDestructor = mp.GetComponent<ControladorColisiones>().destructores.Length - 1;
+                mp.GetComponents<AudioSource>()[2].volume = 0;
                 mp.enabled = false;
                 transform.GetChild(0).gameObject.SetActive(false);
                 canvasConversacion.SetActive(true);
