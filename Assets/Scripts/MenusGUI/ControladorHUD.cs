@@ -45,12 +45,18 @@ public class ControladorHUD : MonoBehaviour
     private GameObject corazonesrpg;
 
     private AudioSource sonido;
-   
+
+
+    private Vector3 mousePosition;
+    private bool oculto;
 
     void Awake()
     {
 
         Cursor.visible = false;
+        oculto = false;
+        mousePosition = Input.mousePosition;
+        //InvokeRepeating("OcultarMouse",0.5f,0.5f);
 
 
         if (instance == null)
@@ -81,6 +87,42 @@ public class ControladorHUD : MonoBehaviour
 
 
     }
+
+
+    //private void OcultarMouse()
+    //{
+    //    RotatingCursor mouse = GameObject.Find("OrangeCursor").GetComponent<RotatingCursor>();
+
+        
+
+    //    if (Input.mousePosition == mousePosition&&mouse.enabled==true)
+    //    {
+    //        oculto = true;
+    //        Cursor.lockState = CursorLockMode.Confined;
+    //        mousePosition = Input.mousePosition;
+    //        Debug.Log(Input.mousePosition);
+    //        Debug.Log("Entra");
+            
+    //        mouse.enabled = false;
+           
+            
+    //    }
+    //    else
+    //    {
+         
+
+    //        if (Input.mousePosition != mousePosition)
+    //        {
+    //            oculto = false;
+    //            mousePosition = Input.mousePosition;
+    //            Cursor.lockState = CursorLockMode.None;
+    //            if (mouse != null)
+    //                mouse.enabled = true;
+    //        }
+    //    }
+
+    //}
+
 
 
     public void aumentarPuntaje(int cantidad, bool conocimiento)
