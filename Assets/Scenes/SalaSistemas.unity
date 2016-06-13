@@ -6237,7 +6237,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11486576, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_Text
-      value: "Debes responder una pregunta para activar el bot\xF3n y bajar la plataforma.\n<color=#a52a2aff><b><size=90>Presiona
+      value: "Debes responder una pregunta para activar el bot\xF3n que baja la plataforma.\n<color=#a52a2aff><b><size=90>Presiona
         F</size></b></color>"
       objectReference: {fileID: 0}
     - target: {fileID: 195058, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
@@ -20021,11 +20021,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -85.10748
+      value: -85.10772
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: -1478.0244
+      value: -1468.5685
       objectReference: {fileID: 0}
     - target: {fileID: 11493820, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -21911,6 +21911,12 @@ Prefab:
     - target: {fileID: 192724, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: m_Name
       value: PuntoPregunta3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470324, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_Text
+      value: 'Debes responder una pregunta para mover la palanca que activa la plataforma.
+
+        <color=#a52a2aff><b><size=90>Presiona F</size></b></color>'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
