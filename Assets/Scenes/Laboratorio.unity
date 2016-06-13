@@ -17347,6 +17347,11 @@ Prefab:
       propertyPath: m_Name
       value: PuntoPregunta1
       objectReference: {fileID: 0}
+    - target: {fileID: 11486576, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
+      propertyPath: m_Text
+      value: "Debes responder una pregunta para pulsar el bot\xF3n y activar la plataforma.\n<color=#a52a2aff><b><size=90>Presiona
+        F</size></b></color>"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
   m_IsPrefabParent: 0
@@ -18562,6 +18567,11 @@ Prefab:
       propertyPath: objetosAnimados.Array.data[2]
       value: 
       objectReference: {fileID: 1378392050}
+    - target: {fileID: 11486576, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
+      propertyPath: m_Text
+      value: "Debes responder una pregunta para pular el bot\xF3n y activar la plataforma.\n<color=#a52a2aff><b><size=90>Presiona
+        F</size></b></color>"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
   m_IsPrefabParent: 0
@@ -23506,6 +23516,12 @@ Prefab:
     - target: {fileID: 6104166, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: m_Size.x
       value: 3.0102143
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470324, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_Text
+      value: 'Debes responder una pregunta para mover la palanca y activar el agrandador.
+
+        <color=#a52a2aff><b><size=90>Presiona F</size></b></color>'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
