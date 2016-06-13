@@ -366,7 +366,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 53}
-  m_SizeDelta: {x: -156, y: -190.70178}
+  m_SizeDelta: {x: -156, y: -190.7362}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &274427919
 GameObject:
@@ -860,7 +860,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
   m_Text: "Nuestro colegio est\xE1 siendo atacado por el Bullying, debes enfrentarte
-    a Brutus y su pandilla, pero para esto debes conocer todo sobre el tema y como
+    a Brutus y su pandilla, pero para esto debes conocer todo sobre el tema y c\xF3mo
     combatirlo. Usando tu inteligencia y audacia recorre el colegio superando todos
     los obst\xE1culos y consiguiendo pistas y conocimiento que te ayuden a encontrar
     la forma de persuadir a tus agresores y terminar por completo esta tendencia."
