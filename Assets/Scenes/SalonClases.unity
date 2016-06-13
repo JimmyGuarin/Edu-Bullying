@@ -961,19 +961,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 345
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -85.10748
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: -1478.0244
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11440754, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_Color.r
@@ -1043,7 +1043,7 @@ Prefab:
         Encuentra la profesora, ella te guiar\xE1 al final del nivel donde tendr\xE1s
         que resolver el conflicto de cada Bullying.\n\n<color=#250601FF>4.</color>
         Llega con la profesora a donde Dante, habla con \xE9l y mediante una charla
-        convenselo de dejar de hacer Bullying.\n\n"
+        conv\xE9nselo de dejar de hacer Bullying.\n\n"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
@@ -8917,6 +8917,23 @@ Prefab:
     - target: {fileID: 179572, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_Name
       value: PuntoPregunta3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11486576, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
+      propertyPath: m_Text
+      value: "Debes responder una pregunta para mover el bot\xF3n que baja la plataforma.\n<color=#a52a2aff><b><size=90>Presiona
+        F</size></b></color>"
+      objectReference: {fileID: 0}
+    - target: {fileID: 22479778, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22479778, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 195058, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
@@ -20592,7 +20609,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Debes responder una pregunta para mover la palanca y activar la plataforma.
+  m_Text: 'Debes responder una pregunta para activar el interruptor que enciende la
+    luz.
 
     <color=#a52a2aff><b><size=90>Presiona F</size></b></color>'
 --- !u!222 &2014459924
@@ -21117,6 +21135,24 @@ Prefab:
     - target: {fileID: 462246, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0.168
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470324, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_Text
+      value: 'Debes responder una pregunta para mover la palanca que gira las plataformas.
+
+        <color=#a52a2aff><b><size=90>Presiona F</size></b></color>'
+      objectReference: {fileID: 0}
+    - target: {fileID: 160926, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22471506, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22471506, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}

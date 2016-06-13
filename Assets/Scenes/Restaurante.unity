@@ -12784,6 +12784,23 @@ Prefab:
       propertyPath: m_Name
       value: PuntoPregunta3
       objectReference: {fileID: 0}
+    - target: {fileID: 11486576, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
+      propertyPath: m_Text
+      value: "Debes responder una pregunta para activar el bot\xF3n que baja la plataforma.\n<color=#a52a2aff><b><size=90>Presiona
+        F</size></b></color>"
+      objectReference: {fileID: 0}
+    - target: {fileID: 22479778, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22479778, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 195058, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
   m_IsPrefabParent: 0
@@ -13332,11 +13349,11 @@ Prefab:
         type: 3}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 345
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11444696, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_Sprite
@@ -13351,7 +13368,7 @@ Prefab:
         Encuentra la profesora, ella te guiar\xE1 al final del nivel donde tendr\xE1s
         que resolver el conflicto de cada Bullying.\n\n<color=#250601FF>4.</color>
         Llega con la profesora a donde Carl, habla con \xE9l y mediante una charla
-        convenselo de dejar de hacer Bullying.\n\n"
+        conv\xE9nselo de dejar de hacer Bullying.\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 11417566, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_Text
@@ -13359,11 +13376,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -85.10748
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: -1478.0244
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 142576, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_IsActive
@@ -16634,6 +16651,37 @@ Prefab:
       propertyPath: canvasHijo
       value: 
       objectReference: {fileID: 1886289678}
+    - target: {fileID: 11470324, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_Text
+      value: 'Debes responder una pregunta para mover la palanca que activa el horno
+        volador.
+
+        <color=#a52a2aff><b><size=90>Presiona F</size></b></color>'
+      objectReference: {fileID: 0}
+    - target: {fileID: 160926, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22471506, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22471506, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22457044, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22457044, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 1284.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22457044, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 412.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
   m_IsPrefabParent: 0
@@ -18620,6 +18668,37 @@ Prefab:
     - target: {fileID: 11406496, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: puntosRetro.Array.data[0]
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470324, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_Text
+      value: 'Debes responder una pregunta para mover la palanca que activa la plataforma
+        voladora.
+
+        <color=#a52a2aff><b><size=90>Presiona F</size></b></color>'
+      objectReference: {fileID: 0}
+    - target: {fileID: 160926, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22471506, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22471506, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22457044, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22457044, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 1284.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22457044, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 445.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
