@@ -121,6 +121,7 @@ public class PuntoPregunta : MonoBehaviour
             respuestas = respuestasMultiples;
             canvasPreguntaMultiple.SetActive(true);
             canvasPreguntaMultiple.GetComponent<Animator>().enabled = true;
+            canvasPreguntaMultiple.GetComponent<Animator>().SetTrigger("Abrir");
             puntajePregunta =puntajePreguntaMultiple;
           
 
@@ -133,6 +134,7 @@ public class PuntoPregunta : MonoBehaviour
             puntajePregunta = puntajePreguntaDual;
             canvasPreguntaDual.SetActive(true);
             canvasPreguntaDual.GetComponent<Animator>().enabled = true;
+            canvasPreguntaDual.GetComponent<Animator>().GetComponent<Animator>().SetTrigger("Abrir");
         }
 
        
