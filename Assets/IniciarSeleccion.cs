@@ -48,11 +48,11 @@ public class IniciarSeleccion : MonoBehaviour {
     {
         
         fade.gameObject.SetActive(true);
-        fade.alpha = 0;
+        fade.alpha = 0.3f;
         while (!async.isDone)
         {
            
-            fade.alpha += Time.deltaTime/2;
+            fade.alpha += Time.deltaTime/1.5f;
             yield return null;
         }
        

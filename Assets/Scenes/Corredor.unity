@@ -3987,6 +3987,22 @@ Prefab:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaApagada.a
+      value: 0.216
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaApagada.r
+      value: 0.7647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaApagada.g
+      value: 0.74783736
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaApagada.b
+      value: 0.74783736
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
   m_IsPrefabParent: 0
