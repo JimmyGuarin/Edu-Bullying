@@ -99,6 +99,6 @@ public class ManejadorPreguntas : MonoBehaviour
 		//ControladorHUD.instance.aumentarPuntaje (puntajePuntoPregunta,true);
   //  }
 
-   
+     
     
 }
