@@ -1,33 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class bombilloPrueba : MonoBehaviour
-{
+public class bombilloPrueba : MonoBehaviour {
 
-    // Use this for initialization
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
 
-
-    // Update is called once per frame
-    void Update()
+    public void Evento()
     {
-
-
-
-
+        //GameObject.FindGameObjectWithTag("Player").GetComponent<ManejadorPreguntas>().AumentarPuntaje();
     }
-
-    public void OnEnable()
-    {
-        Invoke("Deshabilitar", 3f);
-    }    
-
-    void Deshabilitar()
-    {
-
-        gameObject.SetActive(false);
-
-    }
-
-
-
 }

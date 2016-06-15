@@ -126,18 +126,12 @@ public class ControladorHUD : MonoBehaviour
         puntajeTotal += cantidad;
         textoPuntaje.text = "" + puntajeTotal;
         if (conocimiento)
-        {
-            Camera.main.transform.GetChild(0).gameObject.SetActive(true);
             StartCoroutine(AumentarConocimiento((int)(cantidad)));
-        }
-            
     }
 
     IEnumerator AumentarConocimiento(int valor)
     {
-        yield return new WaitForSeconds(1f);
-
-        if (!sonido.isPlaying)
+        if(!sonido.isPlaying)
             sonido.Play();
 
         while (valor > 0)

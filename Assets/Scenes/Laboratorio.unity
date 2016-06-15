@@ -3207,7 +3207,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413252, guid: 92689d59e537ca843bae6dcc16cb9a9c, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 11404572, guid: 92689d59e537ca843bae6dcc16cb9a9c, type: 2}
       propertyPath: rayColor.r
@@ -3324,10 +3324,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92689d59e537ca843bae6dcc16cb9a9c, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &203222424 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 135292, guid: 92689d59e537ca843bae6dcc16cb9a9c, type: 2}
-  m_PrefabInternal: {fileID: 203222423}
 --- !u!1 &203363572
 GameObject:
   m_ObjectHideFlags: 0
@@ -6794,8 +6790,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8, y: 9.6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1299959656}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!82 &414424090
@@ -7665,7 +7660,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 474942764}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 437.8, y: -6.65, z: 0}
+  m_LocalPosition: {x: 432.03, y: -6.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1915182253}
@@ -11759,6 +11754,10 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &841617000 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 135292, guid: 92689d59e537ca843bae6dcc16cb9a9c, type: 2}
+  m_PrefabInternal: {fileID: 203222423}
 --- !u!4 &841617002 stripped
 Transform:
   m_PrefabParentObject: {fileID: 413252, guid: 92689d59e537ca843bae6dcc16cb9a9c, type: 2}
@@ -15736,7 +15735,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 427962, guid: 6c547c5b5f9d4d949ba4282af31ea9ef, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 456.63
+      value: 450.86
       objectReference: {fileID: 0}
     - target: {fileID: 427962, guid: 6c547c5b5f9d4d949ba4282af31ea9ef, type: 2}
       propertyPath: m_LocalPosition.y
@@ -15764,7 +15763,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 427962, guid: 6c547c5b5f9d4d949ba4282af31ea9ef, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 11469590, guid: 6c547c5b5f9d4d949ba4282af31ea9ef, type: 2}
       propertyPath: canvasConversacion
@@ -17119,7 +17118,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1164199202}
         m_MethodName: ManejarTiempo
@@ -17163,17 +17162,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 675060051}
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Cerrar
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -18993,52 +18981,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!1001 &1299959655
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 414424089}
-    m_Modifications:
-    - target: {fileID: 499674, guid: 03afb9f967c73bc45b053666617615c7, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -3.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 499674, guid: 03afb9f967c73bc45b053666617615c7, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -6.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 499674, guid: 03afb9f967c73bc45b053666617615c7, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 499674, guid: 03afb9f967c73bc45b053666617615c7, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 499674, guid: 03afb9f967c73bc45b053666617615c7, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 499674, guid: 03afb9f967c73bc45b053666617615c7, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 499674, guid: 03afb9f967c73bc45b053666617615c7, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 499674, guid: 03afb9f967c73bc45b053666617615c7, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 03afb9f967c73bc45b053666617615c7, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &1299959656 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 499674, guid: 03afb9f967c73bc45b053666617615c7, type: 2}
-  m_PrefabInternal: {fileID: 1299959655}
 --- !u!1001 &1302610884
 Prefab:
   m_ObjectHideFlags: 0
@@ -24803,7 +24745,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1164199202}
         m_MethodName: ManejarTiempo
@@ -24847,17 +24789,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 560016806}
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Cerrar
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -29039,12 +28970,44 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 429720, guid: ce6fc087af59fae4d892a124540ab50f, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446990, guid: ce6fc087af59fae4d892a124540ab50f, type: 2}
+      propertyPath: pathName
+      value: PathHolder
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446990, guid: ce6fc087af59fae4d892a124540ab50f, type: 2}
+      propertyPath: correr
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11418794, guid: ce6fc087af59fae4d892a124540ab50f, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102366, guid: ce6fc087af59fae4d892a124540ab50f, type: 2}
+      propertyPath: m_Offset.y
+      value: -0.8109051
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102366, guid: ce6fc087af59fae4d892a124540ab50f, type: 2}
+      propertyPath: m_Size.y
+      value: 12.213047
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041306, guid: ce6fc087af59fae4d892a124540ab50f, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11418794, guid: ce6fc087af59fae4d892a124540ab50f, type: 2}
       propertyPath: allPaths.Array.data[0]
       value: 
-      objectReference: {fileID: 203222424}
+      objectReference: {fileID: 841617000}
+    - target: {fileID: 5041306, guid: ce6fc087af59fae4d892a124540ab50f, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041306, guid: ce6fc087af59fae4d892a124540ab50f, type: 2}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce6fc087af59fae4d892a124540ab50f, type: 2}
   m_IsPrefabParent: 0
