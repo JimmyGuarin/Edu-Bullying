@@ -29,7 +29,7 @@ public class CameraFollow : MonoBehaviour
     void Start()
     {
 
-        focusArea = new FocusArea(target.collider.bounds, focusAreaSize);
+        focusArea = new FocusArea(target.colliders.bounds, focusAreaSize);
         
 
     }
@@ -41,7 +41,7 @@ public class CameraFollow : MonoBehaviour
         if (target.transform.position.x>=posicionMinimaX)
         {
 
-            focusArea.Update(target.collider.bounds);
+            focusArea.Update(target.colliders.bounds);
 
             Vector2 focusPosition = focusArea.centre + Vector2.up * verticalOffset;
 
@@ -98,7 +98,7 @@ public class CameraFollow : MonoBehaviour
     public void OnEnable()
     {
         GetComponent<Camara>().enabled = false;
-        focusArea = new FocusArea(target.collider.bounds, focusAreaSize);
+        focusArea = new FocusArea(target.colliders.bounds, focusAreaSize);
     }
 
     struct FocusArea
