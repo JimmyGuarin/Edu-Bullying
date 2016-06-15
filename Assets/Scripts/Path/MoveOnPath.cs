@@ -51,7 +51,7 @@ public class MoveOnPath : MonoBehaviour
 
                 GetComponent<Animator>().SetBool("Correr", false);
                 correr = false;
-
+                transform.GetChild(0).gameObject.SetActive(true);
 
 
             }
@@ -71,6 +71,7 @@ public class MoveOnPath : MonoBehaviour
         transform.position = current_position;
         last_position = transform.position;
         GetComponent<Animator>().SetBool("Correr", false);
+        transform.GetChild(0).gameObject.SetActive(false);
         correr = false;
     }
 
