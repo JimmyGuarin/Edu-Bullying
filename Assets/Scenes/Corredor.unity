@@ -372,10 +372,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1665704528}
   m_RootOrder: 6
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.000022888184, y: 104}
-  m_SizeDelta: {x: 513, y: 73}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -413}
+  m_SizeDelta: {x: 562, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &204479300
 MonoBehaviour:
@@ -404,7 +404,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 5
     m_MaxSize: 194
-    m_Alignment: 1
+    m_Alignment: 7
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -449,7 +449,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -25, y: 62}
+  m_AnchoredPosition: {x: -25, y: 38}
   m_SizeDelta: {x: -1213, y: -519}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &242355299
@@ -484,8 +484,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Si deseas ingresar al Restaurante a enfrentarte al Bullying Social\n<size=44>
-    <color=#a52a2aff>Presiona \"F\". </color></size> \n"
+  m_Text: "Si deseas enfrentar el \nBullying Social\n<size=44> <color=#a52a2aff>Presiona
+    \"F\". </color></size> \n"
 --- !u!222 &242355300
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1478,6 +1478,80 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.14530706}
   serializedVersion: 2
   m_Size: {x: 5.614203, y: 2.3753042}
+--- !u!1 &589263499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 589263500}
+  - 222: {fileID: 589263502}
+  - 114: {fileID: 589263501}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &589263500
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 589263499}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1594536829}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 3.2500057, y: 3}
+  m_SizeDelta: {x: 506.5, y: 171.3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &589263501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 589263499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 80a2917dbf27ba74d988a0ba128eca5c, type: 3}
+    m_FontSize: 34
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 43
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 0.9
+  m_Text: "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nSi deseas enfrentar el \nBullying F\xEDsico\n<size=40>
+    <color=#a52a2aff>Presiona \"F\". </color></size> "
+--- !u!222 &589263502
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 589263499}
 --- !u!1 &610269891
 GameObject:
   m_ObjectHideFlags: 0
@@ -1874,7 +1948,7 @@ RectTransform:
   m_AnchorMin: {x: 0.018461538, y: 0.038251363}
   m_AnchorMax: {x: 0.9815385, y: 0.929}
   m_AnchoredPosition: {x: 0, y: 1}
-  m_SizeDelta: {x: -85.10772, y: 46.454304}
+  m_SizeDelta: {x: -85.107834, y: 47.18467}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &695645900
 MonoBehaviour:
@@ -2329,7 +2403,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000024795532, y: 0.000045776367}
+  m_AnchoredPosition: {x: 0.000024795532, y: -19}
   m_SizeDelta: {x: -1213, y: -518}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &807682885
@@ -2364,8 +2438,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Si deseas ingresar al Lab. de Sistemas a enfrentarte al CyberBullying\n<size=44>
-    <color=#a52a2aff>Presiona \"F\". </color></size> \n"
+  m_Text: "Si deseas enfrentar el \nCyberBullying\n<size=44> <color=#a52a2aff>Presiona
+    \"F\". </color></size> \n"
 --- !u!222 &807682886
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2715,13 +2789,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children:
-  - {fileID: 1417307016}
+  - {fileID: 1604970742}
   m_Father: {fileID: 681858243}
   m_RootOrder: 5
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -1266.469, y: 3803.5605}
-  m_SizeDelta: {x: 1706, y: 654}
+  m_SizeDelta: {x: 1706, y: 704}
   m_Pivot: {x: 0.4803819, y: 0.046725582}
 --- !u!114 &1000090516
 MonoBehaviour:
@@ -2742,7 +2816,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 87c23f2e8ab9bed4eb4fa31b0f586da3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 99c3efd72cd16c34b871b3666b21c902, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3231,8 +3305,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -1290.9628, y: 2648.0002}
-  m_SizeDelta: {x: 1706, y: 654}
+  m_AnchoredPosition: {x: -1290.9628, y: 2598}
+  m_SizeDelta: {x: 1706, y: 704}
   m_Pivot: {x: 0.48126453, y: 0.000000022351742}
 --- !u!114 &1278785769
 MonoBehaviour:
@@ -3253,7 +3327,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 87c23f2e8ab9bed4eb4fa31b0f586da3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 99c3efd72cd16c34b871b3666b21c902, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3777,59 +3851,91 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22464638, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 67
       objectReference: {fileID: 0}
     - target: {fileID: 22464638, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 63
       objectReference: {fileID: 0}
     - target: {fileID: 22485454, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 67
       objectReference: {fileID: 0}
     - target: {fileID: 22485454, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 63
       objectReference: {fileID: 0}
     - target: {fileID: 22481850, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 67
       objectReference: {fileID: 0}
     - target: {fileID: 22481850, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 63
       objectReference: {fileID: 0}
     - target: {fileID: 22449416, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 67
       objectReference: {fileID: 0}
     - target: {fileID: 22449416, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.y
+      value: 63
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaEncendida.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaEncendida.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaEncendida.b
+      value: 0.559
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaEncendida.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaApagada.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaApagada.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaApagada.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaApagada.a
+      value: 0.22352941
       objectReference: {fileID: 0}
     - target: {fileID: 22459904, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 138
       objectReference: {fileID: 0}
     - target: {fileID: 22459904, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 136
       objectReference: {fileID: 0}
     - target: {fileID: 22487270, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 22487270, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 369
       objectReference: {fileID: 0}
     - target: {fileID: 22477224, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 595
       objectReference: {fileID: 0}
     - target: {fileID: 22477224, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 226
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
@@ -3918,7 +4024,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1404758005}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 1.08, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4023,80 +4129,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!1 &1417307015
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 1417307016}
-  - 222: {fileID: 1417307018}
-  - 114: {fileID: 1417307017}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1417307016
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1417307015}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.1862528, y: 3.1862507, z: 3.1862507}
-  m_Children: []
-  m_Father: {fileID: 1000090515}
-  m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -25, y: 62}
-  m_SizeDelta: {x: -1213, y: -519}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1417307017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1417307015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 80a2917dbf27ba74d988a0ba128eca5c, type: 3}
-    m_FontSize: 34
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 300
-    m_Alignment: 1
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "Si deseas ingresar al Patio #2 a enfrentarte al Bullying Sexual\n<size=44>
-    <color=#a52a2aff>Presiona \"F\". </color></size> \n"
---- !u!222 &1417307018
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1417307015}
 --- !u!1 &1424329249
 GameObject:
   m_ObjectHideFlags: 0
@@ -4552,13 +4584,14 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.1862528, y: 3.1862507, z: 3.1862507}
-  m_Children: []
+  m_Children:
+  - {fileID: 589263500}
   m_Father: {fileID: 1278785768}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -25, y: 62}
-  m_SizeDelta: {x: -1213, y: -519}
+  m_AnchoredPosition: {x: -15, y: -4}
+  m_SizeDelta: {x: -1206, y: -499}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1594536830
 MonoBehaviour:
@@ -4581,7 +4614,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 80a2917dbf27ba74d988a0ba128eca5c, type: 3}
-    m_FontSize: 34
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -4592,14 +4625,91 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Si deseas ingresar al Patio #1 a enfrentarte al Bullying F\xEDsico\n<size=44>
-    <color=#a52a2aff>Presiona \"F\". </color></size> \n"
+  m_Text: '<size=44>Patio 1</size>
+
+
+
+'
 --- !u!222 &1594536831
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1594536828}
+--- !u!1 &1604970741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1604970742}
+  - 222: {fileID: 1604970744}
+  - 114: {fileID: 1604970743}
+  m_Layer: 5
+  m_Name: Text (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1604970742
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1604970741}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.1862528, y: 3.1862504, z: 3.1862512}
+  m_Children:
+  - {fileID: 1896744212}
+  m_Father: {fileID: 1000090515}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -7.642255, y: 43}
+  m_SizeDelta: {x: 506.5, y: 171.3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1604970743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1604970741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 80a2917dbf27ba74d988a0ba128eca5c, type: 3}
+    m_FontSize: 34
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 43
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: <size=44>Patio 2</size>
+--- !u!222 &1604970744
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1604970741}
 --- !u!1001 &1616203574
 Prefab:
   m_ObjectHideFlags: 0
@@ -5420,7 +5530,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -25, y: 62}
+  m_AnchoredPosition: {x: -25, y: 38}
   m_SizeDelta: {x: -1213, y: -519}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1824069237
@@ -5455,8 +5565,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Si deseas ingresar a los salones a enfrentarte al Bullying Psicol\xF3gico\n<size=44>
-    <color=#a52a2aff>Presiona \"F\". </color></size> \n"
+  m_Text: "Si deseas enfrentar el \nBullying Psicol\xF3gico\n<size=44> <color=#a52a2aff>Presiona
+    \"F\". </color></size> \n"
 --- !u!222 &1824069238
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5620,6 +5730,80 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1896744211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1896744212}
+  - 222: {fileID: 1896744214}
+  - 114: {fileID: 1896744213}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1896744212
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1896744211}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1604970742}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00074005127, y: -16}
+  m_SizeDelta: {x: 506.5, y: 171.3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1896744213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1896744211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 80a2917dbf27ba74d988a0ba128eca5c, type: 3}
+    m_FontSize: 34
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 43
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 0.9
+  m_Text: "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nSi deseas enfrentar el \nBullying Sexual\n<size=40>
+    <color=#a52a2aff>Presiona \"F\". </color></size> "
+--- !u!222 &1896744214
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1896744211}
 --- !u!1 &1898466060
 GameObject:
   m_ObjectHideFlags: 0
@@ -6000,7 +6184,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1898466060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.896, y: -1.114, z: 0}
+  m_LocalPosition: {x: 0.46, y: 1.08, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
   - {fileID: 610269892}
@@ -6220,7 +6404,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -25, y: 62}
+  m_AnchoredPosition: {x: -25, y: 33}
   m_SizeDelta: {x: -1213, y: -519}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1949689307
@@ -6255,8 +6439,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Si deseas ingresar al Laboratorio a enfrentarte al Bullying Verbal\n<size=44>
-    <color=#a52a2aff>Presiona \"F\". </color></size> \n"
+  m_Text: "Si deseas enfrentar el \nBullying Verbal\n<size=44> <color=#a52a2aff>Presiona
+    \"F\". </color></size> \n"
 --- !u!222 &1949689308
 CanvasRenderer:
   m_ObjectHideFlags: 0

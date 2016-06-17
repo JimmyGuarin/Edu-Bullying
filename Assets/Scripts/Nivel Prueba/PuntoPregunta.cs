@@ -158,8 +158,8 @@ public class PuntoPregunta : MonoBehaviour
         {
 
             botonPrecionado.GetComponent<Image>().color = Color.green;
-            textoRetroAlimentacionMultiple.text= "Respuesta Correcta:    <size=60><color=green>" + RespuestaCorrecta(preguntaActual.IndexCorreta()) + "</color></size>";
-            textoRetroAlimentacionDual.text= "Respuesta Correcta:    <size=60><color=green>" + RespuestaCorrecta(preguntaActual.IndexCorreta()) + "</color></size>";
+            textoRetroAlimentacionMultiple.text= "Respuesta Correcta:    <size=60><color=black>" + RespuestaCorrecta(preguntaActual.IndexCorreta()) + "</color></size>";
+            textoRetroAlimentacionDual.text= "Respuesta Correcta:    <size=60><color=black>" + RespuestaCorrecta(preguntaActual.IndexCorreta()) + "</color></size>";
             audios[1].Play();
         }
         else
@@ -178,14 +178,14 @@ public class PuntoPregunta : MonoBehaviour
 
             botonPrecionado.GetComponent<Image>().color = Color.red;
             puntajePregunta=0;
-            textoRetroAlimentacionMultiple.text = "Respuesta Correcta:    <size=60><color=green>" + RespuestaCorrecta(preguntaActual.IndexCorreta()) + "</color></size>";
-            textoRetroAlimentacionDual.text = "Respuesta Correcta:    <size=60><color=green>" + RespuestaCorrecta(preguntaActual.IndexCorreta()) + "</color></size>";
+            textoRetroAlimentacionMultiple.text = "Respuesta Correcta:    <size=60><color=black>" + RespuestaCorrecta(preguntaActual.IndexCorreta()) + "</color></size>";
+            textoRetroAlimentacionDual.text = "Respuesta Correcta:    <size=60><color=black>" + RespuestaCorrecta(preguntaActual.IndexCorreta()) + "</color></size>";
             audios[2].Play();
         }
 
         if (preguntaActual.IsMultiple){
 
-            textoPuntajeMultiple.text = "Puntaje Obtenido:    <size=60><color=green>" +puntajePregunta+ "</color></size>";
+            textoPuntajeMultiple.text = "Puntaje Obtenido:    <size=64><color=black>" +puntajePregunta+ "</color></size>";
             textoPuntajeMultiple.transform.parent.gameObject.SetActive(true);
             textoRetroAlimentacionMultiple.transform.parent.gameObject.SetActive(true);
             botonCerrarMultiple.SetActive(true);
@@ -193,7 +193,7 @@ public class PuntoPregunta : MonoBehaviour
         }
         else
         {
-            textoPuntajeDual.text = "Puntaje Obtenido:    <size=60><color=green>" + puntajePregunta + "</color></size>";
+            textoPuntajeDual.text = "Puntaje Obtenido:    <size=64><color=black>" + puntajePregunta + "</color></size>";
             textoPuntajeDual.transform.parent.gameObject.SetActive(true);
             textoRetroAlimentacionDual.transform.parent.gameObject.SetActive(true);
             botonCerrarDual.SetActive(true);
