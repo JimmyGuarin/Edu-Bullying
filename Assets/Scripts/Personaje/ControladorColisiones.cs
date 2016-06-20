@@ -273,7 +273,7 @@ public class ControladorColisiones : MonoBehaviour
     }
     void obtenerPlataformasCaen(GameObject padre)
     {
-        Debug.Log("obtuve pltaformas");
+
         for (int i=0; i<padre.transform.childCount;i++)
         {
            
@@ -285,7 +285,7 @@ public class ControladorColisiones : MonoBehaviour
     {
         if (destructor != null)
         {
-            Debug.Log("Entre a acomodar");
+
             for (int i = 0; i < plataformasCaen.Count; i++)
             {
 

@@ -1040,10 +1040,23 @@ Prefab:
       value: "<color=#250601FF>1.</color> Llega a cada punto de informaci\xF3n.\n\n<color=#250601FF>2.</color>
         Utiliza el conocimiento que obtuviste en los puntos de informaci\xF3n para
         responder las preguntas necesarias para completar el nivel.\n\n<color=#250601FF>3.</color>
-        Encuentra la profesora, ella te guiar\xE1 al final del nivel donde tendr\xE1s
-        que resolver el conflicto de cada Bullying.\n\n<color=#250601FF>4.</color>
-        Llega con la profesora a donde Dante, habla con \xE9l y mediante una charla
-        conv\xE9nselo de dejar de hacer Bullying.\n\n"
+        Encuentra la profesora, ella te guiar\xE1 al lugar donde podr\xE1s resolver
+        el conflicto de este Bullying.\n\n<color=#250601FF>4.</color> Encuentra a
+        Dante, habla con \xE9l y mediante una charla conv\xE9nselo de dejar de hacerte
+        Bullying.\n\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444696, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9535fe119ddf7274fa4e30a67873db7d,
+        type: 3}
+    - target: {fileID: 11417566, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
+      propertyPath: m_Text
+      value: "OBJETIVOS A CUMPLIR PARA ENFRENTAR EL BULLYING PSICOL\xD3GICO"
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417566, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 56
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
@@ -3090,7 +3103,6 @@ Transform:
   m_LocalPosition: {x: 47.649258, y: 2.6184978, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1335194968}
   - {fileID: 1338718616}
   - {fileID: 1436150912}
   - {fileID: 1279960598}
@@ -3956,8 +3968,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 2
-    m_SelectOnUp: {fileID: 0}
+    m_Mode: 4
+    m_SelectOnUp: {fileID: 1226895719}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
@@ -5477,7 +5489,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: dac112cdc0ee5314da00760a3e315051, type: 3}
-    m_FontSize: 40
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
@@ -8777,7 +8789,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11450172, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: puntosRetro.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 454790, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_LocalPosition.x
@@ -8917,12 +8929,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 179572, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_Name
-      value: PuntoPregunta3
+      value: PuntoPregunta2
       objectReference: {fileID: 0}
     - target: {fileID: 11486576, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_Text
-      value: "Debes responder una pregunta para mover el bot\xF3n que baja la plataforma.\n<color=#a52a2aff><b><size=90>Presiona
-        F</size></b></color>"
+      value: 'Para bajar la plataforma
+
+        Acierta una pregunta
+
+        <color=#a52a2aff><b><size=90>Presiona "F" para continuar</size></b></color>'
       objectReference: {fileID: 0}
     - target: {fileID: 22479778, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_LocalScale.x
@@ -8935,6 +8950,10 @@ Prefab:
     - target: {fileID: 195058, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11450172, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
+      propertyPath: puntosRetro.Array.data[0]
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
@@ -9341,11 +9360,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: dac112cdc0ee5314da00760a3e315051, type: 3}
-    m_FontSize: 40
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 4
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -9816,7 +9835,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: dac112cdc0ee5314da00760a3e315051, type: 3}
-    m_FontSize: 40
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
@@ -10104,8 +10123,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 897368484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 96.47, y: 12.16, z: 0}
-  m_LocalScale: {x: 15.508656, y: 11.577951, z: 1}
+  m_LocalPosition: {x: 88.25, y: 9.97, z: 0}
+  m_LocalScale: {x: 1.2187417, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
@@ -10485,7 +10504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acb6fc2fa1b06444290cf149729f7e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntosRetro: 0000000001000000
+  puntosRetro: 00000000
   puntajePreguntaMultiple: 40
   puntajePreguntaDual: 40
   objetosAnimados:
@@ -13052,11 +13071,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: dac112cdc0ee5314da00760a3e315051, type: 3}
-    m_FontSize: 40
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 4
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -13450,11 +13469,18 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d673ae50552f1124c87adf99c9880686, type: 3}
   - {fileID: 21300000, guid: 5902ec2a9d608164593367ebfa5bc677, type: 3}
   - {fileID: 21300000, guid: ff858fe648930d0488cc83519e0bf662, type: 3}
-  imagenesVictimas:
+  imagenesArnold:
+  - {fileID: 21300000, guid: 33eb6ddad4fc93d47afbd8d2ef29b09b, type: 3}
   - {fileID: 21300000, guid: 435e8d1ffd3a64e418eb95aa8f1051cb, type: 3}
+  imagenesKeily:
+  - {fileID: 21300000, guid: 3c12720f20df7ad4f86582597ba69a2d, type: 3}
   - {fileID: 21300000, guid: 5de0df48e92d3ba42a125832cfa5475b, type: 3}
+  imaganesFred:
+  - {fileID: 21300000, guid: d2a319554c8872542968e3592a508f40, type: 3}
   - {fileID: 21300000, guid: 97202179bb6e7c94f88ec792f5b9a416, type: 3}
+  imagenesFill:
   - {fileID: 21300000, guid: f8b6b842caee9ec4393a97d68f087699, type: 3}
+  - {fileID: 21300000, guid: 64f02f85c699f0547bf0164a22d83073, type: 3}
   textoPlayerNpc: {fileID: 431228211}
   botonesNpc:
   - {fileID: 657677243}
@@ -13462,7 +13488,8 @@ MonoBehaviour:
   - {fileID: 1053551361}
   SliderVillano: {fileID: 1790278427}
   imagenActualVillano: {fileID: 26015316}
-  imagenActualVictima: {fileID: 534798280}
+  imagenVictimaActual: {fileID: 534798280}
+  imagenesVActual: []
   textoVictima: {fileID: 640498815}
 --- !u!114 &1242885269
 MonoBehaviour:
@@ -14355,56 +14382,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1007957552}
   m_RootOrder: 49
---- !u!1001 &1335194967
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 241733304}
-    m_Modifications:
-    - target: {fileID: 429956, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -27.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 429956, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 3.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 429956, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 429956, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 429956, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 429956, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 429956, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 429956, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 186724, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
-      propertyPath: m_Name
-      value: PuntoRetro0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &1335194968 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 429956, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
-  m_PrefabInternal: {fileID: 1335194967}
 --- !u!1001 &1338718615
 Prefab:
   m_ObjectHideFlags: 0
@@ -14446,7 +14423,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 186724, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
       propertyPath: m_Name
-      value: PuntoRetro1
+      value: PuntoRetro0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
@@ -15019,7 +14996,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 186724, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
       propertyPath: m_Name
-      value: PuntoRetro3
+      value: PuntoRetro1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442412, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
+      propertyPath: numeroRetroalimentacion
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
@@ -16421,8 +16402,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 2
-    m_SelectOnUp: {fileID: 0}
+    m_Mode: 4
+    m_SelectOnUp: {fileID: 704749118}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
@@ -17560,7 +17541,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 186724, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
       propertyPath: m_Name
-      value: PuntoRetro4
+      value: PuntoRetro2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442412, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
+      propertyPath: numeroRetroalimentacion
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
@@ -18354,7 +18339,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11424146, guid: 6c547c5b5f9d4d949ba4282af31ea9ef, type: 2}
       propertyPath: m_Text
-      value: "Para hablar con Dante \n<color=#a52a2aff><b><size=126>Presiona F</size></b></color>"
+      value: "Para hablar conmigo \n<color=#a52a2aff><b><size=126>Presiona \"F\"</size></b></color>"
       objectReference: {fileID: 0}
     - target: {fileID: 142000, guid: 6c547c5b5f9d4d949ba4282af31ea9ef, type: 2}
       propertyPath: m_Layer
@@ -20154,7 +20139,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1973466640}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 313.18, y: -6.74, z: 0}
+  m_LocalPosition: {x: 312.06, y: -6.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1915182253}
@@ -20536,10 +20521,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Debes responder una pregunta para activar el interruptor que enciende la
-    luz.
+  m_Text: 'Para encender la luz
 
-    <color=#a52a2aff><b><size=90>Presiona F</size></b></color>'
+    Acierta una pregunta
+
+    <color=#a52a2aff><b><size=90>Presiona "F" para continuar</size></b></color>'
 --- !u!222 &2014459924
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21015,7 +21001,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11406496, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: puntosRetro.Array.data[0]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11406496, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: objetosAnimados.Array.data[0]
@@ -21103,7 +21089,7 @@ Prefab:
       objectReference: {fileID: 1397248128}
     - target: {fileID: 192724, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: m_Name
-      value: PuntoPregunta2
+      value: PuntoPregunta1
       objectReference: {fileID: 0}
     - target: {fileID: 462246, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: m_LocalPosition.y
@@ -21111,9 +21097,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11470324, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: m_Text
-      value: 'Debes responder una pregunta para mover la palanca que gira las plataformas.
+      value: 'para girar las plataformas
 
-        <color=#a52a2aff><b><size=90>Presiona F</size></b></color>'
+        Acierta una pregunta
+
+        <color=#a52a2aff><b><size=90>Presiona "F" para continuar</size></b></color>'
       objectReference: {fileID: 0}
     - target: {fileID: 160926, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: m_IsActive

@@ -14,14 +14,18 @@ public class MaquinaEstadosConver : MonoBehaviour
 
     public Sprite[] imagenesVillano;
 
-    public Sprite[] imagenesVictimas;
+    public Sprite[] imagenesArnold;
+    public Sprite[] imagenesKeily;
+    public Sprite[] imaganesFred;
+    public Sprite[] imagenesFill;
 
     //public Image personajePlayerNpc;
     public Text textoPlayerNpc;
     public Button[] botonesNpc;
     public Slider SliderVillano;
     public Image imagenActualVillano;
-    public Image imagenActualVictima;
+    public Image imagenVictimaActual;
+    public Sprite[] imagenesVActual;
     public Text textoVictima;
     void Start()
     {
@@ -101,9 +105,11 @@ public class MaquinaEstadosConver : MonoBehaviour
                 case 20:
 
                     imagenActualVillano.sprite = imagenesVillano[0];
+                    imagenVictimaActual.sprite = imagenesVActual[0];
                     break;
                 case 30:
                     imagenActualVillano.sprite = imagenesVillano[1];
+                    imagenVictimaActual.sprite = imagenesVActual[1];
                     break;
                 case 50:
                     imagenActualVillano.sprite = imagenesVillano[2];
@@ -145,23 +151,29 @@ public class MaquinaEstadosConver : MonoBehaviour
 
     void SeleccionarVictima()
     {
-        imagenActualVictima.sprite = imagenesVictimas[ControladorHUD.IndexPersonaje];
+        //imagenActualVictima.sprite = imagenesVictimas[ControladorHUD.IndexPersonaje];
         switch (ControladorHUD.IndexPersonaje)
         {
             case 0:
                 textoVictima.text = "ARNOLD";
+                imagenesVActual = imagenesArnold;
                 break;
             case 1:
                 textoVictima.text = "KEILY";
+                imagenesVActual = imagenesKeily;
                 break;
             case 2:
                 textoVictima.text = "FRED";
+                imagenesVActual = imaganesFred;
                 break;
             case 3:
                 textoVictima.text = "FILL";
+                imagenesVActual = imagenesFill;
                 break;
 
         }
+        imagenVictimaActual.sprite = imagenesVActual[1];
+
     }
 
     IEnumerator activar()

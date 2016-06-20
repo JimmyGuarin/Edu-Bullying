@@ -13,19 +13,26 @@ public class BullyingPsicologico : MonoBehaviour {
         //Creando Motor de preguntas del Nivel--------------------------------------------
         miNivel = new Nivel();
 
-        PuntosRetro p1 = new PuntosRetro("Hay Bullying Psicológico cuando hay <color=#a52a2aff><b>persecución</b></color>, que es una manera agresiva y continua de acosar a alguien a fin de que haga lo que la otra persona quiere.");
-        p1.misPreguntas.Add(new Preguntas("Existe Bullying Psicológico cuando hay", "Persecuciones", "Robos", "Golpes", "Acoso sexual", true));
-        p1.misPreguntas.Add(new Preguntas("¿En el Bullying Psicológico se presenta el acoso sexual?", "No", "Sí"));
+        PuntosRetro p1 = new PuntosRetro("Los Factores del Bullying Psicológico son las más difíciles de detectar por parte de los profesores o padres porque son formas de acoso o exclusión que se llevan a cabo a espaldas de cualquier persona que pueda advertir la situación.");
+            p1.misPreguntas.Add(new Preguntas("¿Por qué es tan difícil de detectar el Bullying Psicológico?", " Ocurre a espaldas de cualquier persona que advierta la situación", " Es común en Hombres", " Es común en Mujeres", "Por que todos lo saben", true));
+            p1.misPreguntas.Add(new Preguntas("¿Es el Bullying Psicológico el más difícil de detectar?", "Sí", "No"));
+            p1.misPreguntas.Add(new Preguntas("¿La exclusión hace parte del Bullying Psicológico?", "Verdadero", "Falso"));
+            p1.misPreguntas.Add(new Preguntas("¿A quién debería informarse en caso de presentarse Bullying Psicológico?", "Todas son correctas", "Profesores", "Coordinadores o Rectores", "Padres", true));
         p1.Barajar();
 
-        PuntosRetro p2 = new PuntosRetro("El Bullying Psicológico se presenta cuando hay <color=#a52a2aff><b> intimidación</b></color>, que significa causar o infundir miedo. El miedo es una angustia a causa de un riesgo o daño real o imaginario.");
-        p2.misPreguntas.Add(new Preguntas("Existe Bullying Psicológico cuando hay", "Intimidaciones", "Robos", "Palizas", "Acoso sexual", true));
-        p2.misPreguntas.Add(new Preguntas("¿ Si alguien provoca miedo en los demás compañeros les está causando Bullying Piscológico ?", "Si", "No"));
+        PuntosRetro p2 = new PuntosRetro("El Bullying Psicológico son acciones que dañan la autoestima de la víctima y fomentan su sensación de temor; aumenta el sentimiento de indefensión y vulnerabilidad, pues percibe este atrevimiento como una amenaza que tarde o temprano se materializará de manera más contundente.");
+            p2.misPreguntas.Add(new Preguntas("¿Qué sentimiento presenta una victima del Bullying Psicológico?", "Indefensión y vulnerabilidad", "Rabia y egoísmo", "Frustración", "Ninguna de las anteriores", true));
+            p2.misPreguntas.Add(new Preguntas("¿Los factores presentes en el Bullying Psicológico afecta la autoestima de la víctima?", "Sí", "No"));
+            p2.misPreguntas.Add(new Preguntas("¿Las víctimas del Bullying Psicológico nunca sienten miedo?", "Falso", "Verdadero"));
+            p2.misPreguntas.Add(new Preguntas("¿Por qué las personas perciben que las acciones del Bullying Psicológico tarde o temprano se materializarán de una amenaza a algo más contundente?", "Todas las anteriores", "Porque hay sentimientos de indefensión y vulnerabilidad", " Fomentan la sensación de temor", "Porque dañan la autoestima de la víctima", true));
         p2.Barajar();
 
-        PuntosRetro p3 = new PuntosRetro("En el agredido, aumenta el sentimiento de <color=#a52a2aff><b>indefensión y vulnerabilidad</b></color>, pues percibe este atrevimiento como una amenaza que tarde o temprano se materializará de manera más contundente.");
-        p3.misPreguntas.Add(new Preguntas("Que sentimientos siente una victima a causa del Bullying Psicológico", "indefensión y vulnerabilidad", "Odio y venganza", "Amor y Amistad", "Ninguna de las Anteriores", true));
-        p3.misPreguntas.Add(new Preguntas("¿Las Victimas del Bullying Psicológico se sienten amenazados?", "Si", "No"));
+        PuntosRetro p3 = new PuntosRetro("El Bullying Psicológico es la persecución, intimidación, tiranía, chantaje, manipulación y amenazas al otro.");
+        p3.misPreguntas.Add(new Preguntas("¿Qué factor NO  hace parte del Bullying Psicológico?", "Empujones", "Intimidación", "Persecución", "Tiranía", true));
+        p3.misPreguntas.Add(new Preguntas("¿El chantaje hace parte de los factores que ocurren en el Bullying Psicológico?", "Sí", "No"));
+        p3.misPreguntas.Add(new Preguntas("¿Los golpes pertenecen al Bullying Psicológico?", "Falso", "Verdadero"));
+        p3.misPreguntas.Add(new Preguntas("¿El Bullying Psicológico se presenta cuando existe manipulación y amenazas a otra persona?", "Verdadero", "Falso"));
+        p3.misPreguntas.Add(new Preguntas("¿Estos factores son comunes en el Bullying Psicológico?", "Manipulación, persecución y amenazas al otro", "Golpes y Gritos", "Chismes", "Ninguna es Correcta", true));
         p3.Barajar();
 
 

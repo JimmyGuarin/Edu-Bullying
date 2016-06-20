@@ -36,23 +36,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &113460
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 22468698}
-  - 222: {fileID: 22238104}
-  - 114: {fileID: 11465950}
-  m_Layer: 5
-  m_Name: titulo (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &135836
 GameObject:
   m_ObjectHideFlags: 1
@@ -99,6 +82,7 @@ GameObject:
   - 114: {fileID: 11497154}
   - 114: {fileID: 11419628}
   - 114: {fileID: 11465886}
+  - 111: {fileID: 11113236}
   m_Layer: 5
   m_Name: CanvasPresentacion
   m_TagString: Untagged
@@ -209,6 +193,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!111 &11113236
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142576}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: a35690627fe86434c9db80eb86b52910, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: a35690627fe86434c9db80eb86b52910, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &11403262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -284,7 +283,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: dac112cdc0ee5314da00760a3e315051, type: 3}
-    m_FontSize: 70
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 5
@@ -295,7 +294,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "BULLYING PSICOL\xD3GICO"
+  m_Text: OBJETIVOS A CUMPLIR PARA ENFRENTAR EL BULLYING VERBAL
 --- !u!114 &11419628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -412,7 +411,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9535fe119ddf7274fa4e30a67873db7d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b74c2b8f0cbe65d4f8e6f33a6ffe42c6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -495,10 +494,9 @@ MonoBehaviour:
   m_Text: "<color=#250601FF>1.</color> Llega a cada punto de informaci\xF3n.\n\n<color=#250601FF>2.</color>
     Utiliza el conocimiento que obtuviste en los puntos de informaci\xF3n para responder
     las preguntas necesarias para completar el nivel.\n\n<color=#250601FF>3.</color>
-    Encuentra la profesora, ella te guiar\xE1 al final del nivel donde tendr\xE1s
-    que resolver el conflicto de cada Bullying.\n\n<color=#250601FF>4.</color> Llega
-    con la profesora a donde Dante, habla con \xE9l y mediantes una charla convenselo
-    de dejar de hacer Bullying.\n\n"
+    Encuentra la profesora, ella te guiar\xE1 al lugar donde podr\xE1s resolver el
+    conflicto de este Bullying.\n\n<color=#250601FF>4.</color> Encuentra a Olivia,
+    habla con ella y mediante una charla conv\xE9nsela de dejar de hacerte Bullying.\n\n"
 --- !u!114 &11465886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -510,39 +508,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7778af5943b11f542a7f862ebbc5c92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11465950
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 113460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.14509805, g: 0.023529414, b: 0.003921569, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: dac112cdc0ee5314da00760a3e315051, type: 3}
-    m_FontSize: 50
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 5
-    m_MaxSize: 194
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: OBJETIVOS A CUMPLIR
 --- !u!114 &11493656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -588,7 +553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -615,9 +580,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 142576}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 11465886}
+        m_MethodName: Funcion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -674,12 +650,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 102488}
---- !u!222 &22238104
-CanvasRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 113460}
 --- !u!222 &22246544
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -778,7 +748,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -665, y: -73}
+  m_AnchoredPosition: {x: -665, y: -41}
   m_SizeDelta: {x: 124, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22426238
@@ -817,7 +787,7 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.10727218}
 --- !u!224 &22452482
 RectTransform:
   m_ObjectHideFlags: 1
@@ -832,7 +802,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 122, y: -61}
+  m_AnchoredPosition: {x: 122, y: -35}
   m_SizeDelta: {x: 1319, y: 586}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22456262
@@ -849,7 +819,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -670, y: 203}
+  m_AnchoredPosition: {x: -670, y: 235}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22459202
@@ -870,23 +840,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!224 &22468698
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 113460}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0749813, y: 1.0749815, z: 0.679297}
-  m_Children: []
-  m_Father: {fileID: 22490136}
-  m_RootOrder: 6
-  m_AnchorMin: {x: 0.055503402, y: 0.82800007}
-  m_AnchorMax: {x: 0.9448345, y: 0.933}
-  m_AnchoredPosition: {x: 14.999939, y: -114}
-  m_SizeDelta: {x: -109.34009, y: -7}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22469556
 RectTransform:
   m_ObjectHideFlags: 1
@@ -901,8 +854,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.055503402, y: 0.82800007}
   m_AnchorMax: {x: 0.9448345, y: 0.933}
-  m_AnchoredPosition: {x: 15, y: -4}
-  m_SizeDelta: {x: -109.34, y: -7}
+  m_AnchoredPosition: {x: -1.5941262, y: -4}
+  m_SizeDelta: {x: -112.39, y: -7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22472982
 RectTransform:
@@ -912,13 +865,13 @@ RectTransform:
   m_GameObject: {fileID: 136996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_Children: []
   m_Father: {fileID: 22490136}
   m_RootOrder: 5
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -665, y: -234.9}
+  m_AnchoredPosition: {x: -665, y: -197}
   m_SizeDelta: {x: 124, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22490136
@@ -937,7 +890,6 @@ RectTransform:
   - {fileID: 22494298}
   - {fileID: 22422292}
   - {fileID: 22472982}
-  - {fileID: 22468698}
   m_Father: {fileID: 22433850}
   m_RootOrder: 0
   m_AnchorMin: {x: 0.018461538, y: 0.038251363}
@@ -959,7 +911,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -670, y: 81}
+  m_AnchoredPosition: {x: -670, y: 110}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &100100000

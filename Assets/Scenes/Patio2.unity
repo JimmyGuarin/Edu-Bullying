@@ -287,6 +287,10 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 468632, guid: 92689d59e537ca843bae6dcc16cb9a9c, type: 2}
   m_PrefabInternal: {fileID: 5042610}
+--- !u!1 &5042612 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 135292, guid: 92689d59e537ca843bae6dcc16cb9a9c, type: 2}
+  m_PrefabInternal: {fileID: 5042610}
 --- !u!1 &15529301
 GameObject:
   m_ObjectHideFlags: 0
@@ -7158,11 +7162,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: dac112cdc0ee5314da00760a3e315051, type: 3}
-    m_FontSize: 40
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 4
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -8076,7 +8080,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 618790537}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 353.69, y: -6.73, z: 0}
+  m_LocalPosition: {x: 352.53, y: -6.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1915182253}
@@ -9790,8 +9794,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11486576, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_Text
-      value: "Debes responder una pregunta para pulsar el bot\xF3n y activar la plataforma.\n<color=#a52a2aff><b><size=90>Presiona
-        F</size></b></color>"
+      value: 'Para activar la plataforma
+
+        Acierta una pregunta
+
+        <color=#a52a2aff><b><size=90>Presiona "F" para continuar</size></b></color>'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
@@ -9943,7 +9950,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: dac112cdc0ee5314da00760a3e315051, type: 3}
-    m_FontSize: 40
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
@@ -12321,7 +12328,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: dac112cdc0ee5314da00760a3e315051, type: 3}
-    m_FontSize: 40
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
@@ -14411,11 +14418,18 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e6a85f317fcd2ef4e960378564b5bf90, type: 3}
   - {fileID: 21300000, guid: 6a3cbb8cd330d1340b51ffb08f8041ca, type: 3}
   - {fileID: 21300000, guid: f7bfe98ba938bd0478ef726344068f7d, type: 3}
-  imagenesVictimas:
+  imagenesArnold:
+  - {fileID: 21300000, guid: 33eb6ddad4fc93d47afbd8d2ef29b09b, type: 3}
   - {fileID: 21300000, guid: 435e8d1ffd3a64e418eb95aa8f1051cb, type: 3}
+  imagenesKeily:
+  - {fileID: 21300000, guid: 3c12720f20df7ad4f86582597ba69a2d, type: 3}
   - {fileID: 21300000, guid: 5de0df48e92d3ba42a125832cfa5475b, type: 3}
+  imaganesFred:
+  - {fileID: 21300000, guid: d2a319554c8872542968e3592a508f40, type: 3}
   - {fileID: 21300000, guid: 97202179bb6e7c94f88ec792f5b9a416, type: 3}
+  imagenesFill:
   - {fileID: 21300000, guid: f8b6b842caee9ec4393a97d68f087699, type: 3}
+  - {fileID: 21300000, guid: 64f02f85c699f0547bf0164a22d83073, type: 3}
   textoPlayerNpc: {fileID: 685579278}
   botonesNpc:
   - {fileID: 1139874085}
@@ -14423,7 +14437,8 @@ MonoBehaviour:
   - {fileID: 842514695}
   SliderVillano: {fileID: 203298019}
   imagenActualVillano: {fileID: 212620647}
-  imagenActualVictima: {fileID: 1850132630}
+  imagenVictimaActual: {fileID: 1850132630}
+  imagenesVActual: []
   textoVictima: {fileID: 1112788395}
 --- !u!114 &1110832887
 MonoBehaviour:
@@ -16875,8 +16890,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 2
-    m_SelectOnUp: {fileID: 0}
+    m_Mode: 4
+    m_SelectOnUp: {fileID: 1742592175}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
@@ -17568,8 +17583,39 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11486576, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_Text
-      value: "Debes responder una pregunta para pulsar el bot\xF3n y disminuir la
-        velocidad de las plataformas.\n<color=#a52a2aff><b><size=90>Presiona F</size></b></color>"
+      value: 'Para disminuir la velocidad de las plataformas
+
+        Acierta una pregunta
+
+        <color=#a52a2aff><b><size=90>Presiona "F" para continuar</size></b></color>'
+      objectReference: {fileID: 0}
+    - target: {fileID: 195058, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22479778, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22479778, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22436206, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.8000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 22436206, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 1356.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 22436206, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 396.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 22436206, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.6965266
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
@@ -21060,11 +21106,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: dac112cdc0ee5314da00760a3e315051, type: 3}
-    m_FontSize: 40
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 4
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -22359,9 +22405,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11424146, guid: 6c547c5b5f9d4d949ba4282af31ea9ef, type: 2}
       propertyPath: m_Text
-      value: 'Para Hablar con Adam
+      value: 'Para hablar conmigo
 
-        <color=#a52a2aff><b><size=120>Presiona F</size></b></color>
+        <color=#a52a2aff><b><size=120>Presiona "F"</size></b></color>
 
 '
       objectReference: {fileID: 0}
@@ -24905,7 +24951,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11417566, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_Text
-      value: BULLYING SEXUAL
+      value: OBJETIVOS A CUMPLIR PARA ENFRENTAR EL BULLYING SEXUAL
       objectReference: {fileID: 0}
     - target: {fileID: 11444696, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_Sprite
@@ -24917,26 +24963,26 @@ Prefab:
       value: "<color=#250601FF>1.</color> Llega a cada punto de informaci\xF3n.\n\n<color=#250601FF>2.</color>
         Utiliza el conocimiento que obtuviste en los puntos de informaci\xF3n para
         responder las preguntas necesarias para completar el nivel.\n\n<color=#250601FF>3.</color>
-        Encuentra la profesora, ella te guiar\xE1 al final del nivel donde tendr\xE1s
-        que resolver el conflicto de cada Bullying.\n\n<color=#250601FF>4.</color>
-        Llega con la profesora a donde Adam, habla con \xE9l y mediante una charla
-        conv\xE9nselo de dejar de hacer Bullying.\n\n"
+        Encuentra la profesora, ella te guiar\xE1 al lugar donde podr\xE1s resolver
+        el conflicto de este Bullying.\n\n<color=#250601FF>4.</color> Encuentra a
+        Adam, habla con \xE9l y mediante una charla conv\xE9nselo de dejar de hacerte
+        Bullying.\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -85.10772
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: -803.2686
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 345
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 125
       objectReference: {fileID: 0}
     - target: {fileID: 142576, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_IsActive
@@ -25961,8 +26007,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 2
-    m_SelectOnUp: {fileID: 0}
+    m_Mode: 4
+    m_SelectOnUp: {fileID: 2046278187}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
@@ -26624,9 +26670,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11470324, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: m_Text
-      value: 'Debes responder una pregunta para mover la palanca y activar los columpios.
+      value: 'Para activar los columpios
 
-        <color=#a52a2aff><b><size=90>Presiona F</size></b></color>'
+        Acierta una pregunta
+
+        <color=#a52a2aff><b><size=90>Presiona "F" para continuar</size></b></color>'
+      objectReference: {fileID: 0}
+    - target: {fileID: 160926, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22471506, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22471506, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
@@ -27179,6 +27239,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 11418794, guid: ce6fc087af59fae4d892a124540ab50f, type: 2}
+      propertyPath: allPaths.Array.data[0]
+      value: 
+      objectReference: {fileID: 5042612}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce6fc087af59fae4d892a124540ab50f, type: 2}
   m_IsPrefabParent: 0
