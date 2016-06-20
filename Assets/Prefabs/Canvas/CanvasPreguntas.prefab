@@ -496,8 +496,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 454912}
   - 114: {fileID: 11491478}
-  - 114: {fileID: 11435496}
   - 82: {fileID: 8243088}
+  - 114: {fileID: 11482044}
   m_Layer: 0
   m_Name: ControladorNivel
   m_TagString: Untagged
@@ -1812,7 +1812,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9dbe1e7f69e5e7f458836297a79759bf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 579557d619f52744e84bcc015b0e2887, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2475,9 +2475,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imagenesVillano:
-  - {fileID: 21300000, guid: d673ae50552f1124c87adf99c9880686, type: 3}
-  - {fileID: 21300000, guid: 5902ec2a9d608164593367ebfa5bc677, type: 3}
-  - {fileID: 21300000, guid: ff858fe648930d0488cc83519e0bf662, type: 3}
+  - {fileID: 21300000, guid: c43382bad06cc8e47beb967f8306e3a2, type: 3}
+  - {fileID: 21300000, guid: 87cbb334e1f46164cac5f485518c213c, type: 3}
+  - {fileID: 21300000, guid: f3fcff8a9ff4b75499b600966b6f9964, type: 3}
   imagenesArnold:
   - {fileID: 21300000, guid: 33eb6ddad4fc93d47afbd8d2ef29b09b, type: 3}
   - {fileID: 21300000, guid: 435e8d1ffd3a64e418eb95aa8f1051cb, type: 3}
@@ -2617,18 +2617,6 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
---- !u!114 &11435496
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 151282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c8c5e211663d154c9158697d082d496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conversacion: {fileID: 11428568}
 --- !u!114 &11435518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3007,7 +2995,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ed77cdf26c27bdc43b1da48a6ce75fd4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 87cbb334e1f46164cac5f485518c213c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3469,7 +3457,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "HABLA CON BRUTUS, CONVENCELO DE NO HACERTE M\xC1S BULLYING"
+  m_Text: "HABLA CON ONIX, CONVENCELO DE NO HACERTE M\xC1S BULLYING"
 --- !u!114 &11465730
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4242,6 +4230,17 @@ MonoBehaviour:
           m_StringArgument: Cerrar
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: set_volume
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.3
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &11473446
@@ -4506,6 +4505,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &11482044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcebf6b653390e841843f62c31bec8e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversacion: {fileID: 11428568}
 --- !u!114 &11482514
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5043,7 +5054,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: DANTE
+  m_Text: 'ONIX
+
+'
 --- !u!114 &11498090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6369,7 +6382,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 87, y: 18}
+  m_SizeDelta: {x: 88, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22482334
 RectTransform:
