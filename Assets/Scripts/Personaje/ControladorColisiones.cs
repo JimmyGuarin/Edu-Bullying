@@ -16,9 +16,12 @@ public class ControladorColisiones : MonoBehaviour
     public int indiceDestructor;
     private bool enDaño;
 
+    public AudioSource audioFondo;
+
     // Use this for initialization
     void Start()
     {
+        audioFondo = GameObject.Find("Escenario").GetComponent<AudioSource>();
         indiceDestructor = 0;
         enDaño = false;
         sonidosPersonaje = GetComponents<AudioSource>();
@@ -94,7 +97,7 @@ public class ControladorColisiones : MonoBehaviour
             // StartCoroutine(activarSonidoCallendo(collision.GetComponentInParent<AudioSource>()));
 
 
-
+            audioFondo.Stop();
             collision.GetComponentsInParent<AudioSource>()[0].Play();
             Invoke("iniciarSonidoRespawn", 1.2f);
 
@@ -234,6 +237,8 @@ public class ControladorColisiones : MonoBehaviour
         gameObject.SetActive(true);
         enemigo.SetActive(false);
         Invoke("detenerSonidoRespawn", 1.7f);
+        audioFondo.Play();
+        audioFondo.volume = 0.3f;
         GetComponent<MovimientoPersonaje>().escala = 0.2f;
         GetComponent<MovimientoPersonaje>().velocidad = 8;
         GetComponent<MovimientoPersonaje>().fuerzaSalto = 25;
