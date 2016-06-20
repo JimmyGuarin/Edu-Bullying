@@ -3133,11 +3133,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -85.10772
+      value: -85.107834
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 45.04794
+      value: 46.68917
       objectReference: {fileID: 0}
     - target: {fileID: 142576, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_IsActive
@@ -6866,7 +6866,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.95294124, g: 0.95294124, b: 0.95294124, a: 0.019607844}
+  m_BackGroundColor: {r: 0.427451, g: 0.4784314, b: 0.52156866, a: 0.019607844}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
