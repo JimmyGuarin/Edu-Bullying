@@ -15,7 +15,7 @@ public class BullyingFisico : MonoBehaviour
         PuntosRetro p1 = new PuntosRetro("El Bullying Físico es el tipo de acoso más común, especialmente entre hombres.");
             p1.misPreguntas.Add(new Preguntas("¿Cuál es el tipo de acoso más común?", "Bullying Físico", "Bullying Sexual", "Bullying Verbal", "CyberBullying",true));
             p1.misPreguntas.Add(new Preguntas("¿Los hombres hacen más Bullying físico que las Mujeres?", "Verdadero", "Falso"));
-            p1.misPreguntas.Add(new Preguntas("¿Se puede afirmar que las mujeres realizan acoso de tipo Bullying Físico más que los hombres?", "NO", "SÍ"));
+            p1.misPreguntas.Add(new Preguntas("¿Se puede afirmar que las mujeres realizan acoso de tipo Bullying Físico más que los hombres?", "No", "Sí"));
             p1.misPreguntas.Add(new Preguntas("El Bullying Físico es más común en...", "Hombres", "Mujeres", "Profesores", "Rectores", true));
             p1.Barajar();
 
@@ -32,9 +32,26 @@ public class BullyingFisico : MonoBehaviour
             p3.misPreguntas.Add(new Preguntas("¿Se presenta daño a las pertenencias de las víctimas en el Bullying Físico?", "Verdadero", "Falso"));
             p3.Barajar();
 
+        PuntosRetro p4 = new PuntosRetro("Las características de  personas que son víctimas de Bullying generalmente son: timidez, inseguridad, ansiedad, sobreprotegidos por sus padres o complexión débil.");
+            p4.misPreguntas.Add(new Preguntas("¿Cual es una caracteristica común en las víctimas del Bullying?", "Timidez e inseguridad", "Complexion fuerte", "Negativa hacia la escuela", "Todas son correctas", true));
+            p4.misPreguntas.Add(new Preguntas("¿Las víctimas del Bullying se sienten descuidados por sus padres?", "No", "Sí"));
+            p4.misPreguntas.Add(new Preguntas("¿La ansiedad está presente en las víctimas del Bullying?", "Sí", "No"));
+
+        PuntosRetro p5 = new PuntosRetro("Algunas características de los agresores son: Actitud negativa a la escuela, poca empatía, son impulsivos, les cuesta aceptar las normas sociales, poseen conflictos en sus hogares.");
+            p5.misPreguntas.Add(new Preguntas("¿Cual es una características común en los agresores en el Bullying?", "Poseen conflictos en sus hogares", "Son personas timidas", "Poseen baja autoestima", "Ninguna es correcta",true));
+            p5.misPreguntas.Add(new Preguntas("¿Los Agresores del Bullying tienen actitud positiva hacia la escuela?", "No", "Sí"));
+            p5.misPreguntas.Add(new Preguntas("¿El conflicto familiar puede ser una causa del Bullying ?","Sí","No"));
+
+
+    
+
+
+
         miNivel.puntosRetro.Add(p1);
         miNivel.puntosRetro.Add(p2);
         miNivel.puntosRetro.Add(p3);
+        miNivel.puntosRetro.Add(p4);
+        miNivel.puntosRetro.Add(p5);
 
 
 
