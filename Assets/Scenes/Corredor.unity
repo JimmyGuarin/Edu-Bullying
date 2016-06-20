@@ -3905,6 +3905,118 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaEncendida.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaEncendida.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaEncendida.b
+      value: 0.559
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaEncendida.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaApagada.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaApagada.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaApagada.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaApagada.a
+      value: 0.22352941
+      objectReference: {fileID: 0}
+    - target: {fileID: 22459904, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22459904, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22487270, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22487270, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22477224, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22477224, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaEncendida.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaEncendida.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaEncendida.b
+      value: 0.559
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaEncendida.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaApagada.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaApagada.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaApagada.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443390, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: colorBombillaApagada.a
+      value: 0.22352941
+      objectReference: {fileID: 0}
+    - target: {fileID: 22459904, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22459904, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22487270, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22487270, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22477224, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22477224, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92d720a1aa2e79e4a969255139319a1d, type: 2}
   m_IsPrefabParent: 0

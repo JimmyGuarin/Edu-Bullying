@@ -38,7 +38,7 @@ public class BullyingFisico : MonoBehaviour
             p4.misPreguntas.Add(new Preguntas("¿La ansiedad está presente en las víctimas del Bullying?", "Sí", "No"));
 
         PuntosRetro p5 = new PuntosRetro("Algunas características de los agresores son: Actitud negativa a la escuela, poca empatía, son impulsivos, les cuesta aceptar las normas sociales, poseen conflictos en sus hogares.");
-            p5.misPreguntas.Add(new Preguntas("¿Cual es una característica común en los agresores en el Bullying?", "Poseen conflictos en sus hogares", "Son personas timidas", "Poseen baja autoestima", "Ninguna es correcta",true));
+            p5.misPreguntas.Add(new Preguntas("¿Cual es una características común en los agresores en el Bullying?", "Poseen conflictos en sus hogares", "Son personas timidas", "Poseen baja autoestima", "Ninguna es correcta",true));
             p5.misPreguntas.Add(new Preguntas("¿Los Agresores del Bullying tienen actitud positiva hacia la escuela?", "No", "Sí"));
             p5.misPreguntas.Add(new Preguntas("¿El conflicto familiar puede ser una causa del Bullying ?","Sí","No"));
 
