@@ -8550,7 +8550,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 186724, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
       propertyPath: m_Name
-      value: PuntoRetro3
+      value: PuntoRetro2
       objectReference: {fileID: 0}
     - target: {fileID: 6179644, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
       propertyPath: m_Offset.x
@@ -8567,6 +8567,10 @@ Prefab:
     - target: {fileID: 113882, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442412, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
+      propertyPath: numeroRetroalimentacion
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
@@ -10064,7 +10068,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 186724, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
       propertyPath: m_Name
-      value: PuntoRetro2
+      value: PuntoRetro1
       objectReference: {fileID: 0}
     - target: {fileID: 6179644, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
       propertyPath: m_Offset.x
@@ -10081,6 +10085,10 @@ Prefab:
     - target: {fileID: 113882, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442412, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
+      propertyPath: numeroRetroalimentacion
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
@@ -12294,7 +12302,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 186724, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
       propertyPath: m_Name
-      value: PuntoRetro1
+      value: PuntoRetro0
       objectReference: {fileID: 0}
     - target: {fileID: 113882, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
       propertyPath: m_IsActive
@@ -12802,7 +12810,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 179572, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_Name
-      value: PuntoPregunta3
+      value: PuntoPregunta2
       objectReference: {fileID: 0}
     - target: {fileID: 11486576, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_Text
@@ -13372,11 +13380,11 @@ Prefab:
         type: 3}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 345
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11444696, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_Sprite
@@ -13399,11 +13407,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -85.10772
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: -803.2686
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 142576, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_IsActive
@@ -16768,6 +16776,10 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 412.4
       objectReference: {fileID: 0}
+    - target: {fileID: 192724, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: m_Name
+      value: PuntoPregunta0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
   m_IsPrefabParent: 0
@@ -18749,7 +18761,7 @@ Prefab:
       objectReference: {fileID: 2140287914}
     - target: {fileID: 192724, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: m_Name
-      value: PuntoPregunta2
+      value: PuntoPregunta1
       objectReference: {fileID: 0}
     - target: {fileID: 11406496, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: puntosRetro.Array.data[0]

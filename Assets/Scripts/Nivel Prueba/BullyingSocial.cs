@@ -12,26 +12,42 @@ public class BullyingSocial : MonoBehaviour
         //Creando Motor de preguntas del Nivel--------------------------------------------
         miNivel = new Nivel();
 
-        PuntosRetro p1 = new PuntosRetro("Hay Bullying Psicológico cuando hay <color=#a52a2aff><b>persecución</b></color>, que es una manera agresiva y continua de acosar a alguien a fin de que haga lo que la otra persona quiere.");
-        p1.misPreguntas.Add(new Preguntas("Existe Bullying Psicológico cuando hay", "Persecuciones", "Robos", "Golpes", "Acoso sexual", true));
-        p1.misPreguntas.Add(new Preguntas("¿En el Bullying Psicológico se presenta el acoso sexual?", "No", "Sí"));
+        PuntosRetro p1 = new PuntosRetro("En el Bullying social se pretende aislar al niño o joven del resto del grupo, ignorándolo, aislandolo y excluyéndolo del resto.");
+            p1.misPreguntas.Add(new Preguntas("¿Qué acciones se presentan en el Bullying Social?", "Todas son correctas", "Aislar el joven del resto del grupo", "Ignorarlo", " Excluir del resto", true));
+            p1.misPreguntas.Add(new Preguntas("¿Excluir un joven de las actividades que se realicen en conjunto puede considerarse como Bullying Social?", "Sí", "No"));
+            p1.misPreguntas.Add(new Preguntas("¿Qué Factor se presenta normalmente en el Bullying Social?", "Ignorarlo", " Obligar a una persona hacer lo que no quiere", "Intimidar una persona", "Golpear y Amenazar", true));
+            p1.misPreguntas.Add(new Preguntas("¿Aislar al niño o joven del grupo puede considerarse Bullying Social?", "Verdadero", "Falso"));
         p1.Barajar();
 
-        PuntosRetro p2 = new PuntosRetro("El Bullying Psicológico se presenta cuando hay <color=#a52a2aff><b> intimidación</b></color>, que significa causar o infundir miedo. El miedo es una angustia a causa de un riesgo o daño real o imaginario.");
-        p2.misPreguntas.Add(new Preguntas("Existe Bullying Psicológico cuando hay", "Intimidaciones", "Robos", "Palizas", "Acoso sexual", true));
-        p2.misPreguntas.Add(new Preguntas("¿ Si alguien provoca miedo en los demás compañeros les está causando Bullying Piscológico ?", "Si", "No"));
+        PuntosRetro p2 = new PuntosRetro("El Bullying Social puede transmitirse de forma directa: excluir, no dejar participar a la víctimas en actividades y sacarlos del grupo, comunicándolo directamente.");
+        p2.misPreguntas.Add(new Preguntas("¿De qué forma puede transmitirse el Bullying Social?", "Directa", "Homófono", "Acoso sexual", "Ninguna es correcta", true));
+        p2.misPreguntas.Add(new Preguntas("¿En qué consiste el Bullying Social Directo?", "En no dejar participar la víctima en actividades", "En golpear directamente a la víctima", "En generar chismes sobre una persona", "Ninguna es correcta", true));
+        p2.misPreguntas.Add(new Preguntas("¿Sacar a un compañero del grupo y no dejar que realice actividades es Bullying Social?", "Sí", "No"));
+        p2.misPreguntas.Add(new Preguntas("¿Ignorar a una persona, tratándola como un objeto hace parte del Bullying Social directo?", "Falso", "Verdadero"));
         p2.Barajar();
 
-        PuntosRetro p3 = new PuntosRetro("En el agredido, aumenta el sentimiento de <color=#a52a2aff><b>indefensión y vulnerabilidad</b></color>, pues percibe este atrevimiento como una amenaza que tarde o temprano se materializará de manera más contundente.");
-        p3.misPreguntas.Add(new Preguntas("Que sentimientos siente una victima a causa del Bullying Psicológico", "indefensión y vulnerabilidad", "Odio y venganza", "Amor y Amistad", "Ninguna de las Anteriores", true));
-        p3.misPreguntas.Add(new Preguntas("¿Las Victimas del Bullying Psicológico se sienten amenazados?", "Si", "No"));
+        PuntosRetro p3 = new PuntosRetro("El Bullying social indirecto es ignorar, tratar como un objeto, como si no existiera o hacer ver que no está ahí.");
+        p3.misPreguntas.Add(new Preguntas("¿Cuáles son factores presentes en el Bullying Social indirecto?", "Todas son correctas", "Tratarlos como a un objeto", "Ignorar a otros", "Fingir que no existen", true));
+        p3.misPreguntas.Add(new Preguntas("¿Hacer ver que alguien no está presente es Bullying Social indirecto?", "Verdadero", "Falso"));
+        p3.misPreguntas.Add(new Preguntas("¿Tratar a una persona como un objeto es hacer Bullying Directo?", "Falso", "Verdadero"));
         p3.Barajar();
 
+        PuntosRetro p4 = new PuntosRetro("Ser víctima de bullying no es algo divertido. Muchas personas, niños, adolescentes y adultos, son víctimas de bullying en sus vidas.");
+        p4.misPreguntas.Add(new Preguntas("¿Qué personas pueden ser víctimas de Bullying?", "Todas son correctas", "Los niños", "Los Adolescentes", "Los Adultos", true));
+        p4.misPreguntas.Add(new Preguntas("¿En el Bullying las víctimas pueden ser incluso personas adultas?", "Verdadero", "Falso"));
+        p4.Barajar();
+
+        PuntosRetro p5 = new PuntosRetro("Algunas veces, cuando el bullying llega a puntos extremos, las personas deciden terminar con sus vidas.");
+        p5.misPreguntas.Add(new Preguntas("¿Cuál es la peor consecuencia cuando el Bullying llega a puntos extremos?", "Que las víctimas terminan con sus vidas", "Que las víctimas golpeen a su agresor", "Que los agresores se cansen de hacer Bullying", "Que los padres de las víctimas nunca se enteren", true));
+        p5.misPreguntas.Add(new Preguntas("¿El Bullying puede llegar a hacer  que las víctimas decidan terminar con sus vidas?", "Verdadero", "Falso"));
+        p5.Barajar();
 
 
         miNivel.puntosRetro.Add(p1);
         miNivel.puntosRetro.Add(p2);
         miNivel.puntosRetro.Add(p3);
+        miNivel.puntosRetro.Add(p4);
+        miNivel.puntosRetro.Add(p5);
 
         GameObject.Find("ControladorNivel").GetComponent<ManejadorPreguntas>().misPuntosRetro = miNivel.puntosRetro;
         GameObject.Find("ControladorNivel").GetComponent<ManejadorPreguntas>().Barajar();
