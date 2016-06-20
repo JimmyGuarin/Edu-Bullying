@@ -961,19 +961,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 345
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -85.10772
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: -803.2686
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11440754, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_Color.r
@@ -3103,7 +3103,6 @@ Transform:
   m_LocalPosition: {x: 47.649258, y: 2.6184978, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1335194968}
   - {fileID: 1338718616}
   - {fileID: 1436150912}
   - {fileID: 1279960598}
@@ -8790,7 +8789,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11450172, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: puntosRetro.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 454790, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_LocalPosition.x
@@ -8930,7 +8929,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 179572, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_Name
-      value: PuntoPregunta3
+      value: PuntoPregunta2
       objectReference: {fileID: 0}
     - target: {fileID: 11486576, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_Text
@@ -8951,6 +8950,10 @@ Prefab:
     - target: {fileID: 195058, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11450172, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
+      propertyPath: puntosRetro.Array.data[0]
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
@@ -10501,7 +10504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acb6fc2fa1b06444290cf149729f7e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntosRetro: 0000000001000000
+  puntosRetro: 00000000
   puntajePreguntaMultiple: 40
   puntajePreguntaDual: 40
   objetosAnimados:
@@ -14379,56 +14382,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1007957552}
   m_RootOrder: 49
---- !u!1001 &1335194967
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 241733304}
-    m_Modifications:
-    - target: {fileID: 429956, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -27.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 429956, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 3.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 429956, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 429956, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 429956, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 429956, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 429956, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 429956, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 186724, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
-      propertyPath: m_Name
-      value: PuntoRetro0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &1335194968 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 429956, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
-  m_PrefabInternal: {fileID: 1335194967}
 --- !u!1001 &1338718615
 Prefab:
   m_ObjectHideFlags: 0
@@ -14470,7 +14423,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 186724, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
       propertyPath: m_Name
-      value: PuntoRetro1
+      value: PuntoRetro0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
@@ -15043,7 +14996,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 186724, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
       propertyPath: m_Name
-      value: PuntoRetro3
+      value: PuntoRetro1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442412, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
+      propertyPath: numeroRetroalimentacion
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
@@ -17584,7 +17541,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 186724, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
       propertyPath: m_Name
-      value: PuntoRetro4
+      value: PuntoRetro2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442412, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
+      propertyPath: numeroRetroalimentacion
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
@@ -21040,7 +21001,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11406496, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: puntosRetro.Array.data[0]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11406496, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: objetosAnimados.Array.data[0]
@@ -21128,7 +21089,7 @@ Prefab:
       objectReference: {fileID: 1397248128}
     - target: {fileID: 192724, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: m_Name
-      value: PuntoPregunta2
+      value: PuntoPregunta1
       objectReference: {fileID: 0}
     - target: {fileID: 462246, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: m_LocalPosition.y

@@ -13,9 +13,11 @@ public class BullyingVerbal : MonoBehaviour {
         //Creando Motor de preguntas del Nivel--------------------------------------------
         miNivel = new Nivel();
 
-        PuntosRetro p1 = new PuntosRetro("Hay Bullying Psicológico cuando hay <color=#a52a2aff><b>persecución</b></color>, que es una manera agresiva y continua de acosar a alguien a fin de que haga lo que la otra persona quiere.");
-        p1.misPreguntas.Add(new Preguntas("Existe Bullying Psicológico cuando hay", "Persecuciones", "Robos", "Golpes", "Acoso sexual", true));
-        p1.misPreguntas.Add(new Preguntas("¿En el Bullying Psicológico se presenta el acoso sexual?", "No", "Sí"));
+        PuntosRetro p1 = new PuntosRetro("El Bullying Verbal son acciones no corporales con la finalidad de discriminar, difundir chismes o rumores.");
+        p1.misPreguntas.Add(new Preguntas("¿Que tipo de acciones que hacen parte del Bullying Verbal?", "No corporales", "Corporales", "Acoso Sexual", "Ninguna es correcta", true));
+        p1.misPreguntas.Add(new Preguntas("¿Con que finalidad se presentan las acciones no corporales del Bullying Verbal?", "Todas son correctas", "Discriminar", "Difundir Chismes", "Generar Rumores", true));
+        p1.misPreguntas.Add(new Preguntas("¿En el Bullying verbal se presentan discriminación a través de rumores?", "Sí", "No"));
+        p1.misPreguntas.Add(new Preguntas("¿Difundir chismes hace parte de las discriminaciones del Bullying Verbal?", "Verdadero", "Falso"));
         p1.Barajar();
 
         PuntosRetro p2 = new PuntosRetro("El Bullying Psicológico se presenta cuando hay <color=#a52a2aff><b> intimidación</b></color>, que significa causar o infundir miedo. El miedo es una angustia a causa de un riesgo o daño real o imaginario.");
