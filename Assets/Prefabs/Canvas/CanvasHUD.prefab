@@ -1993,7 +1993,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e55bb765a7b441a49875c66d51d1a6f0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 04107e90471a7784aa644db2bc27a7f9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2395,7 +2395,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8a36bc48e7910b149a45ea8d9b59a827, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 69a771b922912304b8b973354530fc63, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3063,7 +3063,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 3b1faf02697324a4087e6eba2d447502, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 402e1bd0209ce8943ae1ccacee63ced5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8075,7 +8075,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000045776367, y: -243}
-  m_SizeDelta: {x: 405, y: 125}
+  m_SizeDelta: {x: 548, y: 98}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22410118
 RectTransform:
@@ -8836,7 +8836,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000091552734, y: 63}
-  m_SizeDelta: {x: 345, y: 125}
+  m_SizeDelta: {x: 547, y: 98}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22459188
 RectTransform:
@@ -9149,7 +9149,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -4, y: -90}
-  m_SizeDelta: {x: 345, y: 125}
+  m_SizeDelta: {x: 548, y: 98}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22480674
 RectTransform:
