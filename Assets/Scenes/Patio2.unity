@@ -4707,7 +4707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -9658,7 +9658,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11450172, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: puntosRetro.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 454790, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_LocalPosition.x
@@ -9702,7 +9702,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11450172, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: puntosRetro.Array.data[0]
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11450172, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: puntosRetro.Array.data[1]
@@ -9790,7 +9790,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 179572, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_Name
-      value: PuntoPregunta3
+      value: PuntoPregunta2
       objectReference: {fileID: 0}
     - target: {fileID: 11486576, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_Text
@@ -12008,9 +12008,9 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 80a2917dbf27ba74d988a0ba128eca5c, type: 3}
     m_FontSize: 55
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 5
-    m_MaxSize: 80
+    m_MaxSize: 55
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 0
@@ -16867,9 +16867,9 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 80a2917dbf27ba74d988a0ba128eca5c, type: 3}
     m_FontSize: 55
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 5
-    m_MaxSize: 80
+    m_MaxSize: 55
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 0
@@ -17447,7 +17447,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11450172, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: puntosRetro.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 454790, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_LocalPosition.x
@@ -17579,7 +17579,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 179572, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_Name
-      value: PuntoPregunta1
+      value: PuntoPregunta0
       objectReference: {fileID: 0}
     - target: {fileID: 11486576, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_Text
@@ -17822,7 +17822,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 186724, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
       propertyPath: m_Name
-      value: PuntoRetro1
+      value: PuntoRetro0
       objectReference: {fileID: 0}
     - target: {fileID: 113882, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
       propertyPath: m_IsActive
@@ -18606,7 +18606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -21653,6 +21653,14 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 186724, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
+      propertyPath: m_Name
+      value: PuntoRetro2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442412, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
+      propertyPath: numeroRetroalimentacion
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
   m_IsPrefabParent: 0
@@ -22480,7 +22488,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1729603482}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: 2.68, z: -0.22}
+  m_LocalPosition: {x: 0.04, y: 2.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1896263976}
@@ -24555,11 +24563,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 186724, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
       propertyPath: m_Name
-      value: PuntoRetro2
+      value: PuntoRetro1
       objectReference: {fileID: 0}
     - target: {fileID: 113882, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442412, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
+      propertyPath: numeroRetroalimentacion
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
@@ -24970,19 +24982,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -85.10772
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: -803.2686
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 345
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 142576, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_IsActive
@@ -26530,7 +26542,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11406496, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: puntosRetro.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 421432, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: m_LocalPosition.x
@@ -26666,7 +26678,7 @@ Prefab:
       objectReference: {fileID: 2046522032}
     - target: {fileID: 192724, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: m_Name
-      value: PuntoPregunta2
+      value: PuntoPregunta1
       objectReference: {fileID: 0}
     - target: {fileID: 11470324, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: m_Text
@@ -26687,6 +26699,10 @@ Prefab:
     - target: {fileID: 22471506, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: m_LocalScale.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406496, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: puntosRetro.Array.data[0]
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}

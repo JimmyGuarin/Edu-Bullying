@@ -20,21 +20,44 @@ public class BullyingVerbal : MonoBehaviour {
         p1.misPreguntas.Add(new Preguntas("¿Difundir chismes hace parte de las discriminaciones del Bullying Verbal?", "Verdadero", "Falso"));
         p1.Barajar();
 
-        PuntosRetro p2 = new PuntosRetro("El Bullying Psicológico se presenta cuando hay <color=#a52a2aff><b> intimidación</b></color>, que significa causar o infundir miedo. El miedo es una angustia a causa de un riesgo o daño real o imaginario.");
-        p2.misPreguntas.Add(new Preguntas("Existe Bullying Psicológico cuando hay", "Intimidaciones", "Robos", "Palizas", "Acoso sexual", true));
-        p2.misPreguntas.Add(new Preguntas("¿ Si alguien provoca miedo en los demás compañeros les está causando Bullying Piscológico ?", "Si", "No"));
+        PuntosRetro p2 = new PuntosRetro("Es común en el Bullying verbal realizar acciones de exclusión o bromas insultantes y repetidas del tipo poner apodos, insultar, amenazar, burlarse de los demás.");
+        p2.misPreguntas.Add(new Preguntas("¿Es una de las acciones más comunes en el Bullying Verbal?", "Bromas Insultantes", "Golpes", " Intimidación", "Ninguna es correcta", true));
+        p2.misPreguntas.Add(new Preguntas("¿Realizar acciones de exclusión a través de bromas insultantes hace parte del Bullying verbal?", "Sí", "No"));
+        p2.misPreguntas.Add(new Preguntas("¿Poner apodos a los compañeros puede considerarse Bullying verbal?", "Sí", "No"));
+        p2.misPreguntas.Add(new Preguntas("¿Las acciones más comunes en el Bullying Verbal son?", "Todas son correctas", "Insultar", "Amenazar", " Burlarse de los demás", true));
         p2.Barajar();
 
-        PuntosRetro p3 = new PuntosRetro("En el agredido, aumenta el sentimiento de <color=#a52a2aff><b>indefensión y vulnerabilidad</b></color>, pues percibe este atrevimiento como una amenaza que tarde o temprano se materializará de manera más contundente.");
-        p3.misPreguntas.Add(new Preguntas("Que sentimientos siente una victima a causa del Bullying Psicológico", "indefensión y vulnerabilidad", "Odio y venganza", "Amor y Amistad", "Ninguna de las Anteriores", true));
-        p3.misPreguntas.Add(new Preguntas("¿Las Victimas del Bullying Psicológico se sienten amenazados?", "Si", "No"));
+
+        PuntosRetro p3 = new PuntosRetro("En el Bullying Verbal se generan rumores de carácter racista o sexual, calumnias. Es más utilizado por algunas chicas a medida que se van acercando a la adolescencia.");
+        p3.misPreguntas.Add(new Preguntas("¿Los rumores generados en el Bullying Verbal pueden ser?", "Todas son correctas", "De carácter racista", "Sexuales", "Calumnias", true));
+        p3.misPreguntas.Add(new Preguntas("El Bullying Verbal es más común en ...", "Mujeres", "Hombres", "Profesores", "Padres", true));
+        p3.misPreguntas.Add(new Preguntas("¿Se puede afirmar que los rumores sexuales sobre un compañero es Bullying Verbal?", "Sí", "No"));
+        p3.misPreguntas.Add(new Preguntas("¿Hacer comentarios de carácter racista puede considerarse Bullying Verbal?", "Sí", "No"));
         p3.Barajar();
+
+
+        PuntosRetro p4 = new PuntosRetro("Asertividad: “Es uno de los camino hacia la  autoestima, hacia la capacidad de relacionarse con los demás de igual a igual, no estando ni por encima ni por debajo. Sólo quien posee una alta autoestima, quien se aprecia y valora a sí mismo, podrá relacionarse con los demás en el mismo plano.”");
+        p4.misPreguntas.Add(new Preguntas("¿Cuando se puede considerar que una persona es asertiva?", "Se valora a sí mismo y se relaciona con los demás de igual a igual", "Tiene adecuado desempeño académico y disciplinado", "Tiene buenos amigos y es expresivo", "No genera conflicto y es dócil", true));
+        p4.misPreguntas.Add(new Preguntas("Ser una persona asertiva puede ayudar a solucionar los conflictos del Bullying", "Verdadero", "Falso"));
+        p4.misPreguntas.Add(new Preguntas("La asertividad es uno de los caminos para mejorar el autoestima", "Verdadero", "Falso"));
+        p4.Barajar();
+
+        PuntosRetro p5 = new PuntosRetro("El Dialogo y la búsqueda de apoyo social a través de tu profesora, amigos o familiares, puede ser la manera efectiva de enfrentarse al acosador del Bullying.");
+        p5.misPreguntas.Add(new Preguntas("¿Cual puede ser la forma mas efectiva de solucionar el Bullying?", "El Dialogo y búsqueda de apoyo social", "La Confrontación directa del conflicto", "Golpear a tu agresor", "Todas son correctas", true));
+        p5.misPreguntas.Add(new Preguntas("¿Hablar en presencia de tu profesora, amigos o familiares con un agresor podría ayudar a solucionar el conflicto de una forma sencilla?", "Sí", "No"));
+        p5.misPreguntas.Add(new Preguntas("¿Dialogar solo empeora el conflicto con el agresor?", "Falso", "Verdadero"));
+        p5.Barajar();
+
+
 
 
 
         miNivel.puntosRetro.Add(p1);
         miNivel.puntosRetro.Add(p2);
         miNivel.puntosRetro.Add(p3);
+        miNivel.puntosRetro.Add(p4);
+        miNivel.puntosRetro.Add(p5);
+
 
         GameObject.Find("ControladorNivel").GetComponent<ManejadorPreguntas>().misPuntosRetro = miNivel.puntosRetro;
         GameObject.Find("ControladorNivel").GetComponent<ManejadorPreguntas>().Barajar();

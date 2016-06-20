@@ -17,19 +17,19 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: {x: 0, y: 0, z: -50.8031}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: -47.4218}
+        inSlope: {x: 0, y: 0, z: 56.094658}
+        outSlope: {x: 0, y: 0, z: 56.094658}
         tangentMode: 0
       - time: 1.6666666
-        value: {x: 0, y: 0, z: 41.836597}
-        inSlope: {x: 0, y: 0, z: -0.17702103}
-        outSlope: {x: 0, y: 0, z: -0.17702103}
-        tangentMode: 0
-      - time: 3.3333333
-        value: {x: 0, y: 0, z: -51.39316}
+        value: {x: 0, y: 0, z: 46.069298}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 3.3333333
+        value: {x: 0, y: 0, z: -47.4218}
+        inSlope: {x: 0, y: 0, z: -56.094658}
+        outSlope: {x: 0, y: 0, z: -56.094658}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -159,31 +159,6 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: base/asiento
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: -50.8031
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1.6666666
-        value: 41.836597
-        inSlope: -0.17702103
-        outSlope: -0.17702103
-        tangentMode: 10
-      - time: 3.3333333
-        value: -51.39316
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: localEulerAnglesRaw.z
     path: base/asiento
     classID: 4
     script: {fileID: 0}
@@ -335,6 +310,31 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
     path: base (2)/asiento
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -47.4218
+        inSlope: 56.094658
+        outSlope: 56.094658
+        tangentMode: 10
+      - time: 1.6666666
+        value: 46.069298
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 3.3333333
+        value: -47.4218
+        inSlope: -56.094658
+        outSlope: -56.094658
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: base/asiento
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves:
