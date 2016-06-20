@@ -34,6 +34,7 @@ public class PresentacionObjetivos : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         Time.timeScale = 1;
         GetComponent<Animation>().Play();
+        GameObject.Find("Escenario").GetComponent<AudioSource>().Play();
         
     }
 }

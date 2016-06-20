@@ -10,6 +10,9 @@ public class Enemigo : MonoBehaviour
     private bool enColision;
     public MovimientoPersonaje mp;
 
+
+    public AudioSource audioFondo;
+
     // Use this for initialization
     void Start()
     {
@@ -36,6 +39,7 @@ public class Enemigo : MonoBehaviour
                 canvasConversacion.SetActive(true);
                 GetComponent<Collider2D>().enabled = false;
                 enColision = false;
+                audioFondo.Stop();
 
                
             }
