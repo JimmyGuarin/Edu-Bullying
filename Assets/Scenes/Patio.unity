@@ -2848,7 +2848,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 75.68917
+      value: -301.52124
       objectReference: {fileID: 0}
     - target: {fileID: 11403262, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_Sprite
@@ -3857,12 +3857,6 @@ Transform:
   - {fileID: 1198987411}
   m_Father: {fileID: 0}
   m_RootOrder: 11
---- !u!114 &497218372 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11439266, guid: 62e8d6c788cc78240bd737c55f8633dc,
-    type: 2}
-  m_PrefabInternal: {fileID: 1942500541}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!4 &517016940 stripped
 Transform:
   m_PrefabParentObject: {fileID: 490024, guid: b2a8d107f3f5e0e4191a16baeddddfce, type: 2}
@@ -4384,11 +4378,11 @@ Prefab:
     - target: {fileID: 11450172, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: textoPuntajeMultiple
       value: 
-      objectReference: {fileID: 497218372}
+      objectReference: {fileID: 1942500542}
     - target: {fileID: 11450172, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: textoRetroAlimentacionMultiple
       value: 
-      objectReference: {fileID: 949677322}
+      objectReference: {fileID: 1942500543}
     - target: {fileID: 11450172, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: canvasPreguntaDual
       value: 
@@ -4412,7 +4406,7 @@ Prefab:
     - target: {fileID: 11450172, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: textoPuntajeDual
       value: 
-      objectReference: {fileID: 1601346423}
+      objectReference: {fileID: 1855167817}
     - target: {fileID: 11450172, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: textoRetroAlimentacionDual
       value: 
@@ -6294,11 +6288,11 @@ Prefab:
     - target: {fileID: 11406496, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: textoPuntajeMultiple
       value: 
-      objectReference: {fileID: 497218372}
+      objectReference: {fileID: 1942500542}
     - target: {fileID: 11406496, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: textoRetroAlimentacionMultiple
       value: 
-      objectReference: {fileID: 949677322}
+      objectReference: {fileID: 1942500543}
     - target: {fileID: 11406496, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: canvasPreguntaDual
       value: 
@@ -6322,7 +6316,7 @@ Prefab:
     - target: {fileID: 11406496, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: textoPuntajeDual
       value: 
-      objectReference: {fileID: 1601346423}
+      objectReference: {fileID: 1855167817}
     - target: {fileID: 11406496, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: textoRetroAlimentacionDual
       value: 
@@ -6536,12 +6530,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2a8d107f3f5e0e4191a16baeddddfce, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &949677322 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11420798, guid: 62e8d6c788cc78240bd737c55f8633dc,
-    type: 2}
-  m_PrefabInternal: {fileID: 1942500541}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!4 &952023386 stripped
 Transform:
   m_PrefabParentObject: {fileID: 437018, guid: bc81c648794dc5e49a73449f757ea596, type: 2}
@@ -11166,12 +11154,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &1601346423 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11417834, guid: ff1d144630946e54cb486d367719f1f4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1855167816}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &1606104984
 Prefab:
   m_ObjectHideFlags: 0
@@ -13320,6 +13302,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff1d144630946e54cb486d367719f1f4, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1855167817 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11463942, guid: ff1d144630946e54cb486d367719f1f4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1855167816}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &1859947838
 Prefab:
   m_ObjectHideFlags: 0
@@ -13801,11 +13789,11 @@ Prefab:
     - target: {fileID: 11406496, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: textoPuntajeMultiple
       value: 
-      objectReference: {fileID: 497218372}
+      objectReference: {fileID: 1942500542}
     - target: {fileID: 11406496, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: textoRetroAlimentacionMultiple
       value: 
-      objectReference: {fileID: 949677322}
+      objectReference: {fileID: 1942500543}
     - target: {fileID: 11406496, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: canvasPreguntaDual
       value: 
@@ -13829,7 +13817,7 @@ Prefab:
     - target: {fileID: 11406496, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: textoPuntajeDual
       value: 
-      objectReference: {fileID: 1601346423}
+      objectReference: {fileID: 1855167817}
     - target: {fileID: 11406496, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: textoRetroAlimentacionDual
       value: 
@@ -14387,6 +14375,18 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62e8d6c788cc78240bd737c55f8633dc, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1942500542 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11492796, guid: 62e8d6c788cc78240bd737c55f8633dc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1942500541}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!114 &1942500543 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11479546, guid: 62e8d6c788cc78240bd737c55f8633dc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1942500541}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &1943984708
 Prefab:
   m_ObjectHideFlags: 0
