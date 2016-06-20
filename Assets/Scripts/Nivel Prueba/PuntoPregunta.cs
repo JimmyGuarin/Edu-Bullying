@@ -18,6 +18,7 @@ public class PuntoPregunta : MonoBehaviour
 
     //Sonidos
     private AudioSource[] audios;
+    public AudioSource audioFondo;
 
 
     public GameObject[] objetosAnimados;
@@ -87,8 +88,10 @@ public class PuntoPregunta : MonoBehaviour
                 Mostrar();
                 GetComponent<Collider2D>().enabled = false;
                 enColision = false;
-                
-                
+                audioFondo.volume = 0.02f;
+
+
+
             }
         }
     }
@@ -161,6 +164,7 @@ public class PuntoPregunta : MonoBehaviour
             textoRetroAlimentacionMultiple.text= "Respuesta Correcta:    <size=60><color=black>" + RespuestaCorrecta(preguntaActual.IndexCorreta()) + "</color></size>";
             textoRetroAlimentacionDual.text= "Respuesta Correcta:    <size=60><color=black>" + RespuestaCorrecta(preguntaActual.IndexCorreta()) + "</color></size>";
             audios[1].Play();
+           
         }
         else
         {
