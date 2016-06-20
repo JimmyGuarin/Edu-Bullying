@@ -3583,19 +3583,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 345
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -85.10772
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 46.830196
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11403262, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_Sprite
@@ -3619,7 +3619,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 142576, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11493820, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -5416,6 +5416,10 @@ Prefab:
     - target: {fileID: 132880, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11450172, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
+      propertyPath: puntosRetro.Array.data[0]
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
@@ -11569,7 +11573,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 186724, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
       propertyPath: m_Name
-      value: PuntoRetro1
+      value: PuntoRetro0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
@@ -14399,6 +14403,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 186724, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
+      propertyPath: m_Name
+      value: PuntoRetro2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442412, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
+      propertyPath: numeroRetroalimentacion
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
   m_IsPrefabParent: 0
@@ -16964,7 +16976,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 186724, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
       propertyPath: m_Name
-      value: PuntoRetro2
+      value: PuntoRetro1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442412, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
+      propertyPath: numeroRetroalimentacion
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99ae012bdd9c25045a84beb41244a05e, type: 2}
