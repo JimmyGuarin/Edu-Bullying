@@ -16,10 +16,14 @@ public class UltimaOportunidad : MonoBehaviour
     public GameObject corazon;
     public Text textoRetro;
 
+    public AudioSource audioFondo;
+
 
     private ArrayList puntosRetro;
     private Preguntas pregunta;
     private PuntosRetro pr;
+
+   
   
 
    void Start()
@@ -177,6 +181,8 @@ public class UltimaOportunidad : MonoBehaviour
     IEnumerator  Activar()
     {
         yield return new WaitForEndOfFrame();
+        audioFondo = GameObject.Find("Escenario").GetComponent<AudioSource>();
+        audioFondo.volume = 0.05f;
         Debug.Log("activeb");
         EventSystem.current.SetSelectedGameObject(botones[0].gameObject);
         

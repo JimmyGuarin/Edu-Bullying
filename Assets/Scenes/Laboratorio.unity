@@ -3133,11 +3133,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -85.107834
+      value: -83.1076
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 46.68917
+      value: -400.24777
       objectReference: {fileID: 0}
     - target: {fileID: 142576, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_IsActive
@@ -15770,6 +15770,10 @@ Prefab:
       propertyPath: m_Size.x
       value: 7.08074
       objectReference: {fileID: 0}
+    - target: {fileID: 11469590, guid: 6c547c5b5f9d4d949ba4282af31ea9ef, type: 2}
+      propertyPath: audioFondo
+      value: 
+      objectReference: {fileID: 1915182254}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c547c5b5f9d4d949ba4282af31ea9ef, type: 2}
   m_IsPrefabParent: 0
@@ -17098,6 +17102,17 @@ MonoBehaviour:
           m_StringArgument: Cerrar
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1915182254}
+        m_MethodName: set_volume
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.3
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1135437618
@@ -17298,6 +17313,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11450172, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
+      propertyPath: audioFondo
+      value: 
+      objectReference: {fileID: 1915182254}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
   m_IsPrefabParent: 0
@@ -18521,6 +18540,10 @@ Prefab:
 
         <color=#a52a2aff><b><size=90>Presiona "F" para continuar</size></b></color>'
       objectReference: {fileID: 0}
+    - target: {fileID: 11450172, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
+      propertyPath: audioFondo
+      value: 
+      objectReference: {fileID: 1915182254}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
   m_IsPrefabParent: 0
@@ -23536,6 +23559,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11406496, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
+      propertyPath: audioFondo
+      value: 
+      objectReference: {fileID: 1915182254}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
   m_IsPrefabParent: 0
@@ -24815,6 +24842,17 @@ MonoBehaviour:
           m_StringArgument: Cerrar
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1915182254}
+        m_MethodName: set_volume
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.3
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1803263576
@@ -25545,6 +25583,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1915182253}
+  - 82: {fileID: 1915182254}
   m_Layer: 0
   m_Name: Escenario
   m_TagString: Untagged
@@ -25570,6 +25609,81 @@ Transform:
   - {fileID: 474942765}
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!82 &1915182254
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1915182252}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 666296eff64ad0d478ad3baf9bf06393, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.3
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 1
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1927927665
 GameObject:
   m_ObjectHideFlags: 0
@@ -28406,6 +28520,7 @@ MonoBehaviour:
   destructor: {fileID: 1444118916}
   plataformasCaen: []
   indiceDestructor: -1
+  audioFondo: {fileID: 0}
 --- !u!50 &2096319726
 Rigidbody2D:
   serializedVersion: 2
