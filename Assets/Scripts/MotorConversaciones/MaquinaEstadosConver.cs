@@ -145,6 +145,7 @@ public class MaquinaEstadosConver : MonoBehaviour
     void terminarConversacion()
     {
         this.gameObject.SetActive(false);
+        GameObject.Find("Enemigo").GetComponent<AudioSource>().Stop();
         ControladorHUD.instance.GanarNivel();
 
     }

@@ -39,7 +39,9 @@ public class Enemigo : MonoBehaviour
                 canvasConversacion.SetActive(true);
                 GetComponent<Collider2D>().enabled = false;
                 enColision = false;
-                audioFondo.Stop();
+                audioFondo.volume = 0.05f;
+                GetComponent<AudioSource>().Play();
+
 
                
             }
