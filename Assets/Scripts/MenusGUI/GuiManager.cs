@@ -26,13 +26,15 @@ public class GuiManager : MonoBehaviour {
     public Fade fade;
 
     private bool listo;
-    
+
+    public bool borrrarDatos;
 
     void Awake(){
 
         listo = false;
 
-        //PlayerPrefs.DeleteAll();
+        if(borrrarDatos)
+            PlayerPrefs.DeleteAll();
         Cursor.visible = false;
 
         if (indexPersonaje != 0)

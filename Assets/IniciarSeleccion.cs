@@ -37,8 +37,7 @@ public class IniciarSeleccion : MonoBehaviour {
 
     IEnumerator load()
     {
-        Debug.LogWarning("ASYNC LOAD STARTED - " +
-           "DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH");
+
         async = SceneManager.LoadSceneAsync(1);
         async.allowSceneActivation = false;
         yield return async;
