@@ -2844,11 +2844,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -83.107834
+      value: -83.1076
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: -301.52124
+      value: -396.12677
       objectReference: {fileID: 0}
     - target: {fileID: 11403262, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_Sprite
@@ -4410,7 +4410,7 @@ Prefab:
     - target: {fileID: 11450172, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: textoRetroAlimentacionDual
       value: 
-      objectReference: {fileID: 765151658}
+      objectReference: {fileID: 1855167818}
     - target: {fileID: 195058, guid: 1f54b879c690c4f42a9a0e0222a8dddd, type: 2}
       propertyPath: m_IsActive
       value: 0
@@ -5302,12 +5302,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &765151658 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11478244, guid: ff1d144630946e54cb486d367719f1f4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1855167816}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!4 &767122693 stripped
 Transform:
   m_PrefabParentObject: {fileID: 486610, guid: 0b4e35e9a64faad4ca7e27067d5987c2, type: 2}
@@ -6320,7 +6314,7 @@ Prefab:
     - target: {fileID: 11406496, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: textoRetroAlimentacionDual
       value: 
-      objectReference: {fileID: 765151658}
+      objectReference: {fileID: 1855167818}
     - target: {fileID: 192724, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: m_Name
       value: PuntoPregunta1
@@ -12068,6 +12062,81 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 142000, guid: 6c547c5b5f9d4d949ba4282af31ea9ef, type: 2}
   m_PrefabInternal: {fileID: 1726498977}
+--- !u!82 &1726498979
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1726498978}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 8e3626b5f55e51d409de3ad4c7f8bd93,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: e01b4a73fd8297645a682e220f9b7193, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.3
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  Priority: 256
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1730324528
 GameObject:
   m_ObjectHideFlags: 0
@@ -13308,6 +13377,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1855167816}
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!114 &1855167818 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11450248, guid: ff1d144630946e54cb486d367719f1f4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1855167816}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &1859947838
 Prefab:
   m_ObjectHideFlags: 0
@@ -13821,7 +13896,7 @@ Prefab:
     - target: {fileID: 11406496, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: textoRetroAlimentacionDual
       value: 
-      objectReference: {fileID: 765151658}
+      objectReference: {fileID: 1855167818}
     - target: {fileID: 160926, guid: 98dbb5f0acbaaf041a9e04b2d5a3a5f3, type: 2}
       propertyPath: m_IsActive
       value: 0
