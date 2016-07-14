@@ -403,7 +403,8 @@ public class ControladorHUD : MonoBehaviour
             PlayerPrefs.SetString("nombre" + posicionPuntajes, nombreJugador);
         }
         nombre.text = "";
-        GameObject.FindGameObjectWithTag("Player").GetComponent<MoveRPG>().enabled = true;
+
+        GameObject.Find("Puntajes").transform.GetChild(0).gameObject.SetActive(true);
     }
 
 
