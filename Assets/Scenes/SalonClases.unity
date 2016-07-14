@@ -2214,9 +2214,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 2.0238416, y: 0.039569266}
+  m_Offset: {x: 1.9765625, y: -0.15777884}
   serializedVersion: 2
-  m_Size: {x: 0.046939276, y: 5.0159507}
+  m_Size: {x: 0.14005777, y: 4.6212645}
 --- !u!4 &174074553 stripped
 Transform:
   m_PrefabParentObject: {fileID: 486610, guid: 0b4e35e9a64faad4ca7e27067d5987c2, type: 2}
@@ -9390,7 +9390,7 @@ GameObject:
   - 4: {fileID: 1201647554}
   - 212: {fileID: 1201647556}
   - 61: {fileID: 1201647555}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: props (26)
   m_TagString: Trampolin
   m_Icon: {fileID: 0}
@@ -9420,9 +9420,9 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: cd6a578b4c6196b45b3d1a88087a2553, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0.19734153, y: 2.3823872}
+  m_Offset: {x: 0.23752083, y: 2.463867}
   serializedVersion: 2
-  m_Size: {x: 10.210438, y: 0.27402517}
+  m_Size: {x: 10.788066, y: 0.111065246}
 --- !u!212 &1201647556
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11361,10 +11361,11 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
-  - {x: -2.9990757, y: -2.8311262}
+  - {x: -2.7390974, y: -2.7733352}
   - {x: -3.0362394, y: 2.1572978}
   - {x: 3.056408, y: 2.801472}
-  - {x: 2.1817076, y: -2.785737}
+  - {x: 2.1344876, y: -2.7420423}
+  - {x: -2.7059128, y: -2.7016206}
 --- !u!212 &1637800499
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13421,6 +13422,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[7].m_Arguments.m_FloatArgument
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 148152, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11435496, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
@@ -14317,9 +14322,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -1.4235563, y: 0.02692979}
+  m_Offset: {x: -1.54, y: -0.17000397}
   serializedVersion: 2
-  m_Size: {x: 0.10121178, y: 5.0003605}
+  m_Size: {x: 0.10121178, y: 4.6064963}
 --- !u!1 &2005563623 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 111504, guid: 0b4e35e9a64faad4ca7e27067d5987c2, type: 2}
@@ -14485,10 +14490,12 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
-  - {x: -2.9990757, y: -2.8311262}
+  - {x: -2.7902277, y: -2.8311257}
+  - {x: -2.7896028, y: -2.7400565}
   - {x: -3.0362394, y: 2.1572978}
   - {x: 3.056408, y: 2.801472}
-  - {x: 2.1817076, y: -2.785737}
+  - {x: 2.1464908, y: -2.7603443}
+  - {x: -2.7502916, y: -2.836025}
 --- !u!212 &2011961892
 SpriteRenderer:
   m_ObjectHideFlags: 0

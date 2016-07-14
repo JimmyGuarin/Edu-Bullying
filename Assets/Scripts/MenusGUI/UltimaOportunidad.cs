@@ -164,6 +164,7 @@ public class UltimaOportunidad : MonoBehaviour
         ControladorHUD.instance.aumentarVida();
         ControladorHUD.instance.aumentarVida();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        ControladorHUD.instance.cargarCanvarJugable();
     }
 
     public void ResetearCanvas()
