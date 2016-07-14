@@ -13395,11 +13395,11 @@ Prefab:
         type: 3}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 345
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11444696, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_Sprite
@@ -13422,11 +13422,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -83.10772
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 76.56926
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 142576, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_IsActive
@@ -19623,6 +19623,11 @@ Prefab:
       propertyPath: allPaths.Array.data[0]
       value: 
       objectReference: {fileID: 282224675}
+    - target: {fileID: 11495452, guid: ce6fc087af59fae4d892a124540ab50f, type: 2}
+      propertyPath: m_Text
+      value: "Recuerda que tener una actitud pac\xEDfica ayuda a solucionar cualquier
+        problema\n<color=#a52a2aff><b><size=126>Presiona F</size></b></color>"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce6fc087af59fae4d892a124540ab50f, type: 2}
   m_IsPrefabParent: 0
