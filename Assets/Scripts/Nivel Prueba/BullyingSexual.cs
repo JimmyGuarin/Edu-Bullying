@@ -61,15 +61,15 @@ public class BullyingSexual : MonoBehaviour {
 
         //Creando Sistema de conversación del nivel------------------------------------------------------------------------------------------
 
-        EstadoConversacion ec0 = new EstadoConversacion(0, new Preguntas("Deseas que te pegue", "tal vez", "quiero hablarte del bullying", "ya me canse de eso", "", false));
-        EstadoConversacion ec1 = new EstadoConversacion(-10, new Preguntas("Pues entonces lo haré", "No por favor", "Lo que sea", "Se lo diré a mi mamá", "", false));
-        EstadoConversacion ec2 = new EstadoConversacion(10, new Preguntas("Y que es esa cosa", "Es lo que tu me haces", "Es pegarle a los otros", "la profesora lo sabe", "", false));
-        EstadoConversacion ec3 = new EstadoConversacion(-10, new Preguntas("Y que vas hacer", "Pegarte", "Se lo diré a mi mamá", "quiero hablarte del bullying", "", false));
-        EstadoConversacion ec4 = new EstadoConversacion(10, new Preguntas("Por que no tendria que hacerlo", "Por que voy a hablarte de Bullying", "Por que aquí está la profe", "Se lo diré a mi mamá", "", false));
-        EstadoConversacion ec5 = new EstadoConversacion(-10, new Preguntas("Te pegaré!!!", "No por favor", "Estoy listo", "la profesora lo sabra", "", false));
-        EstadoConversacion ec6 = new EstadoConversacion(-10, new Preguntas("Pues digale y verás", "Eso Haré", "Se lo diré a tu mamá", "tal vez", "", false));
-        EstadoConversacion ec7 = new EstadoConversacion(10, new Preguntas("Lo que tú sientas me tiene sin cuidado", "Tienes problemas que debes solucionar", "Se lo diré a tu mamá", "Ya verás lo que haré", "", false));
-        EstadoConversacion ec8 = new EstadoConversacion(10, new Preguntas("Lo que tú sientas me tiene sin cuidado", "Tienes problemas que debes solucionar", "Se lo diré a tu mamá", "Le diré a la profesora", "", false));
+        EstadoConversacion ec0 = new EstadoConversacion(0, new Preguntas("¿Acaso deseas que te pegue?", "Tal vez", "Quiero hablarte del bullying", "Ya me canse de eso", "", false));
+        EstadoConversacion ec1 = new EstadoConversacion(-10, new Preguntas("Pues entonces lo haré", "No por favor", "Haga lo que quiera", "Se lo diré a mi mamá", "", false));
+        EstadoConversacion ec2 = new EstadoConversacion(10, new Preguntas("¿Qué es el bullying?", "Es la agresión que tu me haces cada día", "Es pegarle a los otros", "La profesora lo sabe", "", false));
+        EstadoConversacion ec3 = new EstadoConversacion(-10, new Preguntas("Y que vas hacer", "Golpearte", "Se lo diré a mi mamá", "Quisiera hablarte un poco del bullying", "", false));
+        EstadoConversacion ec4 = new EstadoConversacion(10, new Preguntas("¿Por qué no tendría que hacerlo?", "Por qué voy a hablarte un poco Bullying", "Porque aquí está la profe", "Se lo diré a mi mamá", "", false));
+        EstadoConversacion ec5 = new EstadoConversacion(-10, new Preguntas("Te pegaré!!!", "No por favor", "Estoy listo", "La profesora lo sabrá", "", false));
+        EstadoConversacion ec6 = new EstadoConversacion(-10, new Preguntas("Pues dígale y verás", "Eso Haré", "Se lo diré a tu mamá", "tal vez", "", false));
+        EstadoConversacion ec7 = new EstadoConversacion(10, new Preguntas("Lo que tú sientas me tiene sin cuidado", "Ponte en mis zapatos y te darás cuenta", "Se lo diré a tu mamá", "Ya verás lo que haré", "", false));
+        EstadoConversacion ec8 = new EstadoConversacion(10, new Preguntas("Lo siento, intentare hacerlo", "Pronto lo descubrirás", "Se lo diré a tu mamá", "Le diré a la profesora", "", false));
 
         ec0.AgregarProximos(new int[3] { 1, 2, 3 });
         ec1.AgregarProximos(new int[3] { 4, 5, 6 });
