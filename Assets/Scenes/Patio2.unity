@@ -1670,7 +1670,7 @@ GameObject:
   - 4: {fileID: 173076538}
   - 212: {fileID: 173076541}
   - 61: {fileID: 173076540}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: props (17)
   m_TagString: Trampolin
   m_Icon: {fileID: 0}
@@ -1700,9 +1700,9 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: 15649ab83512ace44a1c51318d4ab602, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0.03299713, y: 1.568613}
+  m_Offset: {x: 0.03299713, y: 1.4434967}
   serializedVersion: 2
-  m_Size: {x: 5.293414, y: 0.49180016}
+  m_Size: {x: 5.2934146, y: 0.7420374}
 --- !u!212 &173076541
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12998,9 +12998,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.12}
+  m_Offset: {x: 0.0000009536743, y: -0.05814886}
   serializedVersion: 2
-  m_Size: {x: 3.3, y: 0.63}
+  m_Size: {x: 3.3, y: 0.433532}
 --- !u!4 &1293000631 stripped
 Transform:
   m_PrefabParentObject: {fileID: 486610, guid: 0b4e35e9a64faad4ca7e27067d5987c2, type: 2}
@@ -19578,19 +19578,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -83.1076
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: -396.12677
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 345
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22426238, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 142576, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_IsActive

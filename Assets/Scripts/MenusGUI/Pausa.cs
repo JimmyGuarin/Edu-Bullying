@@ -37,21 +37,26 @@ public class Pausa : MonoBehaviour
     public void ToggleMenuPausa()
     {
 
-        if (Time.timeScale == 1)
+        if (Time.timeScale == 1&& GameObject.FindGameObjectWithTag("Player").GetComponent<MovimientoPersonaje>().enabled)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<MovimientoPersonaje>().enabled =false;
             Time.timeScale = 0;
             gameObject.SetActive(false);
             panelPausa.SetActive(true);
             EventSystem.current.SetSelectedGameObject(panelPausa.transform.GetChild(0).GetChild(0).gameObject);
+            Debug.Log("Activa");
         }
         else
         {
-            Time.timeScale = 1;
-            GameObject.FindGameObjectWithTag("Player").GetComponent<MovimientoPersonaje>().enabled = true;
-            gameObject.SetActive(true);
-            panelPausa.SetActive(false);
-            EventSystem.current.SetSelectedGameObject(null);
+            if (Time.timeScale == 0 && !GameObject.FindGameObjectWithTag("Player").GetComponent<MovimientoPersonaje>().enabled)
+            {
+                Debug.Log("DesActiva");
+                Time.timeScale = 1;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<MovimientoPersonaje>().enabled = true;
+                gameObject.SetActive(true);
+                panelPausa.SetActive(false);
+                EventSystem.current.SetSelectedGameObject(null);
+            }
         }
 
 
