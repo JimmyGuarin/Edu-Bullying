@@ -2848,7 +2848,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: -480.27194
+      value: 75.8302
       objectReference: {fileID: 0}
     - target: {fileID: 11403262, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_Sprite
@@ -4256,7 +4256,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: DANTE
+  m_Text: BRUTUS
 --- !u!222 &589586449
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5543,7 +5543,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "HABLA CON BRUTUS, CONVENCELO DE NO HACERTE M\xC1S BULLYING"
+  m_Text: "HABLA CON BRUTUS, CONV\xC9NCELO DE NO HACERTE M\xC1S BULLYING"
 --- !u!222 &810397762
 CanvasRenderer:
   m_ObjectHideFlags: 0

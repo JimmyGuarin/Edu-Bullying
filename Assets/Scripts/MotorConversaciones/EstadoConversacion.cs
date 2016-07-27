@@ -3,21 +3,16 @@ using System.Collections;
 
 public class EstadoConversacion{
 
-    //Profesora a Player=0
-    //Enemigo a Player=1
-    //Profesora a Enemigo=2
-    //Enemigo a Profesora=3
-    public int tipo;
 
-    //Si es de tipo 2 0 3 Respuesta buena
-    //es el enunciado del receptor
+    public int [] calificaciones;
+
     public Preguntas pregunta;
     public int[] proximos;
 
 
-	public EstadoConversacion(int tip,Preguntas pregt)
+	public EstadoConversacion(int[] tip,Preguntas pregt)
     {
-        tipo = tip;
+        calificaciones = tip;
         pregunta = pregt;
        
 
