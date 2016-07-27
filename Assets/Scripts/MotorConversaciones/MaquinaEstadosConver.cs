@@ -41,8 +41,8 @@ public class MaquinaEstadosConver : MonoBehaviour
     public void CambiarEstado(int i)
     {
 
+        int suma = estados[estadoActual].calificaciones[i];
         estadoActual = estados[estadoActual].proximos[i];
-        int suma = estados[estadoActual].tipo;
         StartCoroutine(MoverSlider(suma));
         Moldear();
 
@@ -111,6 +111,7 @@ public class MaquinaEstadosConver : MonoBehaviour
                     imagenActualVillano.sprite = imagenesVillano[1];
                     imagenVictimaActual.sprite = imagenesVActual[1];
                     break;
+          
                 case 50:
                     imagenActualVillano.sprite = imagenesVillano[2];
                     break;

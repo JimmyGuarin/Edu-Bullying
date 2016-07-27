@@ -826,7 +826,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22490136, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_SizeDelta.y
-      value: -480.27194
+      value: 75.8302
       objectReference: {fileID: 0}
     - target: {fileID: 11440754, guid: 9f9492317fb26164fbd472cde92c4610, type: 2}
       propertyPath: m_Color.r
@@ -13425,6 +13425,119 @@ Prefab:
     - target: {fileID: 148152, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 162580, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22482050, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22482050, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22482050, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22482050, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 88
+      objectReference: {fileID: 0}
+    - target: {fileID: 22482050, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 22474890, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: -86
+      objectReference: {fileID: 0}
+    - target: {fileID: 22474890, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: -71.18103
+      objectReference: {fileID: 0}
+    - target: {fileID: 22477280, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 22477280, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 10.999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 22456732, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 265
+      objectReference: {fileID: 0}
+    - target: {fileID: 22456732, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 305
+      objectReference: {fileID: 0}
+    - target: {fileID: 22411118, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 265
+      objectReference: {fileID: 0}
+    - target: {fileID: 22411118, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 305
+      objectReference: {fileID: 0}
+    - target: {fileID: 22446146, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 1157
+      objectReference: {fileID: 0}
+    - target: {fileID: 22446146, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 77
+      objectReference: {fileID: 0}
+    - target: {fileID: 22428376, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 1157
+      objectReference: {fileID: 0}
+    - target: {fileID: 22428376, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 77
+      objectReference: {fileID: 0}
+    - target: {fileID: 22488568, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 1157
+      objectReference: {fileID: 0}
+    - target: {fileID: 22488568, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 77
+      objectReference: {fileID: 0}
+    - target: {fileID: 11428568, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: imagenesVillano.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: d673ae50552f1124c87adf99c9880686,
+        type: 3}
+    - target: {fileID: 11428568, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: imagenesVillano.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5902ec2a9d608164593367ebfa5bc677,
+        type: 3}
+    - target: {fileID: 11428568, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: imagenesVillano.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: ff858fe648930d0488cc83519e0bf662,
+        type: 3}
+    - target: {fileID: 11451618, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5902ec2a9d608164593367ebfa5bc677,
+        type: 3}
+    - target: {fileID: 11408876, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9dbe1e7f69e5e7f458836297a79759bf,
+        type: 3}
+    - target: {fileID: 11497224, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_Text
+      value: DANTE
+      objectReference: {fileID: 0}
+    - target: {fileID: 11464510, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}
+      propertyPath: m_Text
+      value: "HABLA CON DANTE, CONV\xC9NCELO DE NO HACERTE M\xC1S BULLYING"
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11435496, guid: 089697f48885466469104d3c2e1a1b3d, type: 2}

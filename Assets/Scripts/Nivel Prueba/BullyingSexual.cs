@@ -61,28 +61,21 @@ public class BullyingSexual : MonoBehaviour {
 
         //Creando Sistema de conversación del nivel------------------------------------------------------------------------------------------
 
-        EstadoConversacion ec0 = new EstadoConversacion(0, new Preguntas("¿Acaso deseas que te pegue?", "Tal vez", "Quiero hablarte del bullying", "Ya me canse de eso", "", false));
-        EstadoConversacion ec1 = new EstadoConversacion(-10, new Preguntas("Pues entonces lo haré", "No por favor", "Haga lo que quiera", "Se lo diré a mi mamá", "", false));
-        EstadoConversacion ec2 = new EstadoConversacion(10, new Preguntas("¿Qué es el bullying?", "Es la agresión que tu me haces cada día", "Es pegarle a los otros", "La profesora lo sabe", "", false));
-        EstadoConversacion ec3 = new EstadoConversacion(-10, new Preguntas("Y que vas hacer", "Golpearte", "Se lo diré a mi mamá", "Quisiera hablarte un poco del bullying", "", false));
-        EstadoConversacion ec4 = new EstadoConversacion(10, new Preguntas("¿Por qué no tendría que hacerlo?", "Por qué voy a hablarte un poco Bullying", "Porque aquí está la profe", "Se lo diré a mi mamá", "", false));
-        EstadoConversacion ec5 = new EstadoConversacion(-10, new Preguntas("Te pegaré!!!", "No por favor", "Estoy listo", "La profesora lo sabrá", "", false));
-        EstadoConversacion ec6 = new EstadoConversacion(-10, new Preguntas("Pues dígale y verás", "Eso Haré", "Se lo diré a tu mamá", "tal vez", "", false));
-        EstadoConversacion ec7 = new EstadoConversacion(10, new Preguntas("Lo que tú sientas me tiene sin cuidado", "Ponte en mis zapatos y te darás cuenta", "Se lo diré a tu mamá", "Ya verás lo que haré", "", false));
-        EstadoConversacion ec8 = new EstadoConversacion(10, new Preguntas("Lo siento, intentare hacerlo", "Pronto lo descubrirás", "Se lo diré a tu mamá", "Le diré a la profesora", "", false));
+        EstadoConversacion ec0 = new EstadoConversacion(new int[] { -10, 10, -10 }, new Preguntas("¿Te digo algo? me gustaría tocarte", "¿Qué te gustaría tocar?", " Mi cuerpo merece respeto y nadie debe tocarme", "No entiendo lo que dices", "", false));
+        EstadoConversacion ec1 = new EstadoConversacion(new int[] { 20, -10, -20 }, new Preguntas("Es que yo deseo tu cuerpo", "Por favor te exigo que me respetes", "Me tienes confundido", "Quiero saber más sobre eso", "", false));
+        EstadoConversacion ec2 = new EstadoConversacion(new int[] { -30, 10, -20 }, new Preguntas("Estoy seguro que no te vas a arrepentir", "Me pones a dudarlo", "Por favor no insistas, te digo que no", "Umm, no lo sé", "", false));
+        EstadoConversacion ec3 = new EstadoConversacion(new int[] { -10, 10, -10 }, new Preguntas("Nadie se va a enterar", "Voy a pensarlo", "No me gusta tu comportamiento", "Suena interesante", "", false));
+        EstadoConversacion ec4 = new EstadoConversacion(new int[] { -10, -20, 10 }, new Preguntas("Se que eres una persona fácil, no mereces respeto", "Me hiciste sentir mal", "Y que te gustaría hacer", "Hablaré con mis amigos y padres, se que me ayudarán", "", false));
+       
 
-        ec0.AgregarProximos(new int[3] { 1, 2, 3 });
-        ec1.AgregarProximos(new int[3] { 4, 5, 6 });
-        ec2.AgregarProximos(new int[3] { 7, 5, 6 });
-        ec3.AgregarProximos(new int[3] { 5, 5, 2 });
-        ec4.AgregarProximos(new int[3] { 2, 6, 5 });
-        ec5.AgregarProximos(new int[3] { 4, 1, 6 });
-        ec6.AgregarProximos(new int[3] { 5, 5, 1 });
-        ec7.AgregarProximos(new int[3] { 8, 5, 6 });
-        ec8.AgregarProximos(new int[3] { 8, 5, 6 });
+        ec0.AgregarProximos(new int[3] { 1, 2, 1 });
+        ec1.AgregarProximos(new int[3] { 2, 3, 1 });
+        ec2.AgregarProximos(new int[3] { 3, 4, 1 });
+        ec3.AgregarProximos(new int[3] { 3, 1, 3 });
+        ec4.AgregarProximos(new int[3] { 2, 0, 4 });
 
 
-        conversacion.estados = new EstadoConversacion[9] { ec0, ec1, ec2, ec3, ec4, ec5, ec6, ec7, ec8 };
+        conversacion.estados = new EstadoConversacion[5] { ec0, ec1, ec2, ec3, ec4 };
 
 
 
